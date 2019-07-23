@@ -28,8 +28,6 @@ language:
   excuse/1: "%s fall under one of recognized categories of excuses for this type of case and this inclusion be justified in this case."
   not_excuse/1: "%s does not fall under a recognized category and this pose a problem in future cases."
 
-
-  
 argument_schemes:
   - id: rule_physical_world_1
     meta:
