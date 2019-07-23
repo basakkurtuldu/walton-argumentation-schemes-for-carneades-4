@@ -1,0 +1,118 @@
+language:
+  both_properties/3: "Therefore, generally, if %s has property %s then it also has property %s."
+  has_properties/3: "In this particular case, the individual %s has property %s and also property %s."
+  impair_general/1: "Special circumstances of example %s impair its generalizability"
+  typical_example/1: " Example %s is an typical example of the kinds of cases the generalzation covers."
+  valid_rule/1: "The rule is valid for %s."
+  usually_properties/3: "Usually, if %s has property %s it also has property %s."
+  same_properties/3: "In this case, %s has property %s and %s."
+  should_do/2: "%s should do %s."
+  prestigious_individual/2: "Individual %s is prestigious for -admired by- individuals %s."
+  carry_out_act/2: "%s carries out action %s."
+  worth_imitated/2: "Then %s worth being imitated by %s."
+  want_to_be_different/2: "%s want to be different from %s."
+  carry_out_right/2: "Therefore, the right thing to do in %s is carry out %s."
+  carry_out_wrong/2: "Therefore, the wrong thing to do in %s is carry out %s."
+  similar_to/2: "%s is similar to %s."
+  right_to_do/2: "The right thing to do in %s, was to carry out action %s."
+  wrong_to_do/2: "The wrong thing to do in %s, was to carry out action %s."
+  image/2: "Person %s has a %s image -an image of a perceptible property-."
+  exemplify/1: "To have a %s image -an image of a perceptible property- is a prima facie reason to believe that the circumstances exemplify it."
+  reasonable_case/1: "It is reasonable to believe that %s is the case."
+  not_indicator/1: The circumstances such that having a %s image is not a reliable indicator of it."  
+
+argument_schemes:
+  - id: from_example
+    meta:
+      title: Argument From Example
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
+    variables: [A,P1,P2]
+    conclusions:
+      - has_properties(A,P1,P2)
+    premises:
+      - both_properties(A,P1,P2)
+    exceptions:
+      - impair_general(A)
+    assumptions: 
+      - typical_example(A)
+     
+  - id: illustration
+    meta:
+      title: Argument From Illustration
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
+    variables: [X,Y,P1,P2]
+    conclusions:
+      - valid_rule(Y)
+    premises:
+      - usually_properties(X,P1,P2)
+      - same_properties(Y,P1,P2)
+
+  - id: from_model
+    meta:
+      title: Argument From Model
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
+    variables: [A,B,X]
+    conclusions:
+      - should_do(B,X)
+    premises:
+      - prestigious_individual(A,B)
+      - carry_out_act (A,X)
+      - worth_imitated(X,B)
+
+  - id: from_antimodel
+    meta:
+      title: Argument From Anti-Model
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
+    variables: [A,B,X]
+    conclusions:
+      - ¬should_do(B,X)
+    premises:
+      - ¬prestigious_individual(A,B)
+      - carry_out_act(A,X)
+      - want_to_be_different(B,A)
+
+  - id: practical_analogy_positive
+    meta:
+      title: Practical Reasoning From Analogy - Positive Schema
+      source: >
+              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+    variables: [A1,A2,X]
+    conclusions:
+      - carry_out_right(A2,X)
+    premises:
+      - right_to_do(A1,X)
+      - similar_to(A1,A2)
+      
+  - id: practical_analogy_negative
+    meta:
+      title: Practical Reasoning From Analogy - Negative Schema
+      source: >
+              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+    variables: [A1,A2,X]
+    conclusions:
+      - carry_out_wrong(A2,X)
+    premises:
+      - wrong_to_do(A1,X)
+      - similar_to(A1,A2)
+
+  - id: perception
+    meta:
+      title: Argument From Perception
+      source: >
+             John Pollock, Cognitive Carpentry. Cambridge, Mass.: MIT Press, 1995, p. 53.
+    variables: [P,I]
+    conclusions:
+      - reasonable_case(I)
+    premises:
+      - image(P,I)
+      - exemplify(I)
+    exceptions:
+      - not_indicator(I)
