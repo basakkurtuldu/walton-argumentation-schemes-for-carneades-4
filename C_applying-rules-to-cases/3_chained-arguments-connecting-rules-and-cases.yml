@@ -9,7 +9,6 @@ language:
   may_have/2: %s, may have %s, for all we know or can prove."
 
 argument_schemes:
-
   - id: gradualism
     meta:
       title: Argument From Gradualism
