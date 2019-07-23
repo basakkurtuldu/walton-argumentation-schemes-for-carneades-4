@@ -1,0 +1,136 @@
+language:
+  not_has_propery/2: "Therefore, you can't truly say that %s, has %s"
+  synonymous: "Whenever expressions are referentially coextensive, they are synonymous."
+  means_same/2: "%s means the same as %s"
+  not_necessarily_true: "First premise not necessary true." 
+  oficcial_rulebook: "In the official rulebook for %s -a rule governed institution, such as a game- it is stated that %s counts as %s."
+  correctly_report: "Oflicial rulelebooks correctly report the rules in force."
+  counts_as/2: "%s counts as %s." 
+  rule_changed: "The rule has changed since the publication of the rulebook." 
+  is/2: "% is %s."
+  same_meaning/2: "Speakers of %s believe that %s means the same as %s."
+  speakers_correct: "Speakers of a language are generally correct about word definitions in that language."
+  without_correcting/1: "Speakers are able to use the word %s in the correct physical and grammatical context without being correct about the nature of its referent or property."
+  evaluation/3: "If %s is the case, then an evaluation %s is justified/conduct %s is required."
+  case/1: "%s is the case."
+  evaluation_justified/2: Therefore, evaluation %s is justified/conduct %s is required."
+  obligatory/1: "%s is prohibited -obligatory-."
+  do_obligator: "One must not do what is prohibite -obligator-."
+  must_do/2: "%s must do %s."
+  excuse: "%s has an adequate excuse or an overriding duty."
+  rule_can_waived/1: "If the case of %s is an exception, then the established rule can be waived in the case."
+  case_exception/1: "The case of %s is an exception."
+  rule_waived/1: "Therefore, the established rule can be waived in the case of %s."
+  rule_require/3: "Normally, rule %s requires or forbids a type o f action or inaction %s, which carries with it a sanction - penalty- %s."
+  pleader_committed/1: "I -the pleader- have committed %s."
+  special_circumstances/1: "But I can cite special circumstances that constitute an excuse %s."
+  exempted/1: "Therefore, in this instance, I ought to be exempted from %s."
+  excuse/1: "%s fall under one of recognized categories of excuses for this type of case and this inclusion be justified in this case."
+  not_excuse/1: "%s does not fall under a recognized category and this pose a problem in future cases."
+
+
+  
+argument_schemes:
+  - id: rule_physical_world_1
+    meta:
+      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 1 
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 342.             
+    variables: [W,D]
+    conclusions:
+      - means_same(W,D)
+    premises:
+      - is(W,D)
+      - synonymous
+    exceptions:
+      -not_necessarily_true
+      
+  - id: rule_physical_world_2
+    meta:
+      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 2
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 342.             
+    variables: [I,D,W]
+    conclusions:
+      - counts_as(D,W)
+    premises:
+      - oficcial_rulebook(I,D,W)
+      - correctly_report
+    exceptions:
+      -rule_changed
+
+  - id: rule_mental_world 
+    meta:
+      title: 
+      source: >
+             Wayrw Grennan, Informal Logic, Montreal: McGill-Queen's University Press, 1997, p. 196.
+    variables: [W,D,L]
+    conclusions:
+      - means_same(W,D)
+    premises:
+      - same_meaning(L,W,D)
+      - speakers_correct
+    exceptions:
+      - without_correcting(W)
+      
+  - id: rule
+    meta:
+      title: Argument From Rules - From Rules
+      source: >
+             Peter Jan Schellens and Menno De Jong, "Argumentation Schemes in Persuasive  Brochures.
+             "Argumentation 18, 2004, p. 311.
+    variables: [E,A,C] 
+    conclusions:
+      - evaluation_justified(E,C)
+    premises:
+      - evaluation(A,E,C)
+      - case(A)
+
+  - id: regulative_rule
+    meta:
+      title: Argumentation From Rules - Regulative Rule Premise Obligation Claim
+      source: >
+            Wayne Grennan, Informal Logic. Montreal: McGill-Queen's University Press, 1997, p. 169.
+    variables: [A,X]
+    conclusions:
+      - must_do(A,X)
+    premises:
+      - obligatory(X)
+      - do_obligator
+    exceptions:
+      - excuse
+
+  - id: exeptional
+    meta:
+      title: Argument For An Exceptional Case
+      source: >
+             Douglas Walton, A Pragmatic Theory of Fallacy. 
+             Tuscaloosa and London: University of Alabama Press, 1995, p. 148.
+    variables: [A,X]
+    conclusions:
+      - rule_waived(A)
+    premises:
+      - rule_can_waived(X)
+      - case_exception(A)
+    assumptions:
+      - case_exception(A)
+
+  - id: plea_for_excuse
+    meta:
+      title: Argument From Plea For Excuse
+      source: >
+             Douglas Walton, Appeal to Pity. 
+             Albany: State University of New York Press, 1997, pp. 154-156.
+    variables: [S,R,T,E]
+    conclusions:
+      - exempted(S)
+    premises:
+      - rule_require(R,T,S)
+      - pleader_committed(T)
+      - special_circumstances(E)
+    exceptions:
+      - not_excuse(E)
+    assumptions: 
+     - excuse(E)
