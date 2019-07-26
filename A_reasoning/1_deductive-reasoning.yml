@@ -1,0 +1,36 @@
+language:
+  group_quality/2: "Group %s has the quality %s."
+  group_member/2: "%s is a member,idea, habit, custom, product or method of %s."
+  group_member_quality/3: "If %s has %s, its members ideas, habits, customs, products or methods %s will have it as well."
+  is/2: "% is %s."
+  has_property/2: "Therefore, %s has property %s."
+  all_parts_has/2: "Every part that composes %s has property %s"
+  all_parts_propert/2: "All the parts %s have the property %s."
+
+argument_schemes:
+  - id: group_2
+    meta:
+      title:  Argument From A Group and Its Members - Variant 2
+      source: >
+               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
+               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 321-326. 	          
+    variables: [G,Q,M]
+    conclusions: 
+      - is(M,Q)
+    premises: 
+      - group_quality(G,Q)
+      - group_member(M,G)
+      - group_member_quality(G,Q,M)
+
+  - id: division_generic
+    meta:
+      title: Argument From Division - Generic Division
+      source: >
+             Douglas Walton, Argument: The Logic of Fallacies, Toronto: McGraw-Hill Ryerson, 1982, pp.206-208.
+    variables: [A,P]
+    conclusions:
+      - has_property(A,P)
+    premises:
+      - all_parts_propert(A,P)
+    assumptions: 
+     - all_parts_has(A,P)
