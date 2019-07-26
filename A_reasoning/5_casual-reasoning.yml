@@ -1,0 +1,146 @@
+language:
+  cannot_present_sametime/2: "%s cannot present %s at the same time and in the same respect."
+  presents/2: "%s presents %s."
+  presents_predicate/3: "If %s presents the predicate %s, it cannot present the contradictory, contrary, converse, incompatible, predicate %s at the same time and in the same respect."
+  not_presents_predicate/3: " If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
+  must_present_sametime/2: "%s must present %s at the same time and in the same respect." 
+  must_present_complementary_contrary/3: "If %s does not present the predicate %s, it must present the complementary contrary predicate %s at the same time and in the same respect."
+  cannot_recieve_evaluation/2: "%s cannot receive the evaluation %s at the same time and in the same respect."
+  recieves_evaluation/2: "%s recieves the evaluation %s." 
+  if_treatment_required/4: "If the treatment %s is required for the subject %s, for the contrary subject %s the contrary treatment %s is required."
+  treatment_required/2: "The treatment %s is required for the subject %s."
+  contrary_treatment_required/2: " The contrary treatment %s is required for the subject %s."  
+  relation_converse_relation/4: If %s is in relation %s with %s they can be in the converse relation %s."
+  relation_with/3: "%s is in relation %s with %s."
+  converse_relation/3: "%s can be in converse relation %s with %s."
+  person_act/2: "Person %s done act %s." 
+  act_value/2: "Done act %s is attributed the value %s."
+  person_value/2: "Person %s is %s."
+  person_judgment_value/2: "Person %s has a judgment value %s."
+  person_value_depending/3: "If a person is %s, his acts %s depending on judgment value, will be %s."
+  person_acts_value/3: "%s acts %s will be %s."
+  initial_presumption/1: "Case %s, is tentatively acceptable as an initial presumption."
+  leads_to_next/3: "There exists a series of cases %s, %s,..., %s where each leads to the next by a combination of causal, precedent, and/or analogical steps."
+  accept_all_steps: "There is a climate of social opinion such that once people come to accept each step as plausible, then they will also be led to accept the next step."
+  not_acceptable_step/1: "%s is not acceptable, contrary to the presumption of the initial premise."
+  led_to_step: "People will be led to accept the next step once they come to accept each step as plausible."
+  
+argument_schemes:
+  - id: opposition-descriptive_1
+    meta:
+      title: Argument From Opposition - Descriptive Scheme 1
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 317. 
+    variables: [P,P',A]
+    conclusions:
+      - cannot_present_sametime(A,P')
+    premises:
+      - presents_predicate(A,P,P')
+      - presents(A,P)
+ 
+  - id: opposition_descriptive_2
+    meta:
+      title: Argument From Opposition - Descriptive Scheme 2
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 317.
+    variables: [P,P',A]
+    conclusions:
+      - must_present_sametime(A,P')
+    premises:
+      - not_presents_predicate(A,P,P')
+      - ¬presents(A,P)
+
+  - id:opposition_descriptive_3
+    meta:
+      title: Argument From Opposition - Descriptive Scheme 2
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 318.
+    variables: [P,P',A]
+    conclusions:
+      - must_present_sametime(A,P')
+    premises:
+      - must_present_complementary_contrary(A,P,P')
+      - Â¬presents(A,P)
+
+  - id: opposition-normative
+    meta:
+      title: Argument From Opposition - Normative Scheme
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 318.
+    variables: [A,X,X']
+    conclusions:
+      - cannot_recieve_evaluation(A,X')
+    premises:
+      - cannot_present_sametime(A,X,X')
+      - recieves_evaluation(A,X') 
+
+  - id: rhetorical_oppositions_normative
+    meta:
+      title: Rhetorical Argument From Opposition - Normative Schemes
+      source: >
+             Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+             Argumentation Schemes. Cambridge University Press, p. 318.
+    variables: [X,X',A,A']
+    conclusions:
+      - contrary_treatment_required(X',A')
+    premises:
+      - if_treatment_required(X,A,A',X)
+      - treatment_required(X,A)
+
+  - id: rhetorical_oppositions_descriptive
+    meta:
+      title: Rhetorical Argument From Opposition - Descriptive Schemes
+      source: >
+             Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+             Argumentation Schemes. Cambridge University Press, p. 318.
+    variables: [A,B,R,R']
+    conclusions:
+      - converse_relation(B,R',A)
+    premises:
+      - relation_converse_relation(A,R,B,R')
+      - relation_with(A,R,B)
+     
+  - id: interaction_act_person_1
+    meta: 
+      title: Argument From Interaction of Act and Person - Variant 1
+      source: >
+               Ch. Perelman, L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
+               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 296-305.       
+    variables: [X,A,V]
+    conclusions: 
+      - person_value(A,V)
+    premises: 
+      - person_act(A,X)
+      - act_value(X,V)
+
+  - id: interaction_act_person_2
+    meta: 
+      title:  Argument From Interaction of Act and Person - Variant 2
+      source: >
+               Ch. Perelman, L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
+               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 296-305. 
+    variables: [A,X,V1,V2]
+    conclusions: 
+      - person_acts_value(A,X,V2)
+    premises: 
+      - person_judgment_value(A,V1)
+      - person_value_depending(V1,X,V2)
+
+  - id: full_slippery_slope
+    meta:
+      title: Full Slippery Slope Argument
+      source: >
+             
+    variables: [C0,C1,C2]
+    conclusions:
+      - not_acceptable_step(C0)
+    premises:
+      - initial_presumption(C0)
+      - leads_to_next(C0,C1,C2)
+      - accept_all_steps
+    assumptions: 
+     - led_to_step
