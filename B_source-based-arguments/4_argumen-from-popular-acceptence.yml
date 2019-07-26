@@ -1,0 +1,190 @@
+language:
+  generally_true/1: "%s is generally accepted as true."
+  favor/1: "If %s is generally accepted as true that gives a reason in favor of %s."
+  reason_in_favor/1: "There is a reason in favor of %s."
+  generally_accepted/1: "%s generally accepted as true."
+  doubting_general/1: "There are some strong reasons for doubting %s is generally true."
+  reference_group_accepted/2: "Everybody in particular group %s accepts %s"
+  true/1: "%s is true." 
+  should_accept/1: "You should accept %s"
+  deliberate/2: "Group %s has deliberated intelligently and extensively on whether to accept proposition %s or not."
+  group_accepted/2: "Everybody in this group %s accepts %s"
+  plausibly_true/1: "Therefore, %s is plausibly true."
+  good_group/2: "Everybody who is good, or who represen ts a group %s with good qualities, accepts policy %s."
+  goal_good_group/1: "Your goal is to be a good person, or a member of a group %s with good qualities."
+  group_does/3: "Everybody in a group %s does %s or accepts proposition %s as a policy."
+  acceptable_norm/3: "Doing %s or accepting %s shows that they are an acceptable norm of conduct for %s."
+  group_member/1: "The speaker is a member of %s"
+  morally_acceptable_action/2: "Therefore, my doing %s or accepting %s is morally justified as an acceptable action or policy."
+  property_or_object/2: "Everybody in this group %s accepts %s or has some property, or possesses some object." 
+  elite_group/1: "This group %s is elite, that is, everyone who belongs to it has prestige."
+  goal_prestige: "Prestige is an important goal for you."
+  accept_property_object/4: "If you accept %s acquire property %s or buy object %s, then you will a member of the group %s."
+  admired_people/2: "Everybody in this group of admired, popular people %s accepts %s."
+  group_action/2: "If you carry out action %s then you will belong to this group %s."
+  carry_out_action/1: "Therefore, you should carry out action %s."
+  valued_to_be_member/1: "Being a member of this group %s is highly valued for you."
+  out_group_not_accept/2: "If you do not accept %s, you will be out of this group %s."
+  background: "The speaker is an ordinary person, that is, share a common background with the audience."
+  being_credible: "Therefore, you ought to take what I say as being more credible or acceptable."
+  group_background/1: "I, the speaker, am an ordinary person, that is, I share a common background with the members of this audience, group %s."
+  respondent_member/1: "You, the respondent are a member of this audience, group %s."
+  accept_saying: "Therefore, you should accept what I say."
+  acceptable_in_case/1: "Therefore, %s is acceptable in this case."
+  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to %s."
+  to_think_acceptable/1: "That gives a reason to think that %s is acceptable."
+  have_grounds_think/1: "Large majority have justified grounds to think %s is acceptable."
+
+argument_schemes: 
+  - id: popular_opinion
+    meta:
+      title: Argument From Popular Opinion
+      source: >
+              Douglas Walton, Fundamentals of Critical Argumentation. New York: Cambridge University Press, 2006, p. 91.
+              Douglas Walton, lnformal Logic. New York: Cambridge University Press, 1989, p. 89.
+              Douglas Walton, Appeal to Popular Opinion. University Park: Pennsylvania State University Press, 1999, pp. 223-226.
+    variables: [A]
+    conclusions:
+      - reason_in_favor(A)
+    premises:
+      - generally_true(A)
+      - favor(A)
+    assumption:
+      - generally_accepted(A)
+    exceptions:
+      - doubting_general(A)
+      
+  - id: pop_scheme
+    meta:
+      title: Pop Scheme
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 311. 
+    variables: [A,G]
+    conclusions:
+      - true(A)
+      - should_accept(A)
+    premises:
+      - reference_group_accepted(G,A)
+
+  - id: deliberation_ad_populum 
+    meta:
+      title: Deliberation Ad Populum Argument
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [A,G]
+    conclusions:
+      - plausibly_true(A)
+    premises:
+      - group_accepted(G,A)
+      - deliberate(G,A)
+      
+  - id: moral_justification_ad_populum
+    meta:
+      title: Moral Justification Ad Populum Argument
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [G,P]
+    conclusions:
+      - should_accept(P)
+    premises:
+      - good_group(G,P)
+      - goal_good_group(G)
+      
+  - id: moral_justification_ad_populum_excuse
+    meta:
+      title: Moral Justification Ad Populum Argument Excuse Subtype
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [G,X,A]
+    conclusions:
+      - morally_acceptable_action(X,A)
+    premises:
+      - group_does(G,X,A)
+      - acceptable_norm(X,A,G)
+      - group_member(G)
+      
+  - id: snob_appeal_ad_populum
+    meta:
+      title: Snob Appeal Ad Populum Argument
+      source: > 
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [A,G,O,P]
+    conclusions:
+      - should_accept(A)
+    premises:
+      - property_or_object(G,A)
+      - elite_group(G)
+      - goal_prestige
+      - accept_property_object(A,P,O,G)
+
+  - id: appeal_to_vanity_ad_populum
+    meta:
+      title: Appeal to Vanity Ad Populum Argument
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [G,A,X]
+    conclusions:
+      - carry_out_action(X)
+    premises:
+      - admired_people(G,A)
+      - group_action(X,G)
+      
+  - id: rhetoric_ad_populum
+    meta:
+      title: Rhetoric of Belonging Ad Populum Argument
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [G,A]
+    conclusions:
+      - should_accept(A)
+    premises:
+      - group_accepted(G,A)
+      - valued_to_be_member(G)
+      - out_group_not_accept(A,G)
+      
+  - id: common_folk_ad_populum 
+    meta:
+      title: Common Folks Ad Populum Argument
+      source: >
+              Argumentation Schemes. Cambridge University Press, p. 312.
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+    variables: []
+    conclusions:
+      - background
+    premises:
+      - being_credible
+
+  - id: common_folks_group_ad_populum
+    meta:
+      title: Common Folks Ad Populum Group Subtype
+      source: >
+              Argumentation Schemes. Cambridge University Press, p. 312.
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+    variables: [G]
+    conclusions:
+      - accept_saying
+    premises:
+      - group_background(G)
+      - respondent_member(G)
+      
+  - id: popular_practise
+    meta:
+      title: Argument From Popular Practise
+      source: >
+              Douglas Walton , Fundamentals of Critical Argumentation. New York: Cambridge
+              University Press, 2006, p. 93.
+    variables: [A]
+    conclusions:
+      - acceptable_in_case(A)
+    premises:
+      - popular_practise(A)
+      - to_think_acceptable(A)
+    assumptions: 
+      - have_grounds_think(A)
