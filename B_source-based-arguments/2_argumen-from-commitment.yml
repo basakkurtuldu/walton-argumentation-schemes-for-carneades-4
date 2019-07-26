@@ -1,0 +1,104 @@
+language:
+  possible_bring_about/2: "It is possible for %s to bring about %s."
+  great_side_effects/2: "There will be too great negative side effects of %s bringing about %s."
+  committed/2: "In this case it was shown that %s is committed to proposition %s, according to the evidence of what he said or did."
+  also_committed/2: Generally, when an arguer is committed to %s, it can be inferred that he is also commined to %s."
+  committed_to/2: "In this case, %s is committed to %s."
+  also_committed_questioned/3: "If arguer %s has commiued herself to proposition %s at some point in a dialogue, then it may be inferred that she is also committed to proposition %s, should the question of whether it is true become an issue later in the dialogue."
+  dialog_committed/2: "Arguer %s has committed herself to proposition %s at some point in a dialogue."
+  commitment_arises/2: "At some later point in the dialogue, where the issue of %s arises, arguer a may be said to be committed to proposition %s."
+  commitment_contrary_evidence/2: "There is a contrary evidence indicating that %s might not be committed to %s."
+  commitment_support_evidence/2: "There is a evidence that supports the claim that %s is committed to %s."
+  initial_commitment/2: "%s has claimed or indicated that he is committed to proposition %s. Generally, or by vinue of what he has said in the past."
+  opposed_commitment/2: "Other evidence in this particular case shows that %s is not really committed to %s."
+  inconsistent_commitment/1: "%s's commitments are inconsistent."
+  evidence_not_commited/2: "There are evidence in this particular case shows that %s is not committed to %s." 
+  judged_positive_value/2: "Value %s is positive as judged by agent %s."
+  positive_affects/3: The fact that value %s is positive affects the interpretation and therefore the evaluation of goal %s of agent %s, if value is good, it supports commitment to goal."
+  reason_retaining_goal/2: "%s is a reason for retaining commitment to goal %s."
+  judged_negative_value/2: "Value %s is negative as judged by agent %s."
+  negative_affects/3: The fact that value %s is negative affects the interpretation and therefore the evaluation of goal %s of agent %s, if value is bad, it supports commitment to goal." 
+
+argument_schemes:
+  - id: commitment1
+    meta:
+      title: Argument From Commitment - Version 1
+      source: > 
+             Douglas Walton, Fundamentals of Critical Argumentation. 
+             Cambridge: Cambridge University Press, 2006, pp. 117- 118.
+             Douglas Walton, "The Sunk Costs Fallacy or Argument from Waste." 
+             Argumentation 16 (2002), p. 490.
+    variables: [A,X,Y]
+    conclusions:
+      - committed_to(A,Y)
+    premises:
+      - committed(A,X)
+      - also_committed(X,Y)
+    exceptions:
+      - commitment_contrary_evidence(A,X)
+    assumptions: 
+     - commitment_support_evidence(A,X)
+
+  - id: commitment2
+    meta:
+      title: Argument From Commitment - Version 2
+      source: >
+             Douglas Walton, Fundamentals of Critical Argumentation. 
+             Cambridge: Cambridge University Press, 2006, pp. 117- 118.
+             Douglas Walton, "The Sunk Costs Fallacy or Argument from Waste." 
+             Argumentation 16 (2002), p. 490.             
+    variables: [A,X,Y]
+    conclusions:
+      - commitment_arises(A,Y)
+    premises:
+      - also_committed_questioned(A,X,Y)
+      - dialog_committed(A,X)
+    exceptions:
+      - commitment_contrary_evidence(A,X)
+    assumptions: 
+      - commitment_support_evidence(A,X)
+
+  - id: inconsistent_commitment
+    meta:
+      title: Argument From Inconsistent Commitment
+      source: >
+             Douglas Walton, Fundamentals of Critical Argumentation. 
+             Cambridge: Cambridge University Press, 2006, pp. 120-121.
+    variables: [A,S]
+    conclusions:
+      - inconsistent_commitment(A)
+    premises:
+      - initial_commitment(A,S)
+      - opposed_commitment(A,S)
+    exceptions:
+      - evidence_not_commited(A,S)
+
+  - id: positive_value
+    meta: 
+      title: Argument From Values - Variant 1: Positive Value 
+      source: >
+               Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
+               Journal of Logic and Computation 13 (2003), pp.429­448. 
+               Trevor Bench-Capon, "Agreeing to Differ: Modelling Persuasive Dialogue
+               between Parties without a Consensus about Values." lnformal Logic 22 (2003a), pp. 231 -245. 
+    variables: [V,A,G]
+    conclusions: 
+      - reason_retaining_goal(V,G)
+    premises: 
+      - judged_positive_value(V,A)
+      - positive_affects(V,G,A)
+
+  - id: negative_value
+    meta:
+      title: Argument From Values - Variant 2: Negative Value
+      source: >
+               Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
+               Journal of Logic and Computation 13 (2003), pp.429­448. 
+               Trevor Bench-Capon, "Agreeing to Differ: Modelling Persuasive Dialogue
+               between Parties without a Consensus about Values." lnformal Logic 22 (2003a), pp. 231 -245. 
+    variables: [V,A,G]
+    conclusions: 
+      - reason_retaining_goal(V,G)
+    premises: 
+      - judged_negative_value(V,A)
+      - negative_affects(V,G,A)
