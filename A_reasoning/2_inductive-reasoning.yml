@@ -1,0 +1,71 @@
+language: 
+  member_quality/3: "Member %s of the group %s has the quality %s"
+  member_group_quality/3: "If the member %s quality %s then %s will have it as well."
+  has/2: "%s has %s"
+  all_parts_propert/2: "All the parts %s have the property %s."
+  has_property/2: "Therefore, %s has property %s."
+  all_parts_has/2: "Every part that composes %s has property %s"
+  species_of/2: "%s is a species of %s."
+  species_property/2: "%s is %s."
+  part_propert/2: "%s is %s." 
+  smaller_part_property/3: " %s is less %s then %s because it's a smaller part of it."
+  whole_of/4: "%s is the whole of %s, %s,..,%s."
+  part_whole/5: "%s is %s only if %s, or %s.., or ...%s is."
+  part_is/2: "%s, is %s."
+  whole_is/2: "%s is %s." 
+  
+argument_schemes:
+  - id: group_1
+    meta:
+      title: Argument From A Group and Its Members - Variant 1
+      source: >
+               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
+               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 321-326.          
+    variables: [G,Q,M]
+    conclusions: 
+      - has(G,Q)
+    premises: 
+      - member_quality(M,G,Q)
+      - member_group_quality(M,Q,G)
+
+  - id: composition_generic
+    meta:
+      title: Argument From Composition - Generic
+      source: >
+              Douglas Walton, Informal Iogic, New York: Cambridge University Press, 1989, p.130.
+    variables: [A,P]
+    conclusions:
+      - has_property(A,P)
+    premises:
+      - all_parts_propert(A,P)
+    assumptions: 
+     - all_parts_has(A,P)
+     
+  - id: part_in_whole
+    meta:
+      title: Argument From Composition - Inclusion of The Part in the Whole 
+      source: >
+              Ch. Perelman and L.Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp.231-233,234-241.
+    variables: [Y,X,A]
+    conclusions:
+      - part_propert(Y,A)
+    premises:
+      - species_of(Y,X)
+      - species_property(X,A)
+    exceptions:
+      -smaller_part_property(Y,A,X)
+
+  - id: whole_into_parts
+    meta:
+      title: Argument From Division - Division of the Whole into its Parts
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 231-233,234-241. 
+    variables: [X,X1,X2,X3,A]
+    conclusions:
+      - whole_is(X,A)
+    premises:
+      - whole_of(X,X1,X2,X3)
+      - part_whole(X,A,X1,X2,X3)
+      - part_is(X1,A)
