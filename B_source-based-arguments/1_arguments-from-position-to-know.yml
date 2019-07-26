@@ -1,0 +1,114 @@
+langugage:
+  group_accepted/2: "Everybody in this group %s accepts %s"
+  position_to_know_group/1: "Group %s is in a special position to know that %s is true."
+  plausibly_true/1: "Therefore, %s is plausibly true."
+  therefore_true/1: "Therefore %s is true."
+  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge"
+  normal_true/1: "If thte situation were normal, %s would he true."
+  case_not_true/1: "It is not the case that %s is true."
+  not_normal: "Therefore, the situation is not normal."
+  not_know_true/1: "I do not know whether %s is true or not."
+  presumption/1: "I have to act on the presumption that %s is true or not true."
+  consequences_presumption/2: If I act on the presumption that %s is true, and is not true, consequences %s will follow."
+  other_consequences_presumption/2: If I act on the presum ption that %s is not true, and A %s true, consequences %s will follow."
+  more_serious_consequences/2: "Consequences %s are more serious than consequences %s."
+  act_on_presumption/1: "Therefore, I act on the presumption that %s is not true or true."
+  sufficient_evidence: "Search for the evidence progress is sufficient."
+  true_propositions_contained/2: "It has not been established that all the true propositions in %s are contained in %s."
+  special_proposition/2: "%s is a special type of proposition such that if it were true, it would normally or usually be expected to be in %s."
+  special_in/2: "%s is in %s."
+  special_not_in/2: "%s is not in %s."
+  plausible_false/2: "Therefore, subject to further investigations in %s it is plausible to presume that %s is false."
+  recalls/2: "Person %s recalls %s."
+  believe_it/1: "Recalling %s is a prima facie reason to believe it."
+  reasonable_belive/1: "It is reasonable to believe %s."
+
+argument_schemes:
+  - id: position_to_know_ad_populum
+    meta:
+      title: Position to Know Ad Populum Argument
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 311. 
+    variables: [A,G]
+    conclusions:
+      - plausibly_true(A)
+    premises:
+      - group_accepted(G,A)
+      - position_to_know_group(G,A)
+      
+  - id: expert_opinion_ad_populum
+    meta:
+      title: Expert Opinion Ad Populum Argument
+      source: >
+              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
+              Argumentation Schemes. Cambridge University Press, p. 312.
+    variables: [A,G]
+    conclusions:
+      - therefore_true(A)
+    premises:
+      - group_accepted(G,A)
+      - expert_in_knowledge(G)
+  
+  - id: negative_normal_expectations
+    meta:
+      title: Negative Reasoning from Normal Expectations
+      source: >
+             Douglas Walton, Arguments from lgnorance. University Park: 
+             Pennsylvania State University Press, 1996, pp. 84,86.
+             Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
+             University of Alabama Press, 1995. p. 150.
+             
+    variables: [A]
+    conclusions:
+      - not_normal
+    premises:
+      - normal_true(A)
+      - case_not_true(A)
+ 
+  - id: negative_practical
+    meta:
+      title: Negative Practical Reasoning
+      source: >
+             Douglas Walton, Arguments from lgnorance. University Park: 
+             Pennsylvania State University Press, 1996, pp. 84,86.
+             Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
+             University of Alabama Press, 1995. p. 150.
+    variables: [A,B,C]
+    conclusions:
+      - act_on_presumption(A)
+    premises:
+      - not_know_true(A)
+      - presumption(A)
+      - consequences_presumption(A,B)
+      - other_consequences_presumption(A,C)
+      - more_serious_consequences(B,C)
+    assumptions: 
+     - sufficient_evidence
+
+  - id: epistemic_ignorence
+    meta:
+      title: Epistemic Argument From Ignorence
+      source: >
+              Douglas Walton , "Nonfallacious Arguments from Ignorance." 
+              American Philosophical Quaerterly 29 (1992), p. 386.
+    variables: [A,D,K]
+    conclusions:
+      - plausible_false(D,A)
+    premises:
+      - true_propositions_contained(D,K)
+      - special_proposition(A,K)
+      - special_in(A,D)
+      - special_not_in(A,K)     
+
+  - id: memory
+    meta:
+      title: Argument From Memory
+      source: >
+             J.L. Pollock, "Defeasible Reasoning." Cognitive Science 11 (1987), pp. 481-518.
+    variables: [P,M]
+    conclusions:
+      - reasonable_belive(M)
+    premises:
+      - recalls(P,M)
+      - believe_it(M)
