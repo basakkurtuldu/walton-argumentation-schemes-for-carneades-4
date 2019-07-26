@@ -1,0 +1,101 @@
+language:
+  bad_character/1: "%s is a person of bad character."
+  bad_not_accepted/2: "%s 's argument %s should not be accepted."
+  attack_well_supported: "Allegration made in character attack premise evidence are well supported."
+  character_revelant: "In the type of dialogue in which the arguement was used issue of character revelant."
+  stronger_than_character/1: "There are some strong evidences that supported %s more than than the character issue."
+  advocates_conclusion/3: "%s advocates argument %s , which has proposition %s as its conclusion."
+  opposite_action/3: "%s has carried out an action, or set of actions, that imply that %s is personally committed to %s."
+  arguement_not_accepted/2: "Therefore, %s's argument %s should not be accepted."
+  strong_advocate: "%s advocate %s in a stron way indicating her personal commitment to %s."
+  descriptions_opposite/2: " Description of action imply that %s is personally committed to the opposite of %s."
+  commited_opposite/2: "%s is personally committed to the opposite of %s, as shown by commitments expressed in her/ his personal actions or personal circumstances expressing such commitments."
+  credibility_questioned/1: "%s's credibility as a sincere person who believes in his own argument has been put into question by the two premises above."
+  plausibility_decreased/2: "The plausibility of %s's argument %s is decreased or destroyed."
+  character_issue/1: "Character is an issue in dialogue, and more specifically, %s 's argument depent on his/her credibility."
+  not_taken_both/2: "If %s is biased, then it is less likely to have taken the evidence on both sides into account in arriving at conclusion %s."
+  biased/1: "Arguer %s is biased."
+  arguer_not_taken_both/2: "Arguer %s is less likely to have taken the evidence on both sides into account in arriving at conclusion %s."
+  proponent_biased/2: "Person %s the proponent of argument %s , is biased."
+  biased_not_take_part/3: "Person %s 's bias is a failure to honestly take part in a type of dialogue %s, that %s is part of."
+  morally_bad/1: "Therefore, %s is a morally bad person." 
+  not_given_credibility/1: "Therefore, %s should not be given as much credibility as it would have without the bias." 
+
+argument_schemes:
+  - id: ad_hominem
+    meta:
+      title: Generic Ad Hominem
+      source: >
+             Douglas Walton , Fundamentals of Critical Argumentation. 
+             Cambridge: Cambridge University Press, 2006, p. 123.
+    variables: [A,S]
+    conclusions:
+      - bad_not_accepted(A,S)
+    premises:
+      - bad_character(A)
+    exceptions:
+      - stronger_than_character(S)
+    assumptions: 
+     - attack_well_supported
+     - character_revelant
+
+  - id: pragmatic_inconsistency
+    meta:
+      title: Pragmatic Inconsistency
+      source: >
+             Douglas Walton , Ad Hominem Arguments. 
+             Tuscaloosa: University of Alabama Press, 1998, pp. 218, 251.
+    variables: [A,S,X]
+    conclusions:
+      - arguement_not_accepted(A,S)
+    premises:
+      - advocates_conclusion(A,S,X)
+      - opposite_action(A,S,¬X)
+    assumptions: 
+     - strong_advocate(A,S,X)
+     - descriptions_opposite(A,S)
+
+  - id: circumstantial_ad_hominem
+    meta:
+      title: Circumstantial Ad Hominem
+      source: >
+             Douglas Walton, Ad Hominem Arguments. 
+             Tuscaloosa: University of Alabama Press, 1998, pp. 255-256.
+             Douglas Walton, Fundamentals of Critical Argumentation. 
+             Cambridge: Cambridge University Press, 2006, pp. 125-126.
+    variables: [A,S,C]
+    conclusions:
+      - plausibility_decreased(A,S)
+    premises:
+      - advocates_conclusion(A,S,C)
+      - commited_opposite(A,S)
+      - credibility_questioned(A)
+    assumptions: 
+     - character_issue(A)  
+
+  - id: bias
+    meta:
+      title: Argument From Bias
+      source: >
+             Douglas Walton, A Pragmatic Theory of Fallacy. 
+             Tuscaloosa and London : University of Alabama Press, 1995, p. 153.
+    variables: [A,X,C]
+    conclusions:
+      - arguer_not_taken_both(A,C)
+    premises:
+      - not_taken_both(X,C)
+      - biased(A) 
+
+  - id: bias_ad_hominem
+    meta:
+      title: Bias Ad Hominem
+      source: >
+             Douglas Walton, Ad Hominem Arguments. 
+             Tuscaloosa: University of Alabama Press, 1998, p.255.
+    variables: [A,S,D]
+    conclusions:
+      - not_given_credibility(S)
+    premises:
+      - proponent_biased(A,S)
+      - biased_not_take_part(A,D,S)
+      - morally_bad(A)
