@@ -1,31 +1,65 @@
 language:
+  accept_all_steps: "There is a climate of social opinion such that once people come to accept each step as plausible, then they will also be led to accept the next step."
+  act_value/2: "Done act %s is attributed the value %s."
   cannot_present_sametime/2: "%s cannot present %s at the same time and in the same respect."
+  cannot_recieve_evaluation/2: "%s cannot receive the evaluation %s at the same time and in the same respect."
+  causes/2: "Event %s causes event %s."
+  causes_both/2: "Some other event causes both %s and %s."
+  contrary_treatment_required/2: " The contrary treatment %s is required for the subject %s."  
+  converse_relation/3: "%s can be in converse relation %s with %s."
+  correlated/2: "Events %s and %s are correlated."
+  explanatory_theory/2: "There exists a theory explaining how event %s causes event %s."
+  has_occurred/1: "An event %s has occurred."
+  horrible_costs/1: "Event %s would entail horrible costs."
+  if_treatment_required/4: "If the treatment %s is required for the subject %s, for the contrary subject %s the contrary treatment %s is required."
+  initial_presumption/1: "Case %s, is tentatively acceptable as an initial presumption."
+  interference/1: "An event has occurred which interferes with event %s."
+  leads_to_next/3: "There exists a series of cases %s, %s,..., %s where each leads to the next by a combination of causal, precedent, and/or analogical steps."
+  led_to_step: "People will be led to accept the next step once they come to accept each step as plausible."
+  must_present_complementary_contrary/3: "If %s does not present the predicate %s, it must present the complementary contrary predicate %s at the same time and in the same respect."
+  must_present_sametime/2: "%s must present %s at the same time and in the same respect." 
+  negative_consequences/1: "Performing action %s would have negative consequences."
+  not_acceptable_step/1: "%s is not acceptable, contrary to the presumption of the initial premise."
+  not_presents_predicate/3: " If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
+  person_act/2: "Person %s done act %s." 
+  person_acts_value/3: "%s acts %s will be %s."
+  person_judgment_value/2: "Person %s has a judgment value %s."
+  person_value/2: "Person %s is %s."
+  person_value_depending/3: "If a person is %s, his acts %s depending on judgment value, will be %s."
   presents/2: "%s presents %s."
   presents_predicate/3: "If %s presents the predicate %s, it cannot present the contradictory, contrary, converse, incompatible, predicate %s at the same time and in the same respect."
-  not_presents_predicate/3: " If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
-  must_present_sametime/2: "%s must present %s at the same time and in the same respect." 
-  must_present_complementary_contrary/3: "If %s does not present the predicate %s, it must present the complementary contrary predicate %s at the same time and in the same respect."
-  cannot_recieve_evaluation/2: "%s cannot receive the evaluation %s at the same time and in the same respect."
   recieves_evaluation/2: "%s recieves the evaluation %s." 
-  if_treatment_required/4: "If the treatment %s is required for the subject %s, for the contrary subject %s the contrary treatment %s is required."
-  treatment_required/2: "The treatment %s is required for the subject %s."
-  contrary_treatment_required/2: " The contrary treatment %s is required for the subject %s."  
-  relation_converse_relation/4: If %s is in relation %s with %s they can be in the converse relation %s."
+  relation_converse_relation/4: "If %s is in relation %s with %s they can be in the converse relation %s."
   relation_with/3: "%s is in relation %s with %s."
-  converse_relation/3: "%s can be in converse relation %s with %s."
-  person_act/2: "Person %s done act %s." 
-  act_value/2: "Done act %s is attributed the value %s."
-  person_value/2: "Person %s is %s."
-  person_judgment_value/2: "Person %s has a judgment value %s."
-  person_value_depending/3: "If a person is %s, his acts %s depending on judgment value, will be %s."
-  person_acts_value/3: "%s acts %s will be %s."
-  initial_presumption/1: "Case %s, is tentatively acceptable as an initial presumption."
-  leads_to_next/3: "There exists a series of cases %s, %s,..., %s where each leads to the next by a combination of causal, precedent, and/or analogical steps."
-  accept_all_steps: "There is a climate of social opinion such that once people come to accept each step as plausible, then they will also be led to accept the next step."
-  not_acceptable_step/1: "%s is not acceptable, contrary to the presumption of the initial premise."
-  led_to_step: "People will be led to accept the next step once they come to accept each step as plausible."
+  treatment_required/2: "The treatment %s is required for the subject %s."
+  will_occur/1: "An event %s will occur."
+  would_realize/2: "Performing %s would realize event %s."
   
 argument_schemes:
+  - id: slippery_slope_base_case
+    meta:
+      title: Slippery Slope Argument
+      source: >
+        Douglas Walton, Slippery Slope Arguments, Vale Press, Newport News, 1999, pp. 93, 95.
+    variables: [A,E]
+    conclusions:
+      - negative_consequences(A)
+    premises:
+      - would_realize(A,E)
+      - horrible_costs(E)
+
+  - id: slippery_slope_inductive_step
+    meta:
+      title: Slippery Slope Argument
+      source: >
+        Douglas Walton, Slippery Slope Arguments, Vale Press, Newport News, 1999, pp. 93, 95.
+    variables: [E1,E2]
+    conclusions:
+      - horrible_costs(E1)
+    premises:
+      - causes(E1,E2)
+      - horrible_costs(E2)
+  
   - id: opposition-descriptive_1
     meta:
       title: Argument From Opposition - Descriptive Scheme 1
@@ -144,3 +178,31 @@ argument_schemes:
       - accept_all_steps
     assumptions: 
      - led_to_step
+
+  - id: cause_to_effect
+    meta:
+      title: Argument from Cause to Effect
+    variables: [E1,E2]
+    conclusions:
+      - will_occur(E2)
+    premises:
+      - has_occurred(E1)
+      - causes(E1,E2)
+    exceptions:
+      - interference(E1)
+
+  - id: correlation_to_cause
+    meta:
+      title: Argument from Correlation to Cause
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London, 1995, p. 142.
+    variables: [E1,E2]
+    conclusions:
+      - causes(E1,E2)
+    premises:
+      - correlated(E1,E2)
+    assumptions:
+      - explanatory_theory(E1,E2)
+    exceptions:
+      - causes_both(E1,E2)

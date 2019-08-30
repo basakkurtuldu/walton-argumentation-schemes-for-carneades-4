@@ -1,11 +1,11 @@
 language:
-  group_quality/2: "Group %s has the quality %s."
-  group_member/2: "%s is a member,idea, habit, custom, product or method of %s."
-  group_member_quality/3: "If %s has %s, its members ideas, habits, customs, products or methods %s will have it as well."
-  is/2: "% is %s."
-  has_property/2: "Therefore, %s has property %s."
   all_parts_has/2: "Every part that composes %s has property %s"
   all_parts_propert/2: "All the parts %s have the property %s."
+  group_member/2: "%s is a member,idea, habit, custom, product or method of %s."
+  group_member_quality/3: "If %s has %s, its members ideas, habits, customs, products or methods %s will have it as well."
+  group_quality/2: "Group %s has the quality %s."
+  has_property/2: "Therefore, %s has property %s."
+  is/2: "% is %s."
 
 argument_schemes:
   - id: group_2

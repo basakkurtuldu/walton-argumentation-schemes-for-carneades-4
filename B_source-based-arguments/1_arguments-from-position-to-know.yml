@@ -1,29 +1,90 @@
 langugage:
-  group_accepted/2: "Everybody in this group %s accepts %s"
-  position_to_know_group/1: "Group %s is in a special position to know that %s is true."
-  plausibly_true/1: "Therefore, %s is plausibly true."
-  therefore_true/1: "Therefore %s is true."
-  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge"
-  normal_true/1: "If thte situation were normal, %s would he true."
-  case_not_true/1: "It is not the case that %s is true."
-  not_normal: "Therefore, the situation is not normal."
-  not_know_true/1: "I do not know whether %s is true or not."
-  presumption/1: "I have to act on the presumption that %s is true or not true."
-  consequences_presumption/2: If I act on the presumption that %s is true, and is not true, consequences %s will follow."
-  other_consequences_presumption/2: If I act on the presum ption that %s is not true, and A %s true, consequences %s will follow."
-  more_serious_consequences/2: "Consequences %s are more serious than consequences %s."
   act_on_presumption/1: "Therefore, I act on the presumption that %s is not true or true."
-  sufficient_evidence: "Search for the evidence progress is sufficient."
-  true_propositions_contained/2: "It has not been established that all the true propositions in %s are contained in %s."
-  special_proposition/2: "%s is a special type of proposition such that if it were true, it would normally or usually be expected to be in %s."
+  asserts/2: "%s asserts that %s is true."
+  based_on_evidence/1: "The assertion %v is based on evidence."
+  believe_it/1: "Recalling %s is a prima facie reason to believe it."
+  believes/2: "%s believes %s to be true."
+  biased/1: "%s is biased."
+  case_not_true/1: "It is not the case that %s is true."
+  consequences_presumption/2: "If I act on the presumption that %s is true, and is not true, consequences %s will follow."
+  credible_source/2: "Witness %s is a credible source for the domain %s."
+  dishonest/1: "%s is dishonest."
+  expert/2: "%s is an expert in the %s domain."
+  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge"
+  group_accepted/2: "Everybody in this group %s accepts %s"
+  implausible/1: "%s is implausible."
+  in_domain/2: "%s is in the domain of %s."
+  inconsistent_with_known_facts/1: "%s is inconsistent with the known facts."
+  inconsistent_with_other_experts/1:  "%s is inconsistent with what other experts assert."
+  inconsistent_with_other_witnesses/1: "%s is inconsistent with what other witnesses assert."
+  instance/2: "%s is an instance of class %s."
+  internally_consistent/1: "%s is internally consistent."
+  known/1: "%s is known to be true."
+  looks_like/2: "%s looks like a %s."
+  more_serious_consequences/2: "Consequences %s are more serious than consequences %s."
+  normal_true/1: "If thte situation were normal, %s would he true."
+  not_know_true/1: "I do not know whether %s is true or not."
+  not_normal: "Therefore, the situation is not normal."
+  other_consequences_presumption/2: "If I act on the presum ption that %s is not true, and A %s true, consequences %s will follow."
+  other_credible_sources_disagree/1: "Other credible source disagree with %s."
+  plausible_false/2: "Therefore, subject to further investigations in %s it is plausible to presume that %s is false."
+  plausibly_true/1: "Therefore, %s is plausibly true."
+  position_to_know/2: "%s is in a position to know about things in a certain subject domain %s."
+  position_to_know_group/1: "Group %s is in a special position to know that %s is true."
+  presumption/1: "I have to act on the presumption that %s is true or not true."
+  reasonable_belive/1: "It is reasonable to believe %s."
+  recalls/2: "Person %s recalls %s."
   special_in/2: "%s is in %s."
   special_not_in/2: "%s is not in %s."
-  plausible_false/2: "Therefore, subject to further investigations in %s it is plausible to presume that %s is false."
-  recalls/2: "Person %s recalls %s."
-  believe_it/1: "Recalling %s is a prima facie reason to believe it."
-  reasonable_belive/1: "It is reasonable to believe %s."
-
+  special_proposition/2: "%s is a special type of proposition such that if it were true, it would normally or usually be expected to be in %s."
+  sufficient_evidence: "Search for the evidence progress is sufficient."
+  therefore_true/1: "Therefore %s is true."
+  true_propositions_contained/2: "It has not been established that all the true propositions in %s are contained in %s."
+  uninvestigated/1: "The truth of %s has not been sufficiently investigated."
+  untrustworthy/1: "%s is untrustworthy."
+  would_be_known/1: "%s would be known if it were true."
+  
 argument_schemes:
+  - id: position_to_know
+    meta:
+      title: Argument from Position to Know
+      source: >
+        Douglas Walton, Legal Argumentation and Evidence,
+        The Pennsylvania State University Press, University Park, 2002, p.46.
+    variables: [W,D,S]
+    conclusions: [S]
+    premises:
+      - position_to_know(W,D)
+      - asserts(W,S)
+      - in_domain(S,D)
+    exceptions:
+      - dishonest(W)
+
+  - id: witness_testimony
+    meta:
+      title: Argument from Witness Testimony
+      source: >
+        Douglas Walton, Henry Prakken, Chris Reed,
+        Argumentation Schemes and Generalisations in Reasoning about
+        Evidence, Proceedings of the 9th International Conference on
+        Artificial Intelligence and Law, Edinburgh, 2003. New York: ACM
+        Press 2003, pp. 35.  Douglas Walton, Witness Testimony Evidence,
+        Cambridge University Press, 2008.
+    variables: [W,D,S]
+    conclusions: [S]
+    premises:
+      - position_to_know(W,D)
+      - in_domain(D,S)
+      - believes(W,S)
+      - asserts(W,S)
+    assumptions:
+      - internally_consistent(S)
+    exceptions:
+      - inconsistent_with_known_facts(S)
+      - inconsistent_with_other_witnesses(S)
+      - biased(W)
+      - implausible(S)
+
   - id: position_to_know_ad_populum
     meta:
       title: Position to Know Ad Populum Argument
@@ -112,3 +173,64 @@ argument_schemes:
     premises:
       - recalls(P,M)
       - believe_it(M)
+
+  - id: appearance
+    meta:
+      title: Argument from Appearance
+      source: "Douglas Walton, ‘Argument from Appearance: A New Argumentation Scheme’, 2006."
+    variables: [O,C]
+    conclusions:
+      - instance(O,C)
+    premises:
+      - looks_like(O,C)      
+      
+  - id: credible_source
+    meta:
+      title: "Argument from Credible Source"
+      source: "Wyner, A., A
+              functional perspective on argumentation schemes. 
+              Argument and Computation, vol. 7, pp. 113-133. 2016."
+    variables: [W,D,S]
+    conclusions: [S]
+    premises:
+      - credible_source(W,D)
+      - asserts(W,S)
+      - in_domain(S,D)
+    exceptions:
+      - biased(W)
+      - dishonest(W)
+      - other_credible_sources_disagree(S)
+      
+  - id: expert_opinion
+    meta:
+      title: Argument from Expert Opinion
+      source: >
+        Douglas Walton, Appeal to Expert Opinion, The Pennsylvania University Press,
+        University Park, Albany, 1997, p.211-225.
+    variables: [W,D,S]
+    premises:
+      - expert(W,D)
+      - in_domain(S,D)
+      - asserts(W,S)
+    exceptions:
+      - untrustworthy(W)
+      - inconsistent_with_other_experts(S)
+    assumptions:
+      - based_on_evidence(asserts(W,S))
+    conclusions:
+      - S
+
+  - id: ignorance
+    meta:
+      title: Argument from Ignorance
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London, 1995, p. 150
+    variables: [S]
+    conclusions:
+      - ¬S
+    premises:
+      - would_be_known(S)
+      - ¬known(S)
+    exceptions:
+      - uninvestigated(S)

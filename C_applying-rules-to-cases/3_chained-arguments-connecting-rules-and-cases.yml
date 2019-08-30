@@ -1,12 +1,12 @@
 language: 
-  true_acceptable/1: "Proposition %s is true, acceptable to the respondent."
-  sequence/4: "There is an intervening sequence of propositions, %s, %s, ...,%s, %s such that the conditionals must be in proper order."
+  all_has/3: "If %s, has %s, then %s has it too."
+  beyond_contetion/2: "It is clearly beyond contention that %s , has %s."
+  may_have/2: "%s, may have %s, for all we know or can prove."
   must_proper/2: "The conditional, If %s than %s is not, by itself, acceptable to the respondent, nor are shorter sequences acceptable to the respondent."
   proper_sequence: "Sequence of proposition is dealt with in the appropriate order."
-  beyond_contetion/2: "It is clearly beyond contention that %s , has %s."
-  all_has/3: "If %s, has %s, then %s has it too."
   reapplication_sequence: "A sequence of modus ponens subarguments, a premise set linking premises and conclusions from the clear area through the grey area."
-  may_have/2: %s, may have %s, for all we know or can prove."
+  sequence/4: "There is an intervening sequence of propositions, %s, %s, ...,%s, %s such that the conditionals must be in proper order."
+  true_acceptable/1: "Proposition %s is true, acceptable to the respondent."
 
 argument_schemes:
   - id: gradualism

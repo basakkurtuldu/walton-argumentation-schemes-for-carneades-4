@@ -1,40 +1,44 @@
 language:
-  generally_true/1: "%s is generally accepted as true."
-  favor/1: "If %s is generally accepted as true that gives a reason in favor of %s."
-  reason_in_favor/1: "There is a reason in favor of %s."
-  generally_accepted/1: "%s generally accepted as true."
-  doubting_general/1: "There are some strong reasons for doubting %s is generally true."
-  reference_group_accepted/2: "Everybody in particular group %s accepts %s"
-  true/1: "%s is true." 
-  should_accept/1: "You should accept %s"
-  deliberate/2: "Group %s has deliberated intelligently and extensively on whether to accept proposition %s or not."
-  group_accepted/2: "Everybody in this group %s accepts %s"
-  plausibly_true/1: "Therefore, %s is plausibly true."
-  good_group/2: "Everybody who is good, or who represen ts a group %s with good qualities, accepts policy %s."
-  goal_good_group/1: "Your goal is to be a good person, or a member of a group %s with good qualities."
-  group_does/3: "Everybody in a group %s does %s or accepts proposition %s as a policy."
-  acceptable_norm/3: "Doing %s or accepting %s shows that they are an acceptable norm of conduct for %s."
-  group_member/1: "The speaker is a member of %s"
-  morally_acceptable_action/2: "Therefore, my doing %s or accepting %s is morally justified as an acceptable action or policy."
-  property_or_object/2: "Everybody in this group %s accepts %s or has some property, or possesses some object." 
-  elite_group/1: "This group %s is elite, that is, everyone who belongs to it has prestige."
-  goal_prestige: "Prestige is an important goal for you."
   accept_property_object/4: "If you accept %s acquire property %s or buy object %s, then you will a member of the group %s."
-  admired_people/2: "Everybody in this group of admired, popular people %s accepts %s."
-  group_action/2: "If you carry out action %s then you will belong to this group %s."
-  carry_out_action/1: "Therefore, you should carry out action %s."
-  valued_to_be_member/1: "Being a member of this group %s is highly valued for you."
-  out_group_not_accept/2: "If you do not accept %s, you will be out of this group %s."
-  background: "The speaker is an ordinary person, that is, share a common background with the audience."
-  being_credible: "Therefore, you ought to take what I say as being more credible or acceptable."
-  group_background/1: "I, the speaker, am an ordinary person, that is, I share a common background with the members of this audience, group %s."
-  respondent_member/1: "You, the respondent are a member of this audience, group %s."
   accept_saying: "Therefore, you should accept what I say."
   acceptable_in_case/1: "Therefore, %s is acceptable in this case."
-  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to %s."
-  to_think_acceptable/1: "That gives a reason to think that %s is acceptable."
+  acceptable_norm/3: "Doing %s or accepting %s shows that they are an acceptable norm of conduct for %s."
+  admired_people/2: "Everybody in this group of admired, popular people %s accepts %s."
+  asserts/2: "%s asserts that %s is true."
+  background: "The speaker is an ordinary person, that is, share a common background with the audience."
+  bad_moral_character/1: "%s has bad moral character."  
+  being_credible: "Therefore, you ought to take what I say as being more credible or acceptable."
+  carry_out_action/1: "Therefore, you should carry out action %s."
+  character_is_relevant/1: "Character is relevant for evaluating the plausibility of the assertion: %s"  
+  deliberate/2: "Group %s has deliberated intelligently and extensively on whether to accept proposition %s or not."
+  doubting_general/1: "There are some strong reasons for doubting %s is generally true."
+  elite_group/1: "This group %s is elite, that is, everyone who belongs to it has prestige."
+  favor/1: "If %s is generally accepted as true that gives a reason in favor of %s."
+  generally_accepted/1: "%s generally accepted as true."
+  generally_true/1: "%s is generally accepted as true."
+  goal_good_group/1: "Your goal is to be a good person, or a member of a group %s with good qualities."
+  goal_prestige: "Prestige is an important goal for you."
+  good_group/2: "Everybody who is good, or who represen ts a group %s with good qualities, accepts policy %s."
+  good_moral_character/1: "%s is of good moral character."  
+  group_accepted/2: "Everybody in this group %s accepts %s"
+  group_action/2: "If you carry out action %s then you will belong to this group %s."
+  group_background/1: "I, the speaker, am an ordinary person, that is, I share a common background with the members of this audience, group %s."
+  group_does/3: "Everybody in a group %s does %s or accepts proposition %s as a policy."
+  group_member/1: "The speaker is a member of %s"
   have_grounds_think/1: "Large majority have justified grounds to think %s is acceptable."
-
+  morally_acceptable_action/2: "Therefore, my doing %s or accepting %s is morally justified as an acceptable action or policy."
+  out_group_not_accept/2: "If you do not accept %s, you will be out of this group %s."
+  plausibly_true/1: "Therefore, %s is plausibly true."
+  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to %s."
+  property_or_object/2: "Everybody in this group %s accepts %s or has some property, or possesses some object." 
+  reason_in_favor/1: "There is a reason in favor of %s."
+  reference_group_accepted/2: "Everybody in particular group %s accepts %s"
+  respondent_member/1: "You, the respondent are a member of this audience, group %s."
+  should_accept/1: "You should accept %s"
+  to_think_acceptable/1: "That gives a reason to think that %s is acceptable."
+  true/1: "%s is true." 
+  valued_to_be_member/1: "Being a member of this group %s is highly valued for you."
+ 
 argument_schemes: 
   - id: popular_opinion
     meta:
@@ -188,3 +192,31 @@ argument_schemes:
       - to_think_acceptable(A)
     assumptions: 
       - have_grounds_think(A)
+      
+  - id: ethotic1
+    meta:
+      title: Positive Argument from Ethos
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London, 1995, p. 152.
+    variables: [P,S]
+    conclusions: [S]
+    premises:
+      - asserts(P,S)
+      - good_moral_character(P)
+    assumptions:
+      - character_is_relevant(S)
+
+  - id: ethotic2
+    meta:
+      title: Negative Argument from Ethos
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London, 1995, p. 152.
+    variables: [P,S]
+    conclusions: [¬S]
+    premises:
+      - asserts(P,S)
+      - bad_moral_character(P)
+    assumptions:
+      - character_is_relevant(S)

@@ -1,91 +1,187 @@
 language:
+  acceptable_action/1: "%s is an acceptable action."
+  action_realize_goal/2: "Carrying out this action %s is a means to realize %s."
+  action_will_help/2: "Proposed action %s will really help %s."  
+  agent_bring_about/2: "If an agent bring about %s, then %s will occur."
+  alternative_action/2: "I reasonably consider on the given information that bringing about at least one of %s is necessary to bring about %s."
+  alternative_bad/2: "The respondent must bring about %s, or the proponent will undertake to see to it that %s will occur."
+  alternative_means/2: "There are alternative means of realizing %s other than %s." 
+  alternatives/2: "Either you must bring about %s, or %s will occur."
+  assert_bad/2: "I hereby assert that in fact I wil l see to it that %s occurs if you bring about %s."
+  bad/1: "%s is bad."
+  bad_consequence/2: "But, if you do not do %s, some consequence %s, which will be very bad for you, will occur, or is likely to occur."
+  bad_for_goals/1: "%s is a bad outcome, from the point ohiew of my goals."
+  bad_for_you/1: "%s is very bad for you."
+  bring_about_more_effectively/2: "There exists an action that would bring about % more effectively than %s."
+  bring_relive/2: "Therefore, %s ought to bring about %s."
+  bringing_about_action/1: "Therefore, it is required that I bring about %s."
+  brings_about/2: "The action %s brings about %s."
   can_be_case/2: "Either %s or %s can be the case."
-  plausibly_not_case/1: "%s is plausibly not the case."
-  plausibly_case/1: "%s is plausibly the case."
   can_be_required/2: "Either %s or %s can be required."
-  is_required/1: "%s is required."
-  not_required/1: "%is not required."
-  sacrifice_made/2: "For the thing %s, sacrifice %s is made."
+  can_carry_out/2: "%s can carry out %s."
+  carry_out/2: "Therefore, %s ought to carry out %s."
+  carry_out_action/1: "Therefore, you should carry out action %s."
+  cited_bad_consequences/1: "If you bring about %s, some cited bad consequences, %s, will follow."
+  conflict_goals/2: "%s has some other goals %s that conflict with %s." 
+  contributing_action: "Doing act %s contributes to goal %s."
+  current_circumstances/1: "%s is the case in the current circumstances."
+  danger/1: "%s is a danger to you."  
+  distress/1: "Individual %s is in distress, is suffering."
+  do_other/1: "Therefore, you should -ought to, practically speaking- bring about %s."
+  easy_to_achive/1: "%s is easy to achive."
+  ends_important/1: "%s should be regarded as highly important."
+  feasible/1: "It is feasible to perform the action %s."
+  future_losses_outweigh/1: "Future losses of completing the action %s outweigh its value."
+  goal_is_action/1: "My goal is to bring about %s."
+  goals_higher_priority/2: "%s has other goals of higher priority that might conflict with the goal of realizing %s."
+  good/1: "%s is good."
   great_sacrifice/3: "If a great sacrifice %s has been made for %s, then the value %s of it will be greater."
   great_sacrifice_made/2: "A great sacrifice %s has been made for %s."
-  sacrifice_value/2: "%s has a great value."
-  have_goal/1: "I have a goal %s."
-  action_realize_goal/2: "Carrying out this action %s is a means to realize %s."
-  other_goals_conflict/1: "Other goals that might conflict with %s."
-  more_efficient_alternative_actions/2: " More effecient actions bringing about %s and that would also brin about %s."
-  possible_action/1: "%s is possible."
-  possible_goal/1: "%s is possible."
-  carry_out_action/1: "Therefore, you should carry out action %s."
-  incompatible_consequences/2: "Bringing about %s has incompatible consequences with %s."
-  goal_is_action/1: "My goal is to bring about %s."
-  alternative_action/2: "I reasonably consider on the given information that bringing about at least one of %s is necessary to bring about %s."
-  necessary_action/2: I have selected one member %s as an acceptable, or as the most acceptable, necessary condition for %s."
-  practicality_action/1: Nothing unchangeable prevents me from bringing about %s, as far as I know."
-  more_acceptable_bringing/2: Bringing about %s is more acceptable to me than not bringing about %s."
-  bringing_about_action/1: Therefore, it is required that I bring about %s."
-  alternative_means/2: "There are alternative means of realizing %s other than %s." 
-  acceptable_action/1: "%s is an acceptable action."
-  possible_agent/2: " %s is possible to do for agent %s."
-  side_effect_action/2: "There are negative side effects of bringing %s bringing about %s."  
-  conflict_goals/2: "%s has some other goals %s that conflict with %s." 
-  sufficient_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, sufficient condition for %s."
-  should_do/2: "%s should do %s."
-  contributing_action: "Doing act %s contributes to goal %s."
-  person_goal/2: "Person %s has goal %s."
-  means_to_end/2: "%s is means to the end %s."
-  good/1: "%s is good."
-  means_end: "Means %s should be regarded as an end."
-  more_important_ends: "Ends are more important than the means used to achieve them."
-  ends_important/1: "%s should be regarded as highly important."
-  easy_to_achive/1: "%s is easy to achive."
-  tells_intend/3: "%s intends to realize %s, and tells %s this."
-  situation_necessiy/4: "As %s sets the situation, %s is a necessary or sufficient condition for caryying out %s, and tells %s this."
-  should_carry_out/2: "Therefore, %s should carry out %s, unless he has better reasons not to."
-  goals_higher_priority/2: "%s has other goals of higher priority that might conflict with the goal of realizing %s."
-  side_effect_other_act/2: "Carrying out %s have known side effects that might conflict with %s other goals."
-  stop_realize_wasted/2: If %s stops trying to realize %s now, all previous efforts will be wasted."
-  waste_bad_thing: "If all %s 's previous attempts to realize %s are wasted, that would be a bad thing."
-  ought_to_continue: Therefore, %s ought to continue trying to realize %s."
-  posible/1: "%s is possible."
-  not_doing/1: "You were considering not doing %s."
-  bad_consequence/2: But, if you do not do %s, some consequence %s, which will be very bad for you, will occur, or is likely to occur."
-  prudential: "Therefore, you ought to reconsider other things being equal and you ought prudentially to do %s."
-  strongly_occur: "If you don't do %s consequences %s may strongly appear."
-  other_consequences: "There are some good or bad consequences of doing %s should be taken into account."
-  alternatives/2: "Either you must bring about %s, or %s will occur."
-  undesirable/1: "%s is bad or undesirable, from your point of view."  
-  do_other/1: "Therefore, you should -ought to, practically speaking- bring about %s."
-  cited_bad_consequences/1: "If you bring about %s, some cited bad consequences, %s, will follow."
-  position_to_know/1: "I am in position to bring about %s."
-  assert_bad/2: "I hereby assert that in fact I wil l see to it that %s occurs if you bring about %s."
-  not_bring_about/1: Therefore, you had better not bring about A.
-  alternative_bad/2: "The respondent must bring about %s, or the proponent will undertake to see to it that %s will occur."
-  not_do_appear/2: "If you do not bring about %s, then %s will occur."
-  bad_for_you/1: "%s is very bad for you."
-  prevent/1: "Therefore, you ought to prevent %s if possible."
-  only_way_prevent/2: "But the only way for you to prevent %s is bring about %s."
-  ought_to_bring_about/1: "Therefore, you ought to bring about %s."
-  occur/2: "If the respondent bring about %s then %s will occur."
-  danger/1: "%s is a danger to you."  
-  should_not: "Therefore you should not bring about %s."
-  help_needed/2: "All the %s ought to help all the %s. if it is in a situation needs help, and giving help would not be too costly."
-  situation_help/3: "%s is in a situation where some action %s by %s would help."
-  can_carry_out/2: "%s can carry out %s."
-  not_too_costly/2: "%s 's carrying out %s would not be too costly that is the negative side effects would not be too great."
-  carry_out/2: "Therefore, %s ought to carry out %s."
-  action_will_help/2: "Proposed action %s will really help %s."  
-  possible_carry_out/2: "It is possible for %s to carry out %s." 
-  greater_side_effects/1: "There will be greater negative side effects of carrying out %s."
-  distress/1: "Individual %s is in distress, is suffering."
-  relieve/2: "If %s brings about %s, it will relieve or help to relieve this distress."
-  bring_relive/2: "Therefore, %s ought to bring about %s."
-  really_distress/1: "%s is really in distress."
   great_side_effects/2: "There will be greater negative side effects of %s 's carrying out %s."
-  agent_bring_about/2: "If an agent bring about %s, then %s will occur."
-  bad_for_goals/1: "%s is a bad outcome, from the point ohiew of my goals."
+  greater_side_effects/1: "There will be greater negative side effects of carrying out %s."
+  have_goal/1: "I have a goal %s."
+  help_needed/2: "All the %s ought to help all the %s. if it is in a situation needs help, and giving help would not be too costly."
+  incompatible_consequences/2: "Bringing about %s has incompatible consequences with %s."
+  incompatible_goal/1: "Another goal is incompatible with %s."  
+  intervening_actions/2: "Intervening actions are needed after performing %s to achieve %s."
+  is_required/1: "%s is required."
+  legitimate_value/1: "%s is a legitimate value."
+  means_end: "Means %s should be regarded as an end."
+  means_to_end/2: "%s is means to the end %s."
+  more_acceptable_bringing/2: "Bringing about %s is more acceptable to me than not bringing about %s."
+  more_efficient_alternative_actions/2: " More effecient actions bringing about %s and that would also brin about %s."
+  more_important_ends: "Ends are more important than the means used to achieve them."
+  necessary_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, necessary condition for %s."
   not_bring_about/1: "Therefore, practically speaking, I should not  bring about %s."
+  not_do_appear/2: "If you do not bring about %s, then %s will occur."
+  not_doing/1: "You were considering not doing %s."
+  not_required/1: "%is not required."
+  not_too_costly/2: "%s 's carrying out %s would not be too costly that is the negative side effects would not be too great."
+  occur/2: "If the respondent bring about %s then %s will occur."
+  only_way_prevent/2: "But the only way for you to prevent %s is bring about %s."
+  other_consequences: "There are some good or bad consequences of doing %s should be taken into account."
+  other_goals_conflict/1: "Other goals that might conflict with %s."
+  ought_to_bring_about/1: "Therefore, you ought to bring about %s."
+  ought_to_continue: "Therefore, %s ought to continue trying to realize %s."
+  person_goal/2: "Person %s has goal %s."
+  plausibly_case/1: "%s is plausibly the case."
+  plausibly_not_case/1: "%s is plausibly not the case."
+  posible/1: "%s is possible."
+  position_to_know/1: "I am in position to bring about %s."
+  possible/1: "Action %s is possible."
+  possible_action/1: "%s is possible."
+  possible_agent/2: " %s is possible to do for agent %s."
+  possible_carry_out/2: "It is possible for %s to carry out %s." 
+  possible_goal/1: "%s is possible."
+  practicality_action/1: "Nothing unchangeable prevents me from bringing about %s, as far as I know."
+  prevent/1: "Therefore, you ought to prevent %s if possible."
+  promote_more_effectively/2: "There exists an action that would promote the value %s more effectively than %s."
+  prudential: "Therefore, you ought to reconsider other things being equal and you ought prudentially to do %s."
+  realize_more_effectively/2: "There exists an action that would realize the goal %s more effectively than %s."
+  really_distress/1: "%s is really in distress."
+  relieve/2: "If %s brings about %s, it will relieve or help to relieve this distress."
+  sacrifice_made/2: "For the thing %s, sacrifice %s is made."
+  sacrifice_value/2: "%s has a great value."
+  should_be_performed/1: "Action %s should be performed."
+  should_carry_out/2: "Therefore, %s should carry out %s, unless he has better reasons not to."
+  should_do/2: "%s should do %s."
+  should_not: "Therefore you should not bring about %s."
+  side_effect_action/2: "There are negative side effects of bringing %s bringing about %s."  
+  side_effect_other_act/2: "Carrying out %s have known side effects that might conflict with %s other goals."
+  side_effects/2: "Performing %s in %s would have side-effects which demote some value."
+  situation_help/3: "%s is in a situation where some action %s by %s would help."
+  situation_necessiy/4: "As %s sets the situation, %s is a necessary or sufficient condition for caryying out %s, and tells %s this."
+  stop_realize_wasted/2: "If %s stops trying to realize %s now, all previous efforts will be wasted."
+  strongly_occur: "If you don't do %s consequences %s may strongly appear."
+  sufficient_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, sufficient condition for %s."
+  sunk_costs/2:  "The costs incurred performing %s thus far are %s."
+  tells_intend/3: "%s intends to realize %s, and tells %s this."
+  too_high_to_waste/1: "The sunk costs of %s are too high to waste."
+  undesirable/1: "%s is bad or undesirable, from your point of view."  
+  waste_bad_thing: "If all %s 's previous attempts to realize %s are wasted, that would be a bad thing."
+  worthy_goal/1: "%s is a worthy goal."
+  would_be_realized/2: "%s would be realized in %s."
+  would_bring_about/3: "Performing %s in %s would bring about %s."
+  would_promote_value/2:  "Achieving the goal %s would promote the value %s."
   
 argument_schemes: 
+  - id: practical_reasoning1
+    meta:
+      title: Argument from Value-Based Practical Reasoning
+      source: >
+        Atkinson, K., and Bench-Capon, T. J. M.
+        Practical reasoning as presumptive argumentation using action
+        based alternating transition systems. Artificial Intelligence 171,
+        10-15 (2007), 855–874.
+    variables: [A,S1,S2,G,V]
+    conclusions:
+      - should_be_performed(A)
+    premises:
+      - current_circumstances(S1)
+      - would_bring_about(A,S1,S2)
+      - would_be_realized(G,S2)
+      - would_promote_value(G,V)
+    assumptions:
+      - legitimate_value(V)
+      - worthy_goal(G)
+      - possible(A)
+    exceptions:
+      - bring_about_more_effectively(S2,A)
+      - realize_more_effectively(G,A)
+      - promote_more_effectively(V,A)
+      - side_effects(A,S1)
+
+  - id: practical_reasoning2
+    meta:
+      title: Argument from Instrumental Practical Reasoning
+      source: >
+        Walton, Douglas (2015). Goal-Based Reasoning for Argumentation. 
+        Cambridge University Press.
+    variables: [A,S1,S2,G]
+    conclusions:
+      - should_be_performed(A)
+    premises:
+      - current_circumstances(S1)
+      - would_bring_about(A,S1,S2)
+      - would_be_realized(G,S2)
+    assumptions:
+      - possible(A)
+      - possible(G)
+    exceptions:
+      - bring_about_more_effectively(S2,A)
+      - realize_more_effectively(G,A)
+      - intervening_actions(A,G)
+      - side_effects(A,S1)
+      - incompatible_goal(G)
+
+  - id: negative_consequences
+    meta:
+      title: Argument from Negative Consequences
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London,
+        1995, pp. 155-156.
+    variables: [A,G]
+    conclusions:
+      - ¬should_be_performed(A)
+    premises:
+      - brings_about(A,G)
+      - bad(G)
+      
+  - id: positive_consequences
+    meta:
+      title: Argument from Positive Consequences
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London,
+        1995, pp. 155-156.
+    variables: [A,G]
+    conclusions:
+      - should_be_performed(A)
+    premises:
+      - brings_about(A,G)
+      - good(G)
+
   - id: alternative_cognitive
     meta:
       title: Argument From Alternatives - Cognitive Schemes
@@ -425,3 +521,20 @@ argument_schemes:
     premises:
       - agent_bring_about(A,B)
       - bad_for_goals(B)
+      
+  - id: sunk_costs
+    meta:
+      title: Argument from Sunk Costs
+      source: >
+        Douglas Walton, ‘The Sunk Costs Fallacy or Argument from Waste’,
+        Argumentation, 16, 2002, p. 489
+    variables: [A,C]
+    conclusions:
+      - should_be_performed(A)
+    premises:
+      - sunk_costs(A,C)
+      - too_high_to_waste(C)
+    assumptions:
+      - feasible(A)
+    exceptions:
+      - future_losses_outweigh(A)

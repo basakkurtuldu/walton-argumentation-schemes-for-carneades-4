@@ -1,18 +1,18 @@
 language: 
-  member_quality/3: "Member %s of the group %s has the quality %s"
-  member_group_quality/3: "If the member %s quality %s then %s will have it as well."
-  has/2: "%s has %s"
-  all_parts_propert/2: "All the parts %s have the property %s."
-  has_property/2: "Therefore, %s has property %s."
   all_parts_has/2: "Every part that composes %s has property %s"
+  all_parts_propert/2: "All the parts %s have the property %s."
+  has/2: "%s has %s"
+  has_property/2: "Therefore, %s has property %s."
+  member_group_quality/3: "If the member %s quality %s then %s will have it as well."
+  member_quality/3: "Member %s of the group %s has the quality %s"
+  part_is/2: "%s, is %s."
+  part_propert/2: "%s is %s." 
+  part_whole/5: "%s is %s only if %s, or %s.., or ...%s is."
+  smaller_part_property/3: " %s is less %s then %s because it's a smaller part of it."
   species_of/2: "%s is a species of %s."
   species_property/2: "%s is %s."
-  part_propert/2: "%s is %s." 
-  smaller_part_property/3: " %s is less %s then %s because it's a smaller part of it."
+  whole_is/2: "%s is %s."
   whole_of/4: "%s is the whole of %s, %s,..,%s."
-  part_whole/5: "%s is %s only if %s, or %s.., or ...%s is."
-  part_is/2: "%s, is %s."
-  whole_is/2: "%s is %s." 
   
 argument_schemes:
   - id: group_1

@@ -1,27 +1,54 @@
 language:
+  applicable/1: "Argument %s is applicable."
   both_properties/3: "Therefore, generally, if %s has property %s then it also has property %s."
-  has_properties/3: "In this particular case, the individual %s has property %s and also property %s."
-  impair_general/1: "Special circumstances of example %s impair its generalizability"
-  typical_example/1: " Example %s is an typical example of the kinds of cases the generalzation covers."
-  valid_rule/1: "The rule is valid for %s."
-  usually_properties/3: "Usually, if %s has property %s it also has property %s."
-  same_properties/3: "In this case, %s has property %s and %s."
-  should_do/2: "%s should do %s."
-  prestigious_individual/2: "Individual %s is prestigious for -admired by- individuals %s."
   carry_out_act/2: "%s carries out action %s."
-  worth_imitated/2: "Then %s worth being imitated by %s."
-  want_to_be_different/2: "%s want to be different from %s."
   carry_out_right/2: "Therefore, the right thing to do in %s is carry out %s."
   carry_out_wrong/2: "Therefore, the wrong thing to do in %s is carry out %s."
-  similar_to/2: "%s is similar to %s."
-  right_to_do/2: "The right thing to do in %s, was to carry out action %s."
-  wrong_to_do/2: "The wrong thing to do in %s, was to carry out action %s."
-  image/2: "Person %s has a %s image -an image of a perceptible property-."
   exemplify/1: "To have a %s image -an image of a perceptible property- is a prima facie reason to believe that the circumstances exemplify it."
+  has_conclusion/2: "Rule %s has conclusion %s."
+  has_properties/3: "In this particular case, the individual %s has property %s and also property %s."
+  image/2: "Person %s has a %s image -an image of a perceptible property-."
+  impair_general/1: "Special circumstances of example %s impair its generalizability"
+  in_case/2: "%s is true in case %s."
+  inapplicable_rule/1: "Rule %s is inapplicable in this case."
+  more_on_point/2: "%s is false in another case which is more on point than case %s."
+  not_indicator/1: "The circumstances such that having a %s image is not a reliable indicator of it."  
+  prestigious_individual/2: "Individual %s is prestigious for -admired by- individuals %s."
   reasonable_case/1: "It is reasonable to believe that %s is the case."
-  not_indicator/1: The circumstances such that having a %s image is not a reliable indicator of it."  
+  relevant_differences/1: "There are relevant differences between case %s and the current case."
+  relevant_differences/2: "There are relevant differences between case %s and case %s."
+  right_to_do/2: "The right thing to do in %s, was to carry out action %s."
+  rule_of_case/2: "Rule %s is the ratio decidendi of case %s."
+  same_properties/3: "In this case, %s has property %s and %s."
+  should_do/2: "%s should do %s."
+  similar_case/1: "Case %s is similar to the current case."
+  similar_to/2: "%s is similar to %s."
+  typical_example/1: " Example %s is an typical example of the kinds of cases the generalzation covers."
+  usually_properties/3: "Usually, if %s has property %s it also has property %s."
+  valid/1: "Rule %s is valid."
+  valid_rule/1: "The rule is valid for %s."
+  want_to_be_different/2: "%s want to be different from %s."
+  worth_imitated/2: "Then %s worth being imitated by %s."
+  wrong_to_do/2: "The wrong thing to do in %s, was to carry out action %s."
 
 argument_schemes:
+  - id: precedent
+    meta:
+      title: Argument from Precedent
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London,
+        1995, p. 148
+    variables: [S,C,R]
+    conclusions: [S]
+    premises:
+      - similar_case(C)
+      - rule_of_case(R,C)
+      - has_conclusion(R,S)
+    exceptions:
+      - relevant_differences(R,C)
+      - inapplicable_rule(R)
+      
   - id: from_example
     meta:
       title: Argument From Example
@@ -116,3 +143,32 @@ argument_schemes:
       - exemplify(I)
     exceptions:
       - not_indicator(I)
+      
+  - id: analogy
+    meta:
+      title: Argument from Analogy
+      source: >
+        Douglas Walton, Fundamentals of Critical Argumentation,
+        Cambridge University Press, New York 2006, p. 96-97.
+    variables: [A,C]
+    conclusions: [A]
+    premises:
+      - similar_case(C)
+      - in_case(A,C)
+    exceptions:
+      - relevant_differences(C)
+      - more_on_point(A,C)
+
+  - id: established_rule
+    meta:
+      title: Argument from an Established Rule
+      source: >
+        Douglas Walton, A Pragmatic Theory of Fallacy,
+        The University of Alabama Press, Tuscaloosa and London, 1995, p. 147.
+    variables: [C,R]
+    conclusions: [C]
+    premises:
+      - has_conclusion(R,C)
+      - applicable(R)
+    assumptions:
+      - valid(R)

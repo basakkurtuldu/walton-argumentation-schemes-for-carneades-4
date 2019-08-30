@@ -203,7 +203,6 @@ language:
   judged_positive_value/2: "Value %s is positive as judged by agent %s."
   known/1: "%s is known to be true."
   legitimate_value/1: "%s is a legitimate value."
-  looks_like/1: "This object looks like it could be classified under verbal category %s."
   looks_like/2: "%s looks like a %s."
   may_have/2: "%s, may have %s, for all we know or can prove."
   means_end: "Means %s should be regarded as an end."
@@ -1690,21 +1689,6 @@ argument_schemes:
     exceptions:
       - not_indicator(I)
       
-  - id: appearance
-    meta:
-      title: Argument From Appearence
-      source: >
-             Douglas Walton, "Argument from Appearance: "A New Argumentation Scheme." 
-             Logique et Analyse 195 (2006), pp. 319-340.
-    variables: [C,D]
-    conclusions:
-      - classified_under(C)
-    premises:
-      - looks_like(C)
-    exceptions:
-      - misleading(C)
-      - another_category(C,D)
-
   - id: memory
     meta:
       title: Argument From Memory
