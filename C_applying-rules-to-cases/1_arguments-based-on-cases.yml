@@ -32,9 +32,9 @@ language:
   wrong_to_do/2: "The wrong thing to do in %s, was to carry out action %s."
 
 argument_schemes:
-  - id: precedent
+  - id: exeption_to_rule
     meta:
-      title: Argument from Precedent
+      title: Argument From Exception to a Rule
       source: >
         Douglas Walton, A Pragmatic Theory of Fallacy,
         The University of Alabama Press, Tuscaloosa and London,
