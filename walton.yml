@@ -171,7 +171,7 @@ language:
   have_grounds_think/1: "Large majority have justified grounds to think %s is acceptable."
   help_needed/2: "All the %s ought to help all the %s. if it is in a situation needs help, and giving help would not be too costly."
   horrible_costs/1: "Event %s would entail horrible costs."
-  hypothesis_event/2: "If hpothesis %s is true, then proposition reporting event %s will be observed to be true."
+  hypothesis_event/2: "If hypothesis %s is true, then proposition reporting event %s will be observed to be true."
   if_treatment_required/4: "If the treatment %s is required for the subject %s, for the contrary subject %s the contrary treatment %s is required."
   image/2: "Person %s has a %s image -an image of a perceptible property-."
   impair_general/1: "Special circumstances of example %s impair its generalizability."
@@ -1194,13 +1194,13 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 329-330. 
-    variables: [D,G,G1,C,C1]
+    variables: [D,G,C,C1]
     conclusions:
       - plausible_conclusion(C1) 
     premises:
       - data_set(D)
       - diagram_set(G,D,C)
-      - succesful_diagram(G1)
+      - succesful_diagram(C1)
 
   - id: abductive_action_to_character
     meta:
@@ -1973,9 +1973,9 @@ argument_schemes:
       - side_effects(A,S1)
       - incompatible_goal(G)
 
-  - id: precedent
+  - id: exeption_to_rule
     meta:
-      title: Argument from Precedent
+      title: Argument From Exception to a Rule
       source: >
         Douglas Walton, A Pragmatic Theory of Fallacy,
         The University of Alabama Press, Tuscaloosa and London,
