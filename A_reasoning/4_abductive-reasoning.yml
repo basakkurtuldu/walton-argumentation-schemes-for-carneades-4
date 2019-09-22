@@ -16,7 +16,7 @@ language:
   event_true/1: "%s has been observed to be true, in a given instance."
   explanation/2: "Theory %s explains %s."
   finding_true/1: "Finding %s is true in this situation."
-  hypothesis_event/2: "If hpothesis %s is true, then proposition reporting event %s will be observed to be true."
+  hypothesis_event/2: "If hypothesis %s is true, then proposition reporting event %s will be observed to be true."
   in/2: "%s contains %s as a member."
   indicated_true/2: "%s is generally indicated as true when its sign %s is true."
   more_coherent_explanation/2: "There exists a more coherent explanation than theory %s of observation %s."
@@ -76,13 +76,13 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 329-330. 
-    variables: [D,G,G1,C,C1]
+    variables: [D,G,C,C1]
     conclusions:
       - plausible_conclusion(C1) 
     premises:
       - data_set(D)
       - diagram_set(G,D,C)
-      - succesful_diagram(G1)
+      - succesful_diagram(C1)
 
   - id: abductive_action_to_character
     meta:
