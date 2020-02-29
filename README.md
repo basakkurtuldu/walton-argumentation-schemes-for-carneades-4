@@ -14,7 +14,7 @@ This study was conducted within the scope of the master's thesis titled **Dougla
 
 According to our correspondence with **Dr. Douglas Walton** on September 19, 2019, in which he informed us about the changes he made on some of the argumentation schemes which were presented in [**Argumentation Schemes (2008)**](https://www.cambridge.org/core/books/argumentation-schemes/9AE7E4E6ABDE690565442B2BD516A8B6) , we implemented these changes in our file:
 
-* Argument From Precedent_ was changed to _Argument From Exception To A Rule_.
+* _Argument From Precedent_ was changed to _Argument From Exception To A Rule_.
 * Spelling error was corrected in _Abductive Argumentation Scheme_.
 * Spelling error was corrected in _Argument From Evidence to Hypothesis_.
 
