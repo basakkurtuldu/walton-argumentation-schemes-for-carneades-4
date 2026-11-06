@@ -681,7 +681,7 @@ argument_schemes:
       source: >
              Ch. Perelman and L.Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp.231-233,234-241.
-    variables: [Y,X,P]
+    variables: [Y,X,A]
     conclusions:
       - part_propert(Y,A)
     premises:
@@ -709,11 +709,11 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 317. 
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - cannot_present_sametime(A,P')
+      - cannot_present_sametime(A,P2)
     premises:
-      - presents_predicate(A,P,P')
+      - presents_predicate(A,P,P2)
       - presents(A,P)
  
   - id: opposition-descriptive_2
@@ -722,11 +722,11 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 317.
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - must_present_sametime(A,P')
+      - must_present_sametime(A,P2)
     premises:
-      - not_presents_predicate(A,P,P')
+      - not_presents_predicate(A,P,P2)
       - ¬presents(A,P)
 
   - id: opposition-descriptive_3
@@ -735,11 +735,11 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - must_present_sametime(A,P')
+      - must_present_sametime(A,P2)
     premises:
-      - must_present_complementary_contrary(A,P,P')
+      - must_present_complementary_contrary(A,P,P2)
       - ¬presents(A,P)
 
   - id: opposition-normative
@@ -748,12 +748,12 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [A,X,X']
+    variables: [A,X,X2]
     conclusions:
-      - cannot_recieve_evaluation(A,X')
+      - cannot_recieve_evaluation(A,X2)
     premises:
-      - cannot_present_sametime(A,X,X')
-      - recieves_evaluation(A,X')
+      - cannot_present_sametime(A,X,X2)
+      - recieves_evaluation(A,X2)
 
   - id: rhetorical_oppositions_normative
     meta:
@@ -761,11 +761,11 @@ argument_schemes:
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [X,X',A,A']
+    variables: [X,X2,A,A2]
     conclusions:
-      - contrary_treatment_required(X',A')
+      - contrary_treatment_required(X2,A2)
     premises:
-      - if_treatment_required(X,A,A',X)
+      - if_treatment_required(X,A,A2,X)
       - treatment_required(X,A)
 
   - id: rhetorical_oppositions_descriptive
@@ -774,11 +774,11 @@ argument_schemes:
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [A,B,R,R']
+    variables: [A,B,R,R2]
     conclusions:
-      - converse_relation(B,R',A)
+      - converse_relation(B,R2,A)
     premises:
-      - relation_converse_relation(A,R,B,R')
+      - relation_converse_relation(A,R,B,R2)
       - relation_with(A,R,B)
 
   - id: alternative_cognitive
@@ -814,7 +814,7 @@ argument_schemes:
       source: >
                 Douglas Walton, Argumentation Schmes for Presumptive Reasoning. 
                 Mahwah, NJ.: Erlbaum, 1996, pp.102-103.       
-    variables: [A,P]
+    variables: [A,F]
     conclusions: 
       -  vaguness_recejted(A)
     premises: 
@@ -835,7 +835,7 @@ argument_schemes:
       - arbitrary_rejected(A)
     premises: 
       - arbitrary_defined_property(A,F)
-      - needed_nonarbitrary((A,F)
+      - needed_nonarbitrary(A,F)
       - arbitrary_property(F,A)
 
   - id: interaction_act_person_1
@@ -1562,7 +1562,7 @@ argument_schemes:
       source: >
              Douglas Walton, A Pragmatic Theory of Fallacy. 
              Tuscaloosa and London: University of Alabama Press, 1995, p. 160.
-    variables: [A1,A2,A,P]
+    variables: [A1,A2,A,P,F]
     conclusions:
       - not_has_propery(A1,P)
     premises:
