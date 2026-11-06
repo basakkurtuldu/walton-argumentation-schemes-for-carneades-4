@@ -224,7 +224,7 @@ def regression(master, rep):
             "the conclusion is not to bring about the action, not the danger (sec. 37, p. 334)"),
         ("treat", lambda x: "position_to_bring_about" in fns(x, "premises") and len(args(stmt(x, "premises", "cited_bad_consequences") or "")) == 2,
             "the proponent is in a position to bring about the cited consequence (sec. 35, p. 333)"),
-        ("abductive_backward", lambda x: "best_account" in fns(x, "premises"),
+        ("abductive_backward", lambda x: "succesful_account" in fns(x, "premises"),
             "the chosen account must explain the data most successfully (sec. 31.1, pp. 329-330)"),
         ("opposition-normative", lambda x: "cannot_opposite_evaluation" in fns(x, "premises")
             and args(stmt(x, "premises", "recieves_evaluation"))[1:] == args(stmt(x, "premises", "cannot_opposite_evaluation"))[1:2],

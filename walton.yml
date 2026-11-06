@@ -493,8 +493,8 @@ argument_schemes:
               Argumentation Schemes. Cambridge University Press, p. 312.
     variables: [G,X,A]
     conclusions:
+      - morally_acceptable_action(X,A)
     premises:
-      -  morally_acceptable_action(X,A)
       - group_does(G,X,A)
       - acceptable_norm(X,A,G)
       - group_member(G)
@@ -549,9 +549,9 @@ argument_schemes:
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
     variables: []
     conclusions:
-      - background
-    premises:
       - being_credible
+    premises:
+      - background
 
   - id: common_folks_group_ad_populum
     meta:
@@ -589,9 +589,9 @@ argument_schemes:
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
     variables: [A,P1,P2]
     conclusions:
-      - has_properties(A,P1,P2)
-    premises:
       - both_properties(A,P1,P2)
+    premises:
+      - has_properties(A,P1,P2)
     exceptions:
       - impair_general(A)
     assumptions: 
@@ -673,7 +673,7 @@ argument_schemes:
     premises:
       - all_parts_propert(A,P)
     assumptions: 
-     - all_parts_has(A,P)
+     - compositionally_hereditary(A,P)
 
   - id: part_in_whole
     meta:
@@ -697,11 +697,25 @@ argument_schemes:
              Douglas Walton, Argument: The Logic of Fallacies, Toronto: McGraw-Hill Ryerson, 1982, pp.206-208.
     variables: [A,P]
     conclusions:
-      - has_property(A,P)
-    premises:
       - all_parts_propert(A,P)
+    premises:
+      - has_property(A,P)
     assumptions: 
-     - all_parts_has(A,P)
+     - divisionally_hereditary(A,P)
+
+  - id: whole_into_parts
+    meta:
+      title: Argument From Division - Division of the Whole into its Parts
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 231-233,234-241.
+    variables: [X,X1,X2,X3,A]
+    conclusions:
+      - whole_is(X,A)
+    premises:
+      - whole_of(X,X1,X2,X3)
+      - part_whole(X,A,X1,X2,X3)
+      - part_is(X1,A)
      
   - id: opposition-descriptive_1
     meta:
@@ -731,7 +745,7 @@ argument_schemes:
 
   - id: opposition-descriptive_3
     meta:
-      title: Argument From Opposition - Descriptive Scheme 2
+      title: Argument From Opposition - Descriptive Scheme 3
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
@@ -752,8 +766,8 @@ argument_schemes:
     conclusions:
       - cannot_recieve_evaluation(A,X2)
     premises:
-      - cannot_present_sametime(A,X,X2)
-      - recieves_evaluation(A,X2)
+      - cannot_opposite_evaluation(A,X,X2)
+      - recieves_evaluation(A,X)
 
   - id: rhetorical_oppositions_normative
     meta:
@@ -765,7 +779,7 @@ argument_schemes:
     conclusions:
       - contrary_treatment_required(X2,A2)
     premises:
-      - if_treatment_required(X,A,A2,X)
+      - if_treatment_required(X,A,X2,A2)
       - treatment_required(X,A)
 
   - id: rhetorical_oppositions_descriptive
@@ -810,7 +824,7 @@ argument_schemes:
 
   - id:  verbal_classification_vagueness
     meta: 
-      title: Argument From Definition to Verbal Classification 
+      title: Argument From Vagueness of a Verbal Classification
       source: >
                 Douglas Walton, Argumentation Schmes for Presumptive Reasoning. 
                 Mahwah, NJ.: Erlbaum, 1996, pp.102-103.       
@@ -905,7 +919,7 @@ argument_schemes:
       - sacrifice_value(A,V)
     premises: 
       - sacrifice_made(A,S)
-      - great_sacrifice(S,A,X)
+      - great_sacrifice(S,A,V)
       - great_sacrifice_made(S,A)
 
   - id: group_1
@@ -1183,8 +1197,9 @@ argument_schemes:
     conclusions:
       - plausible_hypothesis(A1)
     premises:
-      - data_set(D,A)
-      - data_account (A1,D)
+      - data_set(D)
+      - data_account(A,D)
+      - succesful_account(A1,D)
     assumptions: 
      - sufficient_account(A1,D)
       
@@ -1270,7 +1285,7 @@ argument_schemes:
              Douglas Walton, Argumentation Schemes for Presumptive Reasoning. Mahwah, N.J.: Erlbaum, 1996, pp. 67-70.             
     variables: [H,A]
     conclusions:
-      - ¬A
+      - ¬H
     premises:
       - hypothesis_event(H,A)
       - event_false(A)
@@ -1293,7 +1308,21 @@ argument_schemes:
     exceptions:
       - other_consequences(X)
     assumptions: 
-     -  strongly_occur(X)
+     -  strongly_occur(X,C)
+
+  - id: negative_consequences_reasoning
+    meta:
+      title: Argument From Consequences - Reasoning From Negative Consequences
+      source: >
+             Douglas Walton, A Pragmatic Theory of Fallacy.
+             Tuscaloosa and London: University of Alabama Press, 1995. pp. 155-156.
+             Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 123.
+    variables: [A,B]
+    conclusions:
+      - should_not_bring_about(A)
+    premises:
+      - agent_bring_about(A,B)
+      - bad_for_goals(B)
 
   - id: pragmatic_alternative
     meta:
@@ -1309,7 +1338,7 @@ argument_schemes:
 
   - id: treat
     meta:
-      title: Argument From Treat 
+      title: Argument From Threat
       source: >
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London:
              University of Alabama Press, 1995, p. 157.
@@ -1317,8 +1346,8 @@ argument_schemes:
     conclusions:
       - not_bring_about(X)
     premises:
-      - cited_bad_consequences(X)
-      - position_to_know(X)
+      - cited_bad_consequences(X,C)
+      - position_to_bring_about(C)
       - assert_bad(X,C)
       
   - id: ad_baculum
@@ -1354,7 +1383,7 @@ argument_schemes:
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 173.             
     variables: [X,Y]
     conclusions:
-      - should_not(Y)
+      - should_not(X)
     premises:
       - occur(X,Y)
       - danger(Y)
@@ -1405,7 +1434,7 @@ argument_schemes:
              Argumentation 16 (2002), p. 490.
     variables: [A,X,Y]
     conclusions:
-      - commined_to(A,Y)
+      - committed_to(A,Y)
     premises:
       - committed(A,X)
       - also_committed(X,Y)
@@ -1570,6 +1599,21 @@ argument_schemes:
       - individuals_propoerty(A1,F,A2)
       - vague_property(P,A1,A)
       - individual_property_false(A,P)
+
+  - id: full_slippery_slope
+    meta:
+      title: Full Slippery Slope Argument
+      source: >
+             Douglas Walton, Slippery Slope Arguments. Newport News, Va.: Vale Press, 1992, pp. 200, 203.
+    variables: [C0,C1,C2]
+    conclusions:
+      - not_acceptable_step(C0)
+    premises:
+      - initial_presumption(C0)
+      - leads_to_next(C0,C1,C2)
+      - accept_all_steps
+    assumptions:
+     - led_to_step
 
   - id: rule_physical_world_1
     meta:
