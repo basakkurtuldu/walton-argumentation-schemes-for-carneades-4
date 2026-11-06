@@ -57,7 +57,7 @@ argument_schemes:
       - is(W,D)
       - synonymous
     exceptions:
-      -not_necessarily_true
+      - not_necessarily_true
       
   - id: rule_physical_world_2
     meta:
@@ -72,7 +72,7 @@ argument_schemes:
       - oficcial_rulebook(I,D,W)
       - correctly_report
     exceptions:
-      -rule_changed
+      - rule_changed
 
   - id: rule_mental_world 
     meta:

@@ -86,7 +86,7 @@ argument_schemes:
       - not_presents_predicate(A,P,P')
       - ¬presents(A,P)
 
-  - id:opposition_descriptive_3
+  - id: opposition_descriptive_3
     meta:
       title: Argument From Opposition - Descriptive Scheme 2
       source: >

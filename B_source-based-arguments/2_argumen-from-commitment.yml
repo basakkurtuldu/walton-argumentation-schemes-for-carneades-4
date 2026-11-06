@@ -75,7 +75,7 @@ argument_schemes:
 
   - id: positive_value
     meta: 
-      title: Argument From Values - Variant 1: Positive Value 
+      title: "Argument From Values - Variant 1: Positive Value"
       source: >
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
@@ -90,7 +90,7 @@ argument_schemes:
 
   - id: negative_value
     meta:
-      title: Argument From Values - Variant 2: Negative Value
+      title: "Argument From Values - Variant 2: Negative Value"
       source: >
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 

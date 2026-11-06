@@ -54,7 +54,7 @@ argument_schemes:
       - species_of(Y,X)
       - species_property(X,A)
     exceptions:
-      -smaller_part_property(Y,A,X)
+      - smaller_part_property(Y,A,X)
 
   - id: whole_into_parts
     meta:

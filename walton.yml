@@ -415,7 +415,7 @@ argument_schemes:
     premises:
       - generally_true(A)
       - favor(A)
-    assumption:
+    assumptions:
       - generally_accepted(A)
     exceptions:
       - doubting_general(A)
@@ -688,7 +688,7 @@ argument_schemes:
       - species_of(Y,X)
       - species_property(X,A)
     exceptions:
-      -smaller_part_property(Y,A,X)
+      - smaller_part_property(Y,A,X)
   
   - id: division_generic
     meta:
@@ -729,7 +729,7 @@ argument_schemes:
       - not_presents_predicate(A,P,P')
       - ¬presents(A,P)
 
-  - id:opposition-descriptive_3
+  - id: opposition-descriptive_3
     meta:
       title: Argument From Opposition - Descriptive Scheme 2
       source: >
@@ -866,7 +866,7 @@ argument_schemes:
 
   - id: positive_value
     meta: 
-      title: Argument From Values - Variant 1: Positive Value 
+      title: "Argument From Values - Variant 1: Positive Value"
       source: >
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
@@ -881,7 +881,7 @@ argument_schemes:
 
   - id: negative_value
     meta:
-      title: Argument From Values - Variant 2: Negative Value
+      title: "Argument From Values - Variant 2: Negative Value"
       source: >
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
@@ -1584,7 +1584,7 @@ argument_schemes:
       - is(W,D)
       - synonymous
     exceptions:
-      -not_necessarily_true
+      - not_necessarily_true
       
   - id: rule_physical_world_2
     meta:
@@ -1599,7 +1599,7 @@ argument_schemes:
       - oficcial_rulebook(I,D,W)
       - correctly_report
     exceptions:
-      -rule_changed
+      - rule_changed
 
   - id: rule_mental_world 
     meta:
