@@ -1,12 +1,23 @@
-language: 
-  all_has/3: "If %s, has %s, then %s has it too."
-  beyond_contetion/2: "It is clearly beyond contention that %s , has %s."
-  may_have/2: "%s, may have %s, for all we know or can prove."
-  must_proper/2: "The conditional, If %s than %s is not, by itself, acceptable to the respondent, nor are shorter sequences acceptable to the respondent."
-  proper_sequence: "Sequence of proposition is dealt with in the appropriate order."
-  reapplication_sequence: "A sequence of modus ponens subarguments, a premise set linking premises and conclusions from the clear area through the grey area."
-  sequence/4: "There is an intervening sequence of propositions, %s, %s, ...,%s, %s such that the conditionals must be in proper order."
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Applying Rules to Cases - Chained Arguments Connecting Rules and Cases"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
+language:
+  all_has/3: "If %s has %s, then %s has it too."
+  beyond_contetion/2: "It is clearly beyond contention that %s has %s."
+  individual_property/2: "Individual %s has property %s."
+  individual_property_false/2: "But quite clearly it is false that %s has %s."
+  individuals_propoerty/3: "If %s has %s, then %s has it too."
+  may_have/2: "%s may have %s, for all we know or can prove."
+  must_proper/2: "The conditional 'if %s then %s' is not, by itself, acceptable to the respondent, nor are shorter sequences acceptable to the respondent."
+  not_has_propery/2: "Therefore, you can't truly say that %s has %s."
+  proper_sequence/0: "The sequence of propositions is dealt with in the appropriate order."
+  reapplication_sequence/0: "There is a sequence of modus ponens subarguments linking premises and conclusions from the clear area through the grey area."
+  sequence/4: "There is an intervening sequence of propositions, %s, %s,...,%s, %s such that the conditionals must be in proper order."
   true_acceptable/1: "Proposition %s is true, acceptable to the respondent."
+  vague_property/3: "Property %s is vague, and so generally, if %s has it, then you can't deny that the next closely neighboring individual %s has it."
 
 argument_schemes:
   - id: gradualism
@@ -29,7 +40,7 @@ argument_schemes:
     meta:
       title: Sorites Slippery Slope Argument
       source: >
-             Douglas Walton, "The Argument of the Beard." lnformal Logic 18 (1996), p. 151.
+             Douglas Walton, "The Argument of the Beard." Informal Logic 18 (1996), p. 151.
     variables: [A,P,A1,A2]
     conclusions:
       - may_have(A,P)
@@ -37,3 +48,18 @@ argument_schemes:
       - beyond_contetion(A2,P)
       - all_has(A2,P,A1)
       - reapplication_sequence
+
+  - id: verbal_slippery_slope
+    meta:
+      title: Verbal Slippery Slope
+      source: >
+             Douglas Walton, A Pragmatic Theory of Fallacy. 
+             Tuscaloosa and London: University of Alabama Press, 1995, p. 160.
+    variables: [A1,A2,A,P,F]
+    conclusions:
+      - not_has_propery(A1,P)
+    premises:
+      - individual_property(A1,P)
+      - individuals_propoerty(A1,F,A2)
+      - vague_property(P,A1,A)
+      - individual_property_false(A,P)

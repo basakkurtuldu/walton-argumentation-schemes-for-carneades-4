@@ -1,17 +1,23 @@
-langugage:
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Source-based Arguments - Arguments from Position to Know"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
+language:
   act_on_presumption/1: "Therefore, I act on the presumption that %s is not true or true."
   asserts/2: "%s asserts that %s is true."
   based_on_evidence/1: "The assertion %v is based on evidence."
   believe_it/1: "Recalling %s is a prima facie reason to believe it."
   believes/2: "%s believes %s to be true."
-  biased/1: "%s is biased."
+  biased/1: "Arguer %s is biased."
   case_not_true/1: "It is not the case that %s is true."
-  consequences_presumption/2: "If I act on the presumption that %s is true, and is not true, consequences %s will follow."
+  consequences_presumption/2: "If I act on the presumption that %s is true, and it is not true, consequences %s will follow."
   credible_source/2: "Witness %s is a credible source for the domain %s."
   dishonest/1: "%s is dishonest."
   expert/2: "%s is an expert in the %s domain."
-  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge"
-  group_accepted/2: "Everybody in this group %s accepts %s"
+  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge."
+  group_accepted/2: "Everybody in this group %s accepts %s."
   implausible/1: "%s is implausible."
   in_domain/2: "%s is in the domain of %s."
   inconsistent_with_known_facts/1: "%s is inconsistent with the known facts."
@@ -22,28 +28,28 @@ langugage:
   known/1: "%s is known to be true."
   looks_like/2: "%s looks like a %s."
   more_serious_consequences/2: "Consequences %s are more serious than consequences %s."
-  normal_true/1: "If thte situation were normal, %s would he true."
+  normal_true/1: "If the situation were normal, %s would be true."
   not_know_true/1: "I do not know whether %s is true or not."
-  not_normal: "Therefore, the situation is not normal."
-  other_consequences_presumption/2: "If I act on the presum ption that %s is not true, and A %s true, consequences %s will follow."
-  other_credible_sources_disagree/1: "Other credible source disagree with %s."
+  not_normal/0: "Therefore, the situation is not normal."
+  other_consequences_presumption/2: "If I act on the presumption that %s is not true, and it is true, consequences %s will follow."
+  other_credible_sources_disagree/1: "Other credible sources disagree with %s."
   plausible_false/2: "Therefore, subject to further investigations in %s it is plausible to presume that %s is false."
   plausibly_true/1: "Therefore, %s is plausibly true."
   position_to_know/2: "%s is in a position to know about things in a certain subject domain %s."
-  position_to_know_group/1: "Group %s is in a special position to know that %s is true."
+  position_to_know_group/2: "Group %s is in a special position to know that %s is true."
   presumption/1: "I have to act on the presumption that %s is true or not true."
   reasonable_belive/1: "It is reasonable to believe %s."
   recalls/2: "Person %s recalls %s."
   special_in/2: "%s is in %s."
   special_not_in/2: "%s is not in %s."
-  special_proposition/2: "%s is a special type of proposition such that if it were true, it would normally or usually be expected to be in %s."
-  sufficient_evidence: "Search for the evidence progress is sufficient."
+  special_proposition/2: "%s is a special type of proposition such that, if it were true, it would normally or usually be expected to be in %s."
+  sufficient_evidence/0: "The search for evidence has progressed sufficiently."
   therefore_true/1: "Therefore %s is true."
   true_propositions_contained/2: "It has not been established that all the true propositions in %s are contained in %s."
   uninvestigated/1: "The truth of %s has not been sufficiently investigated."
   untrustworthy/1: "%s is untrustworthy."
   would_be_known/1: "%s would be known if it were true."
-  
+
 argument_schemes:
   - id: position_to_know
     meta:
@@ -97,7 +103,7 @@ argument_schemes:
     premises:
       - group_accepted(G,A)
       - position_to_know_group(G,A)
-      
+
   - id: expert_opinion_ad_populum
     meta:
       title: Expert Opinion Ad Populum Argument
@@ -110,12 +116,12 @@ argument_schemes:
     premises:
       - group_accepted(G,A)
       - expert_in_knowledge(G)
-  
+
   - id: negative_normal_expectations
     meta:
       title: Negative Reasoning from Normal Expectations
       source: >
-             Douglas Walton, Arguments from lgnorance. University Park: 
+             Douglas Walton, Arguments from Ignorance. University Park: 
              Pennsylvania State University Press, 1996, pp. 84,86.
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
              University of Alabama Press, 1995. p. 150.
@@ -126,12 +132,12 @@ argument_schemes:
     premises:
       - normal_true(A)
       - case_not_true(A)
- 
+
   - id: negative_practical
     meta:
       title: Negative Practical Reasoning
       source: >
-             Douglas Walton, Arguments from lgnorance. University Park: 
+             Douglas Walton, Arguments from Ignorance. University Park: 
              Pennsylvania State University Press, 1996, pp. 84,86.
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
              University of Alabama Press, 1995. p. 150.
@@ -145,14 +151,14 @@ argument_schemes:
       - other_consequences_presumption(A,C)
       - more_serious_consequences(B,C)
     assumptions: 
-     - sufficient_evidence
+     - sufficient_evidence   
 
   - id: epistemic_ignorence
     meta:
-      title: Epistemic Argument From Ignorence
+      title: Epistemic Argument From Ignorance
       source: >
               Douglas Walton , "Nonfallacious Arguments from Ignorance." 
-              American Philosophical Quaerterly 29 (1992), p. 386.
+              American Philosophical Quarterly 29 (1992), p. 386.
     variables: [A,D,K]
     conclusions:
       - plausible_false(D,A)
@@ -160,7 +166,7 @@ argument_schemes:
       - true_propositions_contained(D,K)
       - special_proposition(A,K)
       - special_in(A,D)
-      - special_not_in(A,K)     
+      - special_not_in(A,K)
 
   - id: memory
     meta:
@@ -182,8 +188,8 @@ argument_schemes:
     conclusions:
       - instance(O,C)
     premises:
-      - looks_like(O,C)      
-      
+      - looks_like(O,C)
+
   - id: credible_source
     meta:
       title: "Argument from Credible Source"
@@ -200,7 +206,7 @@ argument_schemes:
       - biased(W)
       - dishonest(W)
       - other_credible_sources_disagree(S)
-      
+
   - id: expert_opinion
     meta:
       title: Argument from Expert Opinion

@@ -1,18 +1,24 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Reasoning - Practical Reasoning"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
   acceptable_action/1: "%s is an acceptable action."
   action_realize_goal/2: "Carrying out this action %s is a means to realize %s."
-  action_will_help/2: "Proposed action %s will really help %s."  
-  agent_bring_about/2: "If an agent bring about %s, then %s will occur."
+  action_will_help/2: "Proposed action %s will really help %s."
+  agent_bring_about/2: "If I, as an agent, bring about %s, then %s will occur."
   alternative_action/2: "I reasonably consider on the given information that bringing about at least one of %s is necessary to bring about %s."
   alternative_bad/2: "The respondent must bring about %s, or the proponent will undertake to see to it that %s will occur."
-  alternative_means/2: "There are alternative means of realizing %s other than %s." 
+  alternative_means/2: "There are alternative means of realizing %s other than %s."
   alternatives/2: "Either you must bring about %s, or %s will occur."
-  assert_bad/2: "I hereby assert that in fact I wil l see to it that %s occurs if you bring about %s."
+  assert_bad/2: "I hereby assert that in fact I will see to it that %[2]s occurs if you bring about %[1]s."
   bad/1: "%s is bad."
   bad_consequence/2: "But, if you do not do %s, some consequence %s, which will be very bad for you, will occur, or is likely to occur."
-  bad_for_goals/1: "%s is a bad outcome, from the point ohiew of my goals."
+  bad_for_goals/1: "%s is a bad outcome, from the point of view of my goals."
   bad_for_you/1: "%s is very bad for you."
-  bring_about_more_effectively/2: "There exists an action that would bring about % more effectively than %s."
+  bring_about_more_effectively/2: "There exists an action that would bring about %s more effectively than %s."
   bring_relive/2: "Therefore, %s ought to bring about %s."
   bringing_about_action/1: "Therefore, it is required that I bring about %s."
   brings_about/2: "The action %s brings about %s."
@@ -21,14 +27,14 @@ language:
   can_carry_out/2: "%s can carry out %s."
   carry_out/2: "Therefore, %s ought to carry out %s."
   carry_out_action/1: "Therefore, you should carry out action %s."
-  cited_bad_consequences/1: "If you bring about %s, some cited bad consequences, %s, will follow."
-  conflict_goals/2: "%s has some other goals %s that conflict with %s." 
-  contributing_action: "Doing act %s contributes to goal %s."
+  cited_bad_consequences/2: "If you bring about %s, some cited bad consequences, %s, will follow."
+  conflict_goals/3: "%s has some other goals %s that conflict with %s."
+  contributing_action/2: "Doing act %s contributes to goal %s."
   current_circumstances/1: "%s is the case in the current circumstances."
-  danger/1: "%s is a danger to you."  
+  danger/1: "%s is a danger to you."
   distress/1: "Individual %s is in distress, is suffering."
   do_other/1: "Therefore, you should -ought to, practically speaking- bring about %s."
-  easy_to_achive/1: "%s is easy to achive."
+  easy_to_achive/1: "%s is easy to achieve."
   ends_important/1: "%s should be regarded as highly important."
   feasible/1: "It is feasible to perform the action %s."
   future_losses_outweigh/1: "Future losses of completing the action %s outweigh its value."
@@ -37,74 +43,76 @@ language:
   good/1: "%s is good."
   great_sacrifice/3: "If a great sacrifice %s has been made for %s, then the value %s of it will be greater."
   great_sacrifice_made/2: "A great sacrifice %s has been made for %s."
-  great_side_effects/2: "There will be greater negative side effects of %s 's carrying out %s."
+  great_side_effects/2: "There will be too great negative side effects of %s bringing about %s."
   greater_side_effects/1: "There will be greater negative side effects of carrying out %s."
   have_goal/1: "I have a goal %s."
-  help_needed/2: "All the %s ought to help all the %s. if it is in a situation needs help, and giving help would not be too costly."
+  help_needed/2: "If %[1]s needs help and giving help would not be too costly, then %[2]s ought to help."
   incompatible_consequences/2: "Bringing about %s has incompatible consequences with %s."
-  incompatible_goal/1: "Another goal is incompatible with %s."  
+  incompatible_goal/1: "Another goal is incompatible with %s."
   intervening_actions/2: "Intervening actions are needed after performing %s to achieve %s."
   is_required/1: "%s is required."
   legitimate_value/1: "%s is a legitimate value."
-  means_end: "Means %s should be regarded as an end."
+  means_end/1: "Means %s should be regarded as an end."
   means_to_end/2: "%s is means to the end %s."
   more_acceptable_bringing/2: "Bringing about %s is more acceptable to me than not bringing about %s."
-  more_efficient_alternative_actions/2: " More effecient actions bringing about %s and that would also brin about %s."
-  more_important_ends: "Ends are more important than the means used to achieve them."
+  more_efficient_alternative_actions/2: "There are more efficient alternative actions to %s that would also bring about %s."
+  more_important_ends/0: "Ends are more important than the means used to achieve them."
   necessary_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, necessary condition for %s."
-  not_bring_about/1: "Therefore, practically speaking, I should not  bring about %s."
+  not_bring_about/1: "Therefore, you had better not bring about %s."
   not_do_appear/2: "If you do not bring about %s, then %s will occur."
   not_doing/1: "You were considering not doing %s."
-  not_required/1: "%is not required."
-  not_too_costly/2: "%s 's carrying out %s would not be too costly that is the negative side effects would not be too great."
-  occur/2: "If the respondent bring about %s then %s will occur."
-  only_way_prevent/2: "But the only way for you to prevent %s is bring about %s."
-  other_consequences: "There are some good or bad consequences of doing %s should be taken into account."
-  other_goals_conflict/1: "Other goals that might conflict with %s."
+  not_required/1: "%s is not required."
+  not_too_costly/2: "%s's carrying out %s would not be too costly, that is, the negative side effects would not be too great."
+  occur/2: "If the respondent brings about %s, then %s will occur."
+  only_way_prevent/2: "But the only way for you to prevent %s is to bring about %s."
+  other_consequences/1: "There are other good or bad consequences of doing %s that should be taken into account."
+  other_goals_conflict/1: "There are other goals that might conflict with %s."
   ought_to_bring_about/1: "Therefore, you ought to bring about %s."
-  ought_to_continue: "Therefore, %s ought to continue trying to realize %s."
+  ought_to_continue/2: "Therefore, %s ought to continue trying to realize %s."
   person_goal/2: "Person %s has goal %s."
   plausibly_case/1: "%s is plausibly the case."
   plausibly_not_case/1: "%s is plausibly not the case."
   posible/1: "%s is possible."
-  position_to_know/1: "I am in position to bring about %s."
+  position_to_bring_about/1: "I am in a position to bring about %s."
   possible/1: "Action %s is possible."
   possible_action/1: "%s is possible."
-  possible_agent/2: " %s is possible to do for agent %s."
-  possible_carry_out/2: "It is possible for %s to carry out %s." 
+  possible_agent/2: "%s is possible to do for agent %s."
+  possible_bring_about/2: "It is possible for %s to bring about %s."
+  possible_carry_out/2: "It is possible for %s to carry out %s."
   possible_goal/1: "%s is possible."
   practicality_action/1: "Nothing unchangeable prevents me from bringing about %s, as far as I know."
   prevent/1: "Therefore, you ought to prevent %s if possible."
   promote_more_effectively/2: "There exists an action that would promote the value %s more effectively than %s."
-  prudential: "Therefore, you ought to reconsider other things being equal and you ought prudentially to do %s."
+  prudential/1: "Therefore, you ought to reconsider and, other things being equal, you ought prudentially to do %s."
   realize_more_effectively/2: "There exists an action that would realize the goal %s more effectively than %s."
   really_distress/1: "%s is really in distress."
   relieve/2: "If %s brings about %s, it will relieve or help to relieve this distress."
   sacrifice_made/2: "For the thing %s, sacrifice %s is made."
-  sacrifice_value/2: "%s has a great value."
+  sacrifice_value/2: "%s has a great value %s."
   should_be_performed/1: "Action %s should be performed."
   should_carry_out/2: "Therefore, %s should carry out %s, unless he has better reasons not to."
   should_do/2: "%s should do %s."
-  should_not: "Therefore you should not bring about %s."
-  side_effect_action/2: "There are negative side effects of bringing %s bringing about %s."  
-  side_effect_other_act/2: "Carrying out %s have known side effects that might conflict with %s other goals."
+  should_not/1: "Therefore, you should not bring about %s."
+  should_not_bring_about/1: "Therefore, practically speaking, I should not bring about %s."
+  side_effect_action/2: "There are negative side effects of %s's bringing about %s that ought to be considered."
+  side_effect_other_act/2: "Carrying out %s has known side effects that might conflict with %s's other goals."
   side_effects/2: "Performing %s in %s would have side-effects which demote some value."
   situation_help/3: "%s is in a situation where some action %s by %s would help."
-  situation_necessiy/4: "As %s sets the situation, %s is a necessary or sufficient condition for caryying out %s, and tells %s this."
+  situation_necessiy/4: "As %s sets the situation, %s is a necessary or sufficient condition for carrying out %s, and tells %s this."
   stop_realize_wasted/2: "If %s stops trying to realize %s now, all previous efforts will be wasted."
-  strongly_occur: "If you don't do %s consequences %s may strongly appear."
+  strongly_occur/2: "If you do not do %s, the consequences %s are strongly likely to occur."
   sufficient_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, sufficient condition for %s."
   sunk_costs/2:  "The costs incurred performing %s thus far are %s."
   tells_intend/3: "%s intends to realize %s, and tells %s this."
   too_high_to_waste/1: "The sunk costs of %s are too high to waste."
-  undesirable/1: "%s is bad or undesirable, from your point of view."  
-  waste_bad_thing: "If all %s 's previous attempts to realize %s are wasted, that would be a bad thing."
+  undesirable/1: "%s is bad or undesirable, from your point of view."
+  waste_bad_thing/2: "If all of %s's previous attempts to realize %s are wasted, that would be a bad thing."
   worthy_goal/1: "%s is a worthy goal."
   would_be_realized/2: "%s would be realized in %s."
   would_bring_about/3: "Performing %s in %s would bring about %s."
   would_promote_value/2:  "Achieving the goal %s would promote the value %s."
-  
-argument_schemes: 
+
+argument_schemes:
   - id: practical_reasoning1
     meta:
       title: Argument from Value-Based Practical Reasoning
@@ -167,7 +175,7 @@ argument_schemes:
     premises:
       - brings_about(A,G)
       - bad(G)
-      
+
   - id: positive_consequences
     meta:
       title: Argument from Positive Consequences
@@ -186,8 +194,9 @@ argument_schemes:
     meta:
       title: Argument From Alternatives - Cognitive Schemes
       source: >
-              Manfred Kienpointner, Alltagslogik, Struktur rmd Funktion von Argumentationmustern. 
-              Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.     
+              Manfred Kienpointner, Alltagslogik, Struktur und Funktion von Argumentationsmustern. 
+              Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.
+             
     variables: [A,B]
     conclusions:
       - plausibly_case(B)
@@ -199,7 +208,7 @@ argument_schemes:
     meta:
       title: Argument From Alternatives - Normative Schemes
       source: >
-              Manfred Kienpointner, Alltagslogik, Struktur rmd Funktion von Argumentationmustern. 
+              Manfred Kienpointner, Alltagslogik, Struktur und Funktion von Argumentationsmustern. 
               Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.
     variables: [A,B]
     conclusions:
@@ -207,21 +216,21 @@ argument_schemes:
     premises:
       - can_be_required(A,B)
       - is_required(A)
-      
+
   - id: sacrifice
     meta:
       title: Argumentation From Sacrifice 
       source: >
-               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Trtalise on Argumentation. 
+               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
                Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 248-254. 
     variables: [A,S,V]
     conclusions: 
       - sacrifice_value(A,V)
     premises: 
       - sacrifice_made(A,S)
-      - great_sacrifice(S,A,X)
+      - great_sacrifice(S,A,V)
       - great_sacrifice_made(S,A)
-      
+
   - id: practical_inference
     meta:
       title: Practical Reasoning - Practical Inference
@@ -245,7 +254,7 @@ argument_schemes:
     assumptions: 
      - possible_action(A)
      - possible_goal(G)
-     
+
   - id: practical_necessary_condition
     meta:
       title: Practical Reasoning - Necessary Condition Schema
@@ -273,10 +282,10 @@ argument_schemes:
      - possible_action(A)
      - acceptable_action(X)
      - possible_agent(X,P)
-     
-  - id: practical_necessary_condition
+
+  - id: practical_sufficient_condition
     meta:
-      title: Practical Reasoning - Necessary Condition Schema
+      title: Practical Reasoning - Sufficient Condition Schema
       source: >
              Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
              Journal of Logic and Computation 13 (2003), pp. 429-448.
@@ -301,13 +310,13 @@ argument_schemes:
      - possible_action(A)
      - acceptable_action(X)
      - possible_agent(X,P)
-  
+
   - id: practical_goal
     meta:
       title: Practical Reasoning - Argument From Goal
       source: >
               Bart Verheij, "Dialectical Argumentation with Argumentation Schemes: An Approach to Legal Logic." 
-              Artificial lntelligence and Law 11 (2003), p. 169.
+              Artificial Intelligence and Law 11 (2003), p. 169.
              
     variables: [P,X,G]
     conclusions:
@@ -315,12 +324,12 @@ argument_schemes:
     premises:
       - contributing_action(X,G)
       - person_goal(P,G)
-      
+
   - id: end_and_means_1
     meta:
       title: Practical Reasoning - Argument From Ends and Means 1
       source: > 
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X,Y]
     conclusions:
@@ -333,7 +342,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 2
       source: >
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X]
     conclusions:
@@ -346,7 +355,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 3
       source: >
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X,Y]
     conclusions:
@@ -373,7 +382,7 @@ argument_schemes:
       - side_effect_other_act(B,A)
     assumptions: 
      - possible_action(Y)
-     
+
   - id: waste
     meta:
       title: Argument From Waste
@@ -389,7 +398,7 @@ argument_schemes:
       - waste_bad_thing(A,X)
     assumptions: 
      - posible(X)
-     
+
   - id: negative_consequences_prudential
     meta:
       title: Argument From Negative Consequences - Prudential Inference
@@ -401,12 +410,12 @@ argument_schemes:
     conclusions:
       - prudential(X)
     premises:
-      - (X)
+      - not_doing(X)
       - bad_consequence(X,C)
     exceptions:
       - other_consequences(X)
     assumptions: 
-     -  strongly_occur(X)
+     -  strongly_occur(X,C)
 
   - id: pragmatic_alternative
     meta:
@@ -418,11 +427,11 @@ argument_schemes:
       - do_other(A) 
     premises:
       - alternatives(A,B)
-      - undesirable(B)     
-      
+      - undesirable(B)
+
   - id: treat
     meta:
-      title: Argument From Treat 
+      title: Argument From Threat
       source: >
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London:
              University of Alabama Press, 1995, p. 157.
@@ -430,13 +439,13 @@ argument_schemes:
     conclusions:
       - not_bring_about(X)
     premises:
-      - cited_bad_consequences(X)
-      - position_to_know(X)
+      - cited_bad_consequences(X,C)
+      - position_to_bring_about(C)
       - assert_bad(X,C)
-      
+
   - id: ad_baculum
     meta:
-      title: Argument From Disjunctive Ad Baculum Treat
+      title: Argument From Disjunctive Ad Baculum Threat
       source: >
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 140.
     variables: [X,Y]
@@ -445,7 +454,7 @@ argument_schemes:
     premises:
       - alternative_bad(X,Y)
       - undesirable(Y)
- 
+
   - id: fear
     meta:
       title: Argument From Fear Appeal 
@@ -467,11 +476,11 @@ argument_schemes:
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 173.             
     variables: [X,Y]
     conclusions:
-      - should_not(Y)
+      - should_not(X)
     premises:
       - occur(X,Y)
       - danger(Y)
-      
+
   - id: help
     meta:
       title: Argument From Need For Help
@@ -490,7 +499,7 @@ argument_schemes:
     assumptions: 
      - possible_carry_out(B,X)
      - action_will_help(X,A)
-     
+
   - id: distress
     meta:
       title: Argument From Distress 
@@ -508,20 +517,20 @@ argument_schemes:
      - really_distress(A)
      - possible_bring_about(B,X)
 
-  - id: negative_consequences
+  - id: negative_consequences_reasoning
     meta:
       title: Argument From Consequences - Reasoning From Negative Consequences
       source: >
-             Douglas Walton, A Pragmatic Theory of Fallacy. 
+             Douglas Walton, A Pragmatic Theory of Fallacy.
              Tuscaloosa and London: University of Alabama Press, 1995. pp. 155-156.
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 123.
-    variables:
+    variables: [A,B]
     conclusions:
-      - not_bring_about(A)
+      - should_not_bring_about(A)
     premises:
       - agent_bring_about(A,B)
       - bad_for_goals(B)
-      
+
   - id: sunk_costs
     meta:
       title: Argument from Sunk Costs

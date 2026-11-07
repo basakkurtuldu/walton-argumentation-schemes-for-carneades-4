@@ -1,18 +1,23 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Reasoning - Abductive Reasoning"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
   action_character/1: "Agent %s did something that can be classified as fitting a particular character quality."
-  action_fit_quality/1: "Description of action actually fit the quality."
   agent_event/1: "An observed event appears to have been brought about by some agent %s."
   agent_quality/2: "%s has %s."
   character/1: "Agent %s has a character quality of a kind that has been defined."
   character_action/1: "Therefore, if %s carries out some action in the future, this action is likely to be classifiable as fitting under that character quality."
-  character_defined/1: "Agent %s 's character defined well."
+  character_defined/1: "Agent %s's character is well defined."
   character_quality/1: "Therefore, %s has this character quality."
-  data_account/2: "Each one of a set of accounts %s s is successful in explaining %s."
+  data_account/2: "Each account in the set %s is successful in explaining %s."
   data_set/1: "%s is a set of data or supposed facts in a case."
   diagram_set/3: "There is a set of argument diagrams %s and in each argument diagram %s represents premises of an argument that, supplemented by plausible conditionals and other statements that function as missing parts of enthymemes, leads to a respective conclusion %s."
   event_false/1: "%s has been observed to be false, in a given instance."
   event_quality/1: "The bringing about of this event fits a certain character quality %s."
-  event_question/1: "%s brought about the event in question"
+  event_question/1: "%s brought about the event in question."
   event_true/1: "%s has been observed to be true, in a given instance."
   explanation/2: "Theory %s explains %s."
   finding_true/1: "Finding %s is true in this situation."
@@ -20,20 +25,19 @@ language:
   in/2: "%s contains %s as a member."
   indicated_true/2: "%s is generally indicated as true when its sign %s is true."
   more_coherent_explanation/2: "There exists a more coherent explanation than theory %s of observation %s."
-  more_reliable: "There are more reliable account for the sign."
-  not_character_action/1: "Agent %s has some actions that don't fit into defined character."  
-  not_fit_action/1: "Agent %s actions definition fit the definition of quality." 
+  more_reliable/0: "There are other events that would more reliably account for the sign."
+  not_character_action/1: "Agent %s has some actions that don't fit into defined character."
+  not_fit_action/1: "The description of agent %s's action actually fits the definition of the quality."
   observed/1:  "%s has been observed."
   plausible_conclusion/1: "Therefore %s is the most plausible conclusion in the case."
   plausible_hypothesis/1: "Therefore, %s is the most plausible hypothesis in the case."
-  quality_defined/1: "Agent %s 's action defined well."
-  reference_class: "Reference class of other agents who also might have brought about this event and also have same character is sufficient."
+  quality_defined/1: "The character quality attributed to %s is well defined."
+  reference_class/0: "The reference class of other agents who also might have brought about this event and who have the same character quality is small."
   strong_correlation/2: "Correlation of %s and %s is strong."
-  succesful_account/2: "%s , is the account that explains %s most successfully."
+  succesful_account/2: "%s is the account that explains %s most successfully."
   succesful_diagram/1: "The most plausible -strongest- argument is represented by %s."
-  sufficient_account/2: "%s itself as an explanation of %s apart from other alternative explanations availablle so far, is sufficient."
+  sufficient_account/2: "%s itself, as an explanation of %s apart from other alternative explanations available so far, is sufficient."
   sufficient_correlation/2: "Correlation between %s and %s is sufficient."
-  true_false/2: "For all %s in %s, it is either true or false." 
   true_in_situation/1: "%s is true in this situation."
 
 argument_schemes:
@@ -53,7 +57,7 @@ argument_schemes:
       - more_reliable
     assumptions: 
      - strong_correlation(A,B)
-     
+
   - id: abductive_backward 
     meta:
       title: Abductive Argumentation Scheme - Backward Argumentation Scheme
@@ -65,11 +69,12 @@ argument_schemes:
     conclusions:
       - plausible_hypothesis(A1)
     premises:
-      - data_set(D,A)
-      - data_account (A1,D)
+      - data_set(D)
+      - data_account(A,D)
+      - succesful_account(A1,D)
     assumptions: 
      - sufficient_account(A1,D)
-      
+
   - id: abductive_forward
     meta:
       title: Abductive Argumentation Scheme - Forward Argumentation Scheme
@@ -86,7 +91,7 @@ argument_schemes:
 
   - id: abductive_action_to_character
     meta:
-      title: Abductive Argumentation Scheme - From Action to Character.
+      title: Abductive Argumentation Scheme - From Action to Character
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 330.
@@ -98,7 +103,7 @@ argument_schemes:
     assumptions: 
      - quality_defined(A)
      - not_fit_action(A)
-  
+
   - id: abductive_character_to_action
     meta:
       title: Abductive Argumentation Scheme - From Character to Action (Predictive) 
@@ -113,13 +118,14 @@ argument_schemes:
     exceptions:
       - not_character_action(A)
     assumptions: 
-     - character_defined(A)      
-  
+     - character_defined(A)
+
   - id: retroductive
     meta:
       title: Retroductive Scheme for Identifying an Agent from Past Action
       source: >
-             
+             Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008).
+             Argumentation Schemes. Cambridge University Press, p. 331.
     variables: [A,Q]
     conclusions:
       - event_question(A)
@@ -144,7 +150,7 @@ argument_schemes:
       - event_true(A)
     assumptions: 
      - sufficient_correlation(H,A)
-     
+
   - id: evidence_hypothesis_falsification
     meta:
       title: Argument From Evidence to Hypothesis - Argument From Falsification
@@ -152,13 +158,13 @@ argument_schemes:
              Douglas Walton, Argumentation Schemes for Presumptive Reasoning. Mahwah, N.J.: Erlbaum, 1996, pp. 67-70.             
     variables: [H,A]
     conclusions:
-      - ¬A
+      - ¬H
     premises:
       - hypothesis_event(H,A)
       - event_false(A)
     assumptions: 
-     - sufficient_correlation(A,H)
-     
+     - sufficient_correlation(A,H)   
+
   - id: abduction
     variables: [S,T,H]
     conclusions: [H]

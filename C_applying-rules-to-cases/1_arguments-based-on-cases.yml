@@ -1,6 +1,12 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Applying Rules to Cases - Arguments Based on Cases"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
   applicable/1: "Argument %s is applicable."
-  both_properties/3: "Therefore, generally, if %s has property %s then it also has property %s."
+  both_properties/3: "Therefore, generally, if something has property %[2]s, then it also has property %[3]s (generalizing from %[1]s)."
   carry_out_act/2: "%s carries out action %s."
   carry_out_right/2: "Therefore, the right thing to do in %s is carry out %s."
   carry_out_wrong/2: "Therefore, the wrong thing to do in %s is carry out %s."
@@ -8,11 +14,11 @@ language:
   has_conclusion/2: "Rule %s has conclusion %s."
   has_properties/3: "In this particular case, the individual %s has property %s and also property %s."
   image/2: "Person %s has a %s image -an image of a perceptible property-."
-  impair_general/1: "Special circumstances of example %s impair its generalizability"
+  impair_general/1: "Special circumstances of example %s impair its generalizability."
   in_case/2: "%s is true in case %s."
   inapplicable_rule/1: "Rule %s is inapplicable in this case."
   more_on_point/2: "%s is false in another case which is more on point than case %s."
-  not_indicator/1: "The circumstances such that having a %s image is not a reliable indicator of it."  
+  not_indicator/1: "The circumstances are such that having a %s image is not a reliable indicator of it."
   prestigious_individual/2: "Individual %s is prestigious for -admired by- individuals %s."
   reasonable_case/1: "It is reasonable to believe that %s is the case."
   relevant_differences/1: "There are relevant differences between case %s and the current case."
@@ -23,12 +29,12 @@ language:
   should_do/2: "%s should do %s."
   similar_case/1: "Case %s is similar to the current case."
   similar_to/2: "%s is similar to %s."
-  typical_example/1: " Example %s is an typical example of the kinds of cases the generalzation covers."
+  typical_example/1: "Example %s is a typical example of the kinds of cases the generalization covers."
   usually_properties/3: "Usually, if %s has property %s it also has property %s."
   valid/1: "Rule %s is valid."
   valid_rule/1: "The rule is valid for %s."
-  want_to_be_different/2: "%s want to be different from %s."
-  worth_imitated/2: "Then %s worth being imitated by %s."
+  want_to_be_different/2: "%s wants to be different from %s."
+  worth_imitated/2: "Then %s is worth being imitated by %s."
   wrong_to_do/2: "The wrong thing to do in %s, was to carry out action %s."
 
 argument_schemes:
@@ -48,7 +54,7 @@ argument_schemes:
     exceptions:
       - relevant_differences(R,C)
       - inapplicable_rule(R)
-      
+
   - id: from_example
     meta:
       title: Argument From Example
@@ -57,14 +63,14 @@ argument_schemes:
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
     variables: [A,P1,P2]
     conclusions:
-      - has_properties(A,P1,P2)
-    premises:
       - both_properties(A,P1,P2)
+    premises:
+      - has_properties(A,P1,P2)
     exceptions:
       - impair_general(A)
     assumptions: 
       - typical_example(A)
-     
+
   - id: illustration
     meta:
       title: Argument From Illustration
@@ -110,19 +116,19 @@ argument_schemes:
     meta:
       title: Practical Reasoning From Analogy - Positive Schema
       source: >
-              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989. p.257.
     variables: [A1,A2,X]
     conclusions:
       - carry_out_right(A2,X)
     premises:
       - right_to_do(A1,X)
       - similar_to(A1,A2)
-      
+
   - id: practical_analogy_negative
     meta:
       title: Practical Reasoning From Analogy - Negative Schema
       source: >
-              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989. p.257.
     variables: [A1,A2,X]
     conclusions:
       - carry_out_wrong(A2,X)
@@ -143,7 +149,7 @@ argument_schemes:
       - exemplify(I)
     exceptions:
       - not_indicator(I)
-      
+
   - id: analogy
     meta:
       title: Argument from Analogy

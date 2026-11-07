@@ -1,11 +1,17 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Reasoning - Deductive Reasoning"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
-  all_parts_has/2: "Every part that composes %s has property %s"
-  all_parts_propert/2: "All the parts %s have the property %s."
-  group_member/2: "%s is a member,idea, habit, custom, product or method of %s."
-  group_member_quality/3: "If %s has %s, its members ideas, habits, customs, products or methods %s will have it as well."
+  all_parts_propert/2: "All the parts of %s have the property %s."
+  divisionally_hereditary/2: "Property %[2]s is divisionally hereditary with regard to %[1]s: if the whole has it, every part has it."
+  group_member/2: "%s is a member, idea, habit, custom, product or method of %s."
+  group_member_quality/3: "If %s has %s, its members, ideas, habits, customs, products or methods %s will have it as well."
   group_quality/2: "Group %s has the quality %s."
-  has_property/2: "Therefore, %s has property %s."
-  is/2: "% is %s."
+  has_property/2: "%s has property %s."
+  is/2: "%s is %s."
 
 argument_schemes:
   - id: group_2
@@ -13,7 +19,7 @@ argument_schemes:
       title:  Argument From A Group and Its Members - Variant 2
       source: >
                Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
-               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 321-326. 	          
+               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 321-326. 
     variables: [G,Q,M]
     conclusions: 
       - is(M,Q)
@@ -29,8 +35,8 @@ argument_schemes:
              Douglas Walton, Argument: The Logic of Fallacies, Toronto: McGraw-Hill Ryerson, 1982, pp.206-208.
     variables: [A,P]
     conclusions:
-      - has_property(A,P)
-    premises:
       - all_parts_propert(A,P)
+    premises:
+      - has_property(A,P)
     assumptions: 
-     - all_parts_has(A,P)
+     - divisionally_hereditary(A,P)
