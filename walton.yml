@@ -419,7 +419,7 @@ argument_schemes:
       title: Argument From Popular Opinion
       source: >
               Douglas Walton, Fundamentals of Critical Argumentation. New York: Cambridge University Press, 2006, p. 91.
-              Douglas Walton, lnformal Logic. New York: Cambridge University Press, 1989, p. 89.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989, p. 89.
               Douglas Walton, Appeal to Popular Opinion. University Park: Pennsylvania State University Press, 1999, pp. 223-226.
     variables: [A]
     conclusions:
@@ -580,7 +580,7 @@ argument_schemes:
       
   - id: popular_practise
     meta:
-      title: Argument From Popular Practise
+      title: Argument From Popular Practice
       source: >
               Douglas Walton , Fundamentals of Critical Argumentation. New York: Cambridge
               University Press, 2006, p. 93.
@@ -654,7 +654,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning From Analogy - Positive Schema
       source: >
-              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989. p.257.
     variables: [A1,A2,X]
     conclusions:
       - carry_out_right(A2,X)
@@ -666,7 +666,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning From Analogy - Negative Schema
       source: >
-              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989. p.257.
     variables: [A1,A2,X]
     conclusions:
       - carry_out_wrong(A2,X)
@@ -678,7 +678,7 @@ argument_schemes:
     meta:
       title: Argument From Composition - Generic
       source: >
-              Douglas Walton, Informal Iogic, New York: Cambridge University Press, 1989, p.130.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989, p.130.
     variables: [A,P]
     conclusions:
       - has_property(A,P)
@@ -811,7 +811,7 @@ argument_schemes:
     meta:
       title: Argument From Alternatives - Cognitive Schemes
       source: >
-              Manfred Kienpointner, Alltagslogik, Struktur rmd Funktion von Argumentationmustern. 
+              Manfred Kienpointner, Alltagslogik, Struktur und Funktion von Argumentationsmustern. 
               Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.
              
     variables: [A,B]
@@ -825,7 +825,7 @@ argument_schemes:
     meta:
       title: Argument From Alternatives - Normative Schemes
       source: >
-              Manfred Kienpointner, Alltagslogik, Struktur rmd Funktion von Argumentationmustern. 
+              Manfred Kienpointner, Alltagslogik, Struktur und Funktion von Argumentationsmustern. 
               Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.
     variables: [A,B]
     conclusions:
@@ -838,7 +838,7 @@ argument_schemes:
     meta: 
       title: Argument From Vagueness of a Verbal Classification
       source: >
-                Douglas Walton, Argumentation Schmes for Presumptive Reasoning. 
+                Douglas Walton, Argumentation Schemes for Presumptive Reasoning. 
                 Mahwah, NJ.: Erlbaum, 1996, pp.102-103.       
     variables: [A,F]
     conclusions: 
@@ -854,7 +854,7 @@ argument_schemes:
     meta:
       title:  Argument From Arbitrariness of a Verbal Classification
       source: >
-               Douglas Walton, Argumentation Schmes for Presumptive Reasoning. 
+               Douglas Walton, Argumentation Schemes for Presumptive Reasoning. 
                Mahwah, NJ.: Erlbaum, 1996, pp.104-105.	          
     variables: [A,F]
     conclusions:
@@ -897,7 +897,7 @@ argument_schemes:
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
                Trevor Bench-Capon, "Agreeing to Differ: Modelling Persuasive Dialogue
-               between Parties without a Consensus about Values." lnformal Logic 22 (2003a), pp. 231 -245. 
+               between Parties without a Consensus about Values." Informal Logic 22 (2003a), pp. 231 -245. 
     variables: [V,A,G]
     conclusions: 
       - reason_retaining_goal(V,G)
@@ -912,7 +912,7 @@ argument_schemes:
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
                Trevor Bench-Capon, "Agreeing to Differ: Modelling Persuasive Dialogue
-               between Parties without a Consensus about Values." lnformal Logic 22 (2003a), pp. 231 -245. 
+               between Parties without a Consensus about Values." Informal Logic 22 (2003a), pp. 231 -245. 
     variables: [V,A,G]
     conclusions: 
       - reason_retaining_goal(V,G)
@@ -924,7 +924,7 @@ argument_schemes:
     meta:
       title: Argumentation From Sacrifice 
       source: >
-               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Trtalise on Argumentation. 
+               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
                Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 248-254. 
     variables: [A,S,V]
     conclusions: 
@@ -1047,7 +1047,7 @@ argument_schemes:
       title: Practical Reasoning - Argument From Goal
       source: >
               Bart Verheij, "Dialectical Argumentation with Argumentation Schemes: An Approach to Legal Logic." 
-              Artificial lntelligence and Law 11 (2003), p. 169.
+              Artificial Intelligence and Law 11 (2003), p. 169.
              
     variables: [P,X,G]
     conclusions:
@@ -1060,7 +1060,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 1
       source: > 
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X,Y]
     conclusions:
@@ -1073,7 +1073,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 2
       source: >
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X]
     conclusions:
@@ -1086,7 +1086,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 3
       source: >
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X,Y]
     conclusions:
@@ -1134,7 +1134,7 @@ argument_schemes:
     meta:
       title: Negative Reasoning from Normal Expectations
       source: >
-             Douglas Walton, Arguments from lgnorance. University Park: 
+             Douglas Walton, Arguments from Ignorance. University Park: 
              Pennsylvania State University Press, 1996, pp. 84,86.
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
              University of Alabama Press, 1995. p. 150.
@@ -1150,7 +1150,7 @@ argument_schemes:
     meta:
       title: Negative Practical Reasoning
       source: >
-             Douglas Walton, Arguments from lgnorance. University Park: 
+             Douglas Walton, Arguments from Ignorance. University Park: 
              Pennsylvania State University Press, 1996, pp. 84,86.
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
              University of Alabama Press, 1995. p. 150.
@@ -1168,10 +1168,10 @@ argument_schemes:
      
   - id: epistemic_ignorence
     meta:
-      title: Epistemic Argument From Ignorence
+      title: Epistemic Argument From Ignorance
       source: >
               Douglas Walton , "Nonfallacious Arguments from Ignorance." 
-              American Philosophical Quaerterly 29 (1992), p. 386.
+              American Philosophical Quarterly 29 (1992), p. 386.
     variables: [A,D,K]
     conclusions:
       - plausible_false(D,A)
@@ -1231,7 +1231,7 @@ argument_schemes:
 
   - id: abductive_action_to_character
     meta:
-      title: Abductive Argumentation Scheme - From Action to Character.
+      title: Abductive Argumentation Scheme - From Action to Character
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 330.
@@ -1264,7 +1264,8 @@ argument_schemes:
     meta:
       title: Retroductive Scheme for Identifying an Agent from Past Action
       source: >
-             
+             Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008).
+             Argumentation Schemes. Cambridge University Press, p. 331.
     variables: [A,Q]
     conclusions:
       - event_question(A)
@@ -1364,7 +1365,7 @@ argument_schemes:
       
   - id: ad_baculum
     meta:
-      title: Argument From Disjunctive Ad Baculum Treat
+      title: Argument From Disjunctive Ad Baculum Threat
       source: >
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 140.
     variables: [X,Y]
@@ -1588,7 +1589,7 @@ argument_schemes:
     meta:
       title: Sorites Slippery Slope Argument
       source: >
-             Douglas Walton, "The Argument of the Beard." lnformal Logic 18 (1996), p. 151.
+             Douglas Walton, "The Argument of the Beard." Informal Logic 18 (1996), p. 151.
     variables: [A,P,A1,A2]
     conclusions:
       - may_have(A,P)
@@ -1629,7 +1630,7 @@ argument_schemes:
 
   - id: rule_physical_world_1
     meta:
-      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 1 
+      title: Argument For Constitutive Rule Claims - Physical World Premise Version 1 
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 342.             
@@ -1644,7 +1645,7 @@ argument_schemes:
       
   - id: rule_physical_world_2
     meta:
-      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 2
+      title: Argument For Constitutive Rule Claims - Physical World Premise Version 2
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 342.             
@@ -1659,9 +1660,9 @@ argument_schemes:
 
   - id: rule_mental_world 
     meta:
-      title: 
+      title: Argument For Constitutive Rule Claims - Mental World Premise
       source: >
-             Wayrw Grennan, Informal Logic, Montreal: McGill-Queen's University Press, 1997, p. 196.
+             Wayne Grennan, Informal Logic, Montreal: McGill-Queen's University Press, 1997, p. 196.
     variables: [W,D,L]
     conclusions:
       - means_same(W,D)
