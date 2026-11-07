@@ -6,65 +6,67 @@ meta:
        Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
        Argumentation Schemes. Cambridge University Press.
 language: 
-  accept_property_object/4: "If you accept %s acquire property %s or buy object %s, then you will a member of the group %s."
-  accept_saying: "Therefore, you should accept what I say."
+  accept_all_steps/0: "There is a climate of social opinion such that once people come to accept each step as plausible, then they will also be led to accept the next step."
+  accept_property_object/4: "If you accept %s, acquire property %s or buy object %s, then you will be a member of the group %s."
+  accept_saying/0: "Therefore, you should accept what I say."
   acceptable_action/1: "%s is an acceptable action."
   acceptable_in_case/1: "Therefore, %s is acceptable in this case."
   acceptable_norm/3: "Doing %s or accepting %s shows that they are an acceptable norm of conduct for %s."
   act_on_presumption/1: "Therefore, I act on the presumption that %s is not true or true."
   act_value/2: "Done act %s is attributed the value %s."
   action_character/1: "Agent %s did something that can be classified as fitting a particular character quality."
-  action_fit_quality/1: "Description of action actually fit the quality."
+  action_fit_quality/1: "The description of action %s actually fits the quality."
   action_realize_goal/2: "Carrying out this action %s is a means to realize %s."
   action_will_help/2: "Proposed action %s will really help %s."
   admired_people/2: "Everybody in this group of admired, popular people %s accepts %s."
-  advocates_conclusion/3: "%s advocates argument %s , which has proposition %s as its conclusion."
+  advocates_conclusion/3: "%s advocates argument %s, which has proposition %s as its conclusion."
+  agent_bring_about/2: "If I, as an agent, bring about %s, then %s will occur."
   agent_event/1: "An observed event appears to have been brought about by some agent %s."
   agent_quality/2: "%s has %s."
-  all_has/3: "If %s, has %s, then %s has it too."
-  all_parts_has/2: "Every part that composes %s has property %s"
-  all_parts_propert/2: "All the parts %s have the property %s."
-  also_committed/2: "Generally, when an arguer is committed to %s, it can be inferred that he is also commined to %s."
-  also_committed_questioned/3: "If arguer %s has commiued herself to proposition %s at some point in a dialogue, then it may be inferred that she is also committed to proposition %s, should the question of whether it is true become an issue later in the dialogue."
+  all_has/3: "If %s has %s, then %s has it too."
+  all_parts_has/2: "Every part that composes %s has property %s."
+  all_parts_propert/2: "All the parts of %s have the property %s."
+  also_committed/2: "Generally, when an arguer is committed to %s, it can be inferred that he is also committed to %s."
+  also_committed_questioned/3: "If arguer %s has committed herself to proposition %s at some point in a dialogue, then it may be inferred that she is also committed to proposition %s, should the question of whether it is true become an issue later in the dialogue."
   alternative_action/2: "I reasonably consider on the given information that bringing about at least one of %s is necessary to bring about %s."
   alternative_bad/2: "The respondent must bring about %s, or the proponent will undertake to see to it that %s will occur."
   alternative_means/2: "There are alternative means of realizing %s other than %s." 
   alternatives/2: "Either you must bring about %s, or %s will occur."
-  another_category/2: " The object may look like it can be classified under %s but it is more justifiable to classify it under another category %s."
+  another_category/2: "The object may look like it can be classified under %s but it is more justifiable to classify it under another category %s."
   applicable/1: "Argument %s is applicable."
-  arbitrary_defined_property/2: " If an argument, %s occurs in a context of dialogue that requires a certain level of nonarbitrary definition for a key property %s that occurs in argument, and if property is defined in an arbitrary way in argument, then a ought to be rejected as deficient."
+  arbitrary_defined_property/2: "If an argument %s occurs in a context of dialogue that requires a certain level of nonarbitrary definition for a key property %s that occurs in the argument, and if the property is defined in an arbitrary way in the argument, then the argument ought to be rejected as deficient."
   arbitrary_property/2: "Some property %s that occurs in %s is defined in a way that is arbitrary."
   arbitrary_rejected/1: "Therefore, %s ought to be rejected as deficient."
   arguement_not_accepted/2: "Therefore, %s's argument %s should not be accepted."
   arguer_not_taken_both/2: "Arguer %s is less likely to have taken the evidence on both sides into account in arriving at conclusion %s."
-  assert_bad/2: "I hereby assert that in fact I wil l see to it that %s occurs if you bring about %s."
+  assert_bad/2: "I hereby assert that in fact I will see to it that %[2]s occurs if you bring about %[1]s."
   asserts/2: "%s asserts that %s is true."
-  attack_well_supported: "Allegration made in character attack premise evidence are well supported."
-  background: "The speaker is an ordinary person, that is, share a common background with the audience."
+  attack_well_supported/0: "The allegation made in the character attack premise is well supported by evidence."
+  background/0: "The speaker is an ordinary person, that is, shares a common background with the audience."
   bad/1: "%s is bad."
   bad_character/1: "%s is a person of bad character."
   bad_consequence/2: "But, if you do not do %s, some consequence %s, which will be very bad for you, will occur, or is likely to occur."
+  bad_for_goals/1: "%s is a bad outcome, from the point of view of my goals."
   bad_for_you/1: "%s is very bad for you."
   bad_moral_character/1: "%s has bad moral character."
-  bad_not_accepted/2: "%s 's argument %s should not be accepted."
+  bad_not_accepted/2: "%s's argument %s should not be accepted."
   based_on_evidence/1: "The assertion %v is based on evidence."
-  being_credible: "Therefore, you ought to take what I say as being more credible or acceptable."
+  being_credible/0: "Therefore, you ought to take what I say as being more credible or acceptable."
   believe_it/1: "Recalling %s is a prima facie reason to believe it."
   believes/2: "%s believes %s to be true."
-  beyond_contetion/2: "It is clearly beyond contention that %s , has %s."
-  biased/1: "%s is biased."
+  beyond_contetion/2: "It is clearly beyond contention that %s has %s."
   biased/1: "Arguer %s is biased."
-  biased_not_take_part/3: "Person %s 's bias is a failure to honestly take part in a type of dialogue %s, that %s is part of."
-  both_properties/3: "Therefore, generally, if %s has property %s then it also has property %s."
+  biased_not_take_part/3: "Person %s's bias is a failure to honestly take part in a type of dialogue %s, that %s is part of."
+  both_properties/3: "Therefore, generally, if something has property %[2]s, then it also has property %[3]s (generalizing from %[1]s)."
   bribed/1: "%s was bribed."
-  bring_about_more_effectively/2: "There exists an action that would bring about % more effectively than %s."
+  bring_about_more_effectively/2: "There exists an action that would bring about %s more effectively than %s."
   bring_relive/2: "Therefore, %s ought to bring about %s."
   bringing_about_action/1: "Therefore, it is required that I bring about %s."
   brings_about/2: "The action %s brings about %s."
   can_be_case/2: "Either %s or %s can be the case."
   can_be_required/2: "Either %s or %s can be required."
   can_carry_out/2: "%s can carry out %s."
-  cannot_opposite_evaluation/3: "If %s receives the evaluation %s. It cannot receive the opposite evaluation %s at the same time and in the same respect."
+  cannot_opposite_evaluation/3: "If %s receives the evaluation %s, it cannot receive the opposite evaluation %s at the same time and in the same respect."
   cannot_present_sametime/2: "%s cannot present %s at the same time and in the same respect."
   cannot_recieve_evaluation/2: "%s cannot receive the evaluation %s at the same time and in the same respect."
   carry_out/2: "Therefore, %s ought to carry out %s."
@@ -77,102 +79,103 @@ language:
   case_not_true/1: "It is not the case that %s is true."
   causes/2: "Event %s causes event %s."
   causes_both/2: "Some other event causes both %s and %s."
-  certainity_no_need/2: "In arguement %s property %s doesn't need to be certain for the sake of the argument." 
+  certainity_no_need/2: "In argument %s, property %s does not need to be certain for the sake of the argument."
   character/1: "Agent %s has a character quality of a kind that has been defined."
   character_action/1: "Therefore, if %s carries out some action in the future, this action is likely to be classifiable as fitting under that character quality."
-  character_defined/1: "Agent %s 's character defined well."
+  character_defined/1: "Agent %s's character is well defined."
   character_is_relevant/1: "Character is relevant for evaluating the plausibility of the assertion: %s"
-  character_issue/1: "Character is an issue in dialogue, and more specifically, %s 's argument depent on his/her credibility."
+  character_issue/1: "Character is an issue in the dialogue, and more specifically, %s's argument depends on his/her credibility."
   character_quality/1: "Therefore, %s has this character quality."
-  character_revelant: "In the type of dialogue in which the arguement was used issue of character revelant."
-  cited_bad_consequences/1: "If you bring about %s, some cited bad consequences, %s, will follow."
+  character_revelant/0: "In the type of dialogue in which the argument was used, the issue of character is relevant."
+  cited_bad_consequences/2: "If you bring about %s, some cited bad consequences, %s, will follow."
   classified_as/2: "Objects which satisfy definition %s are classified as instances of class %s."
   classified_under/1: "Therefore, this object can be classified under verbal category %s."
-  commited_opposite/2: "%s is personally committed to the opposite of %s, as shown by commitments expressed in her/ his personal actions or personal circumstances expressing such commitments."
-  commitment_arises/2: "At some later point in the dialogue, where the issue of %s arises, arguer a may be said to be committed to proposition %s."
-  commitment_contrary_evidence/2: "There is a contrary evidence indicating that %s might not be committed to %s."
-  commitment_support_evidence/2: "There is a evidence that supports the claim that %s is committed to %s."
+  commited_opposite/2: "%s is personally committed to the opposite of %s, as shown by commitments expressed in her/his personal actions or personal circumstances expressing such commitments."
+  commitment_arises/2: "At some later point in the dialogue, where the issue of %[2]s arises, arguer %[1]s may be said to be committed to it."
+  commitment_contrary_evidence/2: "There is contrary evidence indicating that %s might not be committed to %s."
+  commitment_support_evidence/2: "There is evidence that supports the claim that %s is committed to %s."
   committed/2: "In this case it was shown that %s is committed to proposition %s, according to the evidence of what he said or did."
   committed_to/2: "In this case, %s is committed to %s."
-  conflict_goals/2: "%s has some other goals %s that conflict with %s." 
-  consequences_presumption/2: "If I act on the presumption that %s is true, and is not true, consequences %s will follow."
-  contrary_treatment_required/2: " The contrary treatment %s is required for the subject %s."
+  compositionally_hereditary/2: "Property %[2]s is compositionally hereditary with regard to %[1]s: if every part has it, the whole has it."
+  conflict_goals/3: "%s has some other goals %s that conflict with %s." 
+  consequences_presumption/2: "If I act on the presumption that %s is true, and it is not true, consequences %s will follow."
+  contrary_treatment_required/2: "The contrary treatment %[2]s is required for the subject %[1]s."
   contributing_action/2: "Doing act %s contributes to goal %s."
   converse_relation/3: "%s can be in converse relation %s with %s."
-  correctly_report: "Oflicial rulelebooks correctly report the rules in force."
+  correctly_report/0: "Official rulebooks correctly report the rules in force."
   correlated/2: "Events %s and %s are correlated."
   counts_as/2: "%s counts as %s." 
   credibility_questioned/1: "%s's credibility as a sincere person who believes in his own argument has been put into question by the two premises above."
   credible_source/2: "Witness %s is a credible source for the domain %s."
   current_circumstances/1: "%s is the case in the current circumstances."
   danger/1: "%s is a danger to you."
-  data_account/2: "Each one of a set of accounts %s s is successful in explaining %s."
+  data_account/2: "Each account in the set %s is successful in explaining %s."
   data_set/1: "%s is a set of data or supposed facts in a case."
   defeasibly_implies/2: "If %s is true then presumably %s is also true."
   deliberate/2: "Group %s has deliberated intelligently and extensively on whether to accept proposition %s or not."
-  descriptions_opposite/2: " Description of action imply that %s is personally committed to the opposite of %s."
+  descriptions_opposite/2: "The description of the action implies that %s is personally committed to the opposite of the conclusion of %s."
   diagram_set/3: "There is a set of argument diagrams %s and in each argument diagram %s represents premises of an argument that, supplemented by plausible conditionals and other statements that function as missing parts of enthymemes, leads to a respective conclusion %s."
   dialog_committed/2: "Arguer %s has committed herself to proposition %s at some point in a dialogue."
   dishonest/1: "%s is dishonest."
   distress/1: "Individual %s is in distress, is suffering."
-  do_obligator: "One must not do what is prohibite -obligator-."
+  divisionally_hereditary/2: "Property %[2]s is divisionally hereditary with regard to %[1]s: if the whole has it, every part has it."
+  do_obligator/0: "One must not do what is prohibited, and must do what is obligatory."
   do_other/1: "Therefore, you should -ought to, practically speaking- bring about %s."
   doubting_general/1: "There are some strong reasons for doubting %s is generally true."
-  easy_to_achive/1: "%s is easy to achive."
+  easy_to_achive/1: "%s is easy to achieve."
   elite_group/1: "This group %s is elite, that is, everyone who belongs to it has prestige."
   ends_important/1: "%s should be regarded as highly important."
   evaluation/3: "If %s is the case, then an evaluation %s is justified/conduct %s is required."
   evaluation_justified/2: "Therefore, evaluation %s is justified/conduct %s is required."
   event_false/1: "%s has been observed to be false, in a given instance."
   event_quality/1: "The bringing about of this event fits a certain character quality %s."
-  event_question/1: "%s brought about the event in question"
+  event_question/1: "%s brought about the event in question."
   event_true/1: "%s has been observed to be true, in a given instance."
-  evidence_not_commited/2: "There are evidence in this particular case shows that %s is not committed to %s." 
-  excuse/1: "%s fall under one of recognized categories of excuses for this type of case and this inclusion be justified in this case."
-  excuse: "%s has an adequate excuse or an overriding duty."
+  evidence_not_commited/2: "There is evidence in this particular case that shows that %s is not committed to %s."
+  excuse/1: "%s falls under one of the recognized categories of excuses for this type of case, and this inclusion can be justified in this case."
+  excuse/0: "There is an adequate excuse or an overriding duty."
   exemplify/1: "To have a %s image -an image of a perceptible property- is a prima facie reason to believe that the circumstances exemplify it."
   exempted/1: "Therefore, in this instance, I ought to be exempted from %s."
   expert/2: "%s is an expert in the %s domain."
-  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge"
+  expert_in_knowledge/1: "%s is a group of experts in a domain of knowledge."
   explanation/2: "Theory %s explains %s."
   explanatory_theory/2: "There exists a theory explaining how event %s causes event %s."
-  favor/1: "If %s is generally accepted as truei that gives a reason in favor of %s."
+  favor/1: "If %s is generally accepted as true, that gives a reason in favor of it."
   feasible/1: "It is feasible to perform the action %s."
   finding_true/1: "Finding %s is true in this situation."
   future_losses_outweigh/1: "Future losses of completing the action %s outweigh its value."
-  generally_accepted/1: "%s generally accepted as true."
+  generally_accepted/1: "%s is generally accepted as true."
   generally_true/1: "%s is generally accepted as true."
   goal_good_group/1: "Your goal is to be a good person, or a member of a group %s with good qualities."
   goal_is_action/1: "My goal is to bring about %s."
-  goal_prestige: "Prestige is an important goal for you."
+  goal_prestige/0: "Prestige is an important goal for you."
   goals_higher_priority/2: "%s has other goals of higher priority that might conflict with the goal of realizing %s."
   good/1: "%s is good."
-  good/1: "%s is good."
-  good_group/2: "Everybody who is good, or who represen ts a group %s with good qualities, accepts policy %s."
+  good_group/2: "Everybody who is good, or who represents a group %s with good qualities, accepts policy %s."
   good_moral_character/1: "%s is of good moral character."
   great_sacrifice/3: "If a great sacrifice %s has been made for %s, then the value %s of it will be greater."
   great_sacrifice_made/2: "A great sacrifice %s has been made for %s."
   great_side_effects/2: "There will be too great negative side effects of %s bringing about %s."
   greater_side_effects/1: "There will be greater negative side effects of carrying out %s."
-  group_accepted/2: "Everybody in this group %s accepts %s"
+  group_accepted/2: "Everybody in this group %s accepts %s."
   group_action/2: "If you carry out action %s then you will belong to this group %s."
   group_background/1: "I, the speaker, am an ordinary person, that is, I share a common background with the members of this audience, group %s."
   group_does/3: "Everybody in a group %s does %s or accepts proposition %s as a policy."
-  group_member/1: "The speaker is a member of %s"
-  group_member/2: "%s is a member,idea, habit, custom, product or method of %s."
-  group_member_quality/3: "If %s has %s, its members ideas, habits, customs, products or methods %s will have it as well."
+  group_member/1: "The speaker is a member of %s."
+  group_member/2: "%s is a member, idea, habit, custom, product or method of %s."
+  group_member_quality/3: "If %s has %s, its members, ideas, habits, customs, products or methods %s will have it as well."
   group_quality/2: "Group %s has the quality %s."
-  has/2: "%s has %s"
+  has/2: "%s has %s."
   has_conclusion/2: "Rule %s has conclusion %s."
   has_occurred/1: "An event %s has occurred."
   has_properties/3: "In this particular case, the individual %s has property %s and also property %s."
-  has_property/2: "Therefore, %s has property %s."
+  has_property/2: "%s has property %s."
   have_goal/1: "I have a goal %s."
-  have_grounds_think/1: "Large majority have justified grounds to think %s is acceptable."
-  help_needed/2: "All the %s ought to help all the %s. if it is in a situation needs help, and giving help would not be too costly."
+  have_grounds_think/1: "A large majority have justified grounds to think %s is acceptable."
+  help_needed/2: "If %[1]s needs help and giving help would not be too costly, then %[2]s ought to help."
   horrible_costs/1: "Event %s would entail horrible costs."
   hypothesis_event/2: "If hypothesis %s is true, then proposition reporting event %s will be observed to be true."
-  if_treatment_required/4: "If the treatment %s is required for the subject %s, for the contrary subject %s the contrary treatment %s is required."
+  if_treatment_required/4: "If the treatment %[2]s is required for the subject %[1]s, for the contrary subject %[3]s the contrary treatment %[4]s is required."
   image/2: "Person %s has a %s image -an image of a perceptible property-."
   impair_general/1: "Special circumstances of example %s impair its generalizability."
   implausible/1: "%s is implausible."
@@ -189,82 +192,88 @@ language:
   inconsistent_with_other_experts/1:  "%s is inconsistent with what other experts assert."
   inconsistent_with_other_witnesses/1: "%s is inconsistent with what other witnesses assert."
   indicated_true/2: "%s is generally indicated as true when its sign %s is true."
-  individual_property/2: "Individual %s, has property %s."
+  individual_property/2: "Individual %s has property %s."
   individual_property_false/2: "But quite clearly it is false that %s has %s."
-  individuals_propoerty/3: "If %s, has %s then, %s has it too."
-  initial_commitment/2: "%s has claimed or indicated that he is committed to proposition %s. Generally, or by vinue of what he has said in the past."
+  individuals_propoerty/3: "If %s has %s, then %s has it too."
+  initial_commitment/2: "%s has claimed or indicated that he is committed to proposition %s, generally or by virtue of what he has said in the past."
+  initial_presumption/1: "Case %s is tentatively acceptable as an initial presumption."
   instance/2: "%s is an instance of class %s."
   interference/1: "An event has occurred which interferes with event %s."
   internally_consistent/1: "%s is internally consistent."
   intervening_actions/2: "Intervening actions are needed after performing %s to achieve %s."
-  is/2: "% is %s."
+  is/2: "%s is %s."
   is_required/1: "%s is required."
   judged_negative_value/2: "Value %s is negative as judged by agent %s."
   judged_positive_value/2: "Value %s is positive as judged by agent %s."
   known/1: "%s is known to be true."
+  leads_to_next/3: "There exists a series of cases %s, %s, ..., %s where each leads to the next by a combination of causal, precedent and/or analogical steps."
+  led_to_step/0: "People will be led to accept the next step once they come to accept each step as plausible."
   legitimate_value/1: "%s is a legitimate value."
   looks_like/2: "%s looks like a %s."
-  may_have/2: "%s, may have %s, for all we know or can prove."
-  means_end: "Means %s should be regarded as an end."
-  means_same/2: "%s means the same as %s"
+  may_have/2: "%s may have %s, for all we know or can prove."
+  means_end/1: "Means %s should be regarded as an end."
+  means_same/2: "%s means the same as %s."
   means_to_end/2: "%s is means to the end %s."
-  member_group_quality/3: "If the member %s quality %s then %s will have it as well."
-  member_quality/3: "Member %s of the group %s has the quality %s"
-  misleading/1: "Appearence of the objects looking like it could be classified under %s is misleading for some reasons."
+  member_group_quality/3: "If the member %s has quality %s, then %s will have it as well."
+  member_quality/3: "Member %s of the group %s has the quality %s."
+  misleading/1: "The appearance of the object looking like it could be classified under %s is misleading for some reason."
   morally_acceptable_action/2: "Therefore, my doing %s or accepting %s is morally justified as an acceptable action or policy."
   morally_bad/1: "Therefore, %s is a morally bad person."
   more_acceptable_bringing/2: "Bringing about %s is more acceptable to me than not bringing about %s."
   more_coherent_explanation/2: "There exists a more coherent explanation than theory %s of observation %s."
-  more_efficient_alternative_actions/2: " More effecient actions bringing about %s and that would also brin about %s."
-  more_important_ends: "Ends are more important than the means used to achieve them."
+  more_efficient_alternative_actions/2: "There are more efficient alternative actions to %s that would also bring about %s."
+  more_important_ends/0: "Ends are more important than the means used to achieve them."
   more_on_point/2: "%s is false in another case which is more on point than case %s."
-  more_reliable: "There are more reliable account for the sign."
+  more_reliable/0: "There are other events that would more reliably account for the sign."
   more_serious_consequences/2: "Consequences %s are more serious than consequences %s."
   must_do/2: "%s must do %s."
   must_present_complementary_contrary/3: "If %s does not present the predicate %s, it must present the complementary contrary predicate %s at the same time and in the same respect."
   must_present_sametime/2: "%s must present %s at the same time and in the same respect." 
-  must_proper/2: "The conditional, If %s than %s is not, by itself, acceptable to the respondent, nor are shorter sequences acceptable to the respondent."
+  must_proper/2: "The conditional 'if %s then %s' is not, by itself, acceptable to the respondent, nor are shorter sequences acceptable to the respondent."
   necessary_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, necessary condition for %s."
-  needed_nonarbitrary/2: " %s occurs in a context of dialogue that requires a nonarbitrary definition for a key property %s that occurs in argument."
+  needed_nonarbitrary/2: "%s occurs in a context of dialogue that requires a nonarbitrary definition for a key property %s that occurs in the argument."
   negative_affects/3: "The fact that value %s is negative affects the interpretation and therefore the evaluation of goal %s of agent %s, if value is bad, it supports commitment to goal."
   negative_consequences/1: "Performing action %s would have negative consequences."
-  normal_true/1: "If thte situation were normal, %s would he true."
-  not_bring_about/1: "Therefore, you had better not bring about %s"
+  normal_true/1: "If the situation were normal, %s would be true."
+  not_acceptable_step/1: "%s is not acceptable, contrary to the presumption of the initial premise."
+  not_bring_about/1: "Therefore, you had better not bring about %s."
   not_character_action/1: "Agent %s has some actions that don't fit into defined character."  
   not_do_appear/2: "If you do not bring about %s, then %s will occur."
   not_doing/1: "You were considering not doing %s."
-  not_excuse/1: "%s does not fall under a recognized category and this pose a problem in future cases." 
-  not_fit_action/1: "Agent %s actions definition fit the definition of quality." 
+  not_excuse/1: "%s does not fall under a recognized category, and this would pose a problem in future cases."
+  not_fit_action/1: "The description of agent %s's action actually fits the definition of the quality."
   not_given_credibility/1: "Therefore, %s should not be given as much credibility as it would have without the bias."
-  not_has_propery/2: "Therefore, you can't truly say that %s, has %s"
-  not_indicator/1: "The circumstances such that having a %s image is not a reliable indicator of it."
+  not_has_propery/2: "Therefore, you can't truly say that %s has %s."
+  not_indicator/1: "The circumstances are such that having a %s image is not a reliable indicator of it."
   not_know_true/1: "I do not know whether %s is true or not."
-  not_necessarily_true: "First premise not necessary true." 
-  not_normal: "Therefore, the situation is not normal."
-  not_presents_predicate/3: " If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
-  not_required/1: "%is not required."
+  not_necessarily_true/0: "The premise is not a necessary truth."
+  not_normal/0: "Therefore, the situation is not normal."
+  not_presents_predicate/3: "If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
+  not_required/1: "%s is not required."
   not_taken_both/2: "If %s is biased, then it is less likely to have taken the evidence on both sides into account in arriving at conclusion %s."
-  not_too_costly/2: "%s 's carrying out %s would not be too costly that is the negative side effects would not be too great."
+  not_too_costly/2: "%s's carrying out %s would not be too costly, that is, the negative side effects would not be too great."
   obligatory/1: "%s is prohibited -obligatory-."
   observed/1:  "%s has been observed."
-  occur/2: "If the respondent bring about %s then %s will occur."
-  oficcial_rulebook: "In the official rulebook for %s -a rule governed institution, such as a game- it is stated that %s counts as %s."
-  only_way_prevent/2: "But the only way for you to prevent %s is bring about %s."
+  occur/2: "If the respondent brings about %s, then %s will occur."
+  oficcial_rulebook/3: "In the official rulebook for %s -a rule governed institution, such as a game- it is stated that %s counts as %s."
+  only_way_prevent/2: "But the only way for you to prevent %s is to bring about %s."
   opposed_commitment/2: "Other evidence in this particular case shows that %s is not really committed to %s."
-  opposite_action/3: "%s has carried out an action, or set of actions, that imply that %s is personally committed to %s."
-  other_consequences: "There are some good or bad consequences of doing %s should be taken into account."
-  other_consequences_presumption/2: "If I act on the presum ption that %s is not true, and A %s true, consequences %s will follow."
-  other_credible_sources_disagree/1: "Other credible source disagree with %s."
-  other_goals_conflict/1: "Other goals that might conflict with %s."
+  opposite_action/3: "%[1]s has carried out an action, or set of actions, that imply a personal commitment to %[3]s, contrary to argument %[2]s."
+  other_consequences/1: "There are other good or bad consequences of doing %s that should be taken into account."
+  other_consequences_presumption/2: "If I act on the presumption that %s is not true, and it is true, consequences %s will follow."
+  other_credible_sources_disagree/1: "Other credible sources disagree with %s."
+  other_goals_conflict/1: "There are other goals that might conflict with %s."
   ought_to_bring_about/1: "Therefore, you ought to bring about %s."
-  ought_to_continue: "Therefore, %s ought to continue trying to realize %s."
+  ought_to_continue/2: "Therefore, %s ought to continue trying to realize %s."
   out_group_not_accept/2: "If you do not accept %s, you will be out of this group %s."
+  part_is/2: "%s is %s."
   part_propert/2: "%s is %s." 
-  person_act/2: "Person %s done act %s." 
-  person_acts_value/3: "%s acts %s will be %s."
+  part_whole/5: "%[1]s is %[2]s only if %[3]s, %[4]s or %[5]s is."
+  person_act/2: "Person %s has done act %s."
+  person_acts_value/3: "%s's acts %s will be %s."
   person_goal/2: "Person %s has goal %s."
   person_judgment_value/2: "Person %s has a judgment value %s."
-  person_value/2: " Person %s is %s."
+  person_value/2: "Person %s is %s."
   person_value_depending/3: "If a person is %s, his acts %s depending on judgment value, will be %s."
   plausibility_decreased/2: "The plausibility of %s's argument %s is decreased or destroyed."
   plausible_conclusion/1: "Therefore %s is the most plausible conclusion in the case."
@@ -274,16 +283,16 @@ language:
   plausibly_not_case/1: "%s is plausibly not the case."
   plausibly_true/1: "Therefore, %s is plausibly true."
   pleader_committed/1: "I -the pleader- have committed %s."
-  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to %s."
+  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to it."
   posible/1: "%s is possible."
-  position_to_know/1: "I am in position to bring about %s."
+  position_to_bring_about/1: "I am in a position to bring about %s."
   position_to_know/2: "%s is in a position to know about things in a certain subject domain %s."
-  position_to_know_group/1: "Group %s is in a special position to know that %s is true."
+  position_to_know_group/2: "Group %s is in a special position to know that %s is true."
   positive_affects/3: "The fact that value %s is positive affects the interpretation and therefore the evaluation of goal %s of agent %s, if value is good, it supports commitment to goal."
   positive_consequences/1: "Performing action %s would have positive consequences."
   possible/1: "Action %s is possible."
   possible_action/1: "%s is possible."
-  possible_agent/2: " %s is possible to do for agent %s."
+  possible_agent/2: "%s is possible to do for agent %s."
   possible_bring_about/2: "It is possible for %s to bring about %s."
   possible_carry_out/2: "It is possible for %s to carry out %s." 
   possible_goal/1: "%s is possible."
@@ -294,24 +303,24 @@ language:
   presumption/1: "I have to act on the presumption that %s is true or not true."
   prevent/1: "Therefore, you ought to prevent %s if possible."
   promote_more_effectively/2: "There exists an action that would promote the value %s more effectively than %s."
-  proper_sequence: "Sequence of proposition is dealt with in the appropriate order."
+  proper_sequence/0: "The sequence of propositions is dealt with in the appropriate order."
   property_or_object/2: "Everybody in this group %s accepts %s or has some property, or possesses some object." 
   property_precion_needed/1: "%s occurs in a context of dialogue that requires a certain level of precision that is appropriate for that context."
   property_vagueness/2: "Some property %s that occurs in %s is defined in a way that is too vague to meet the requirement of the level of precision appropriate for the context."    
-  proponent_biased/2: "Person %s the proponent of argument %s , is biased."
-  prudential: "Therefore, you ought to reconsider other things being equal and you ought prudentially to do %s."
-  quality_defined/1: "Agent %s 's action defined well."
+  proponent_biased/2: "Person %s, the proponent of argument %s, is biased."
+  prudential/1: "Therefore, you ought to reconsider and, other things being equal, you ought prudentially to do %s."
+  quality_defined/1: "The character quality attributed to %s is well defined."
   realize_more_effectively/2: "There exists an action that would realize the goal %s more effectively than %s."
   really_distress/1: "%s is really in distress."
-  reapplication_sequence: "A sequence of modus ponens subarguments, a premise set linking premises and conclusions from the clear area through the grey area."
+  reapplication_sequence/0: "There is a sequence of modus ponens subarguments linking premises and conclusions from the clear area through the grey area."
   reason_in_favor/1: "There is a reason in favor of %s."
   reason_retaining_goal/2: "%s is a reason for retaining commitment to goal %s." 
   reasonable_belive/1: "It is reasonable to believe %s."
   reasonable_case/1: "It is reasonable to believe that %s is the case."
   recalls/2: "Person %s recalls %s."
-  recieves_evaluation/2: "%s recieves the evaluation %s." 
-  reference_class: "Reference class of other agents who also might have brought about this event and also have same character is sufficient."
-  reference_group_accepted/2: "Everybody in particular group %s accepts %s"
+  recieves_evaluation/2: "%s receives the evaluation %s."
+  reference_class/0: "The reference class of other agents who also might have brought about this event and who have the same character quality is small."
+  reference_group_accepted/2: "Everybody in particular group %s accepts %s."
   relation_converse_relation/4: "If %s is in relation %s with %s they can be in the converse relation %s."
   relation_with/3: "%s is in relation %s with %s."
   relevant_differences/1: "There are relevant differences between case %s and the current case."
@@ -319,78 +328,81 @@ language:
   relieve/2: "If %s brings about %s, it will relieve or help to relieve this distress."
   respondent_member/1: "You, the respondent are a member of this audience, group %s."
   right_to_do/2: "The right thing to do in %s, was to carry out action %s."
-  rule_can_waived/1: "If the case of %s is an exception, then the established rule can be waived in the case."
-  rule_changed: "The rule has changed since the publication of the rulebook." 
+  rule_can_waived/1: "If the case of %s is an exception, then the established rule can be waived in that case."
+  rule_changed/0: "The rule has changed since the publication of the rulebook." 
   rule_of_case/2: "Rule %s is the ratio decidendi of case %s."
-  rule_require/3: "Normally, rule %s requires or forbids a type o f action or inaction %s, which carries with it a sanction - penalty- %s."
+  rule_require/3: "Normally, rule %s requires or forbids a type of action or inaction %s, which carries with it a sanction -penalty- %s."
   rule_waived/1: "Therefore, the established rule can be waived in the case of %s."
   sacrifice_made/2: "For the thing %s, sacrifice %s is made."
-  sacrifice_value/2: "%s has a great value."
-  same_meaning/2: "Speakers of %s believe that %s means the same as %s."
+  sacrifice_value/2: "%s has a great value %s."
+  same_meaning/3: "Speakers of %s believe that %s means the same as %s."
   same_properties/3: "In this case, %s has property %s and %s."
   satisfies_definition/2: "%s satisfies definition %s."
   sequence/4: "There is an intervening sequence of propositions, %s, %s,...,%s, %s such that the conditionals must be in proper order."
-  should_accept/1: "You should accept %s"
+  should_accept/1: "You should accept %s."
   should_be_performed/1: "Action %s should be performed."
   should_carry_out/2: "Therefore, %s should carry out %s, unless he has better reasons not to."
   should_do/2: "%s should do %s."
-  should_not: "Therefore you should not bring about %s."
-  side_effect_action/2: "There are negative side effects of bringing %s bringing about %s." 
-  side_effect_other_act/2: "Carrying out %s have known side effects that might conflict with %s other goals."
+  should_not/1: "Therefore, you should not bring about %s."
+  should_not_bring_about/1: "Therefore, practically speaking, I should not bring about %s."
+  side_effect_action/2: "There are negative side effects of %s's bringing about %s that ought to be considered."
+  side_effect_other_act/2: "Carrying out %s has known side effects that might conflict with %s's other goals."
   side_effects/2: "Performing %s in %s would have side-effects which demote some value."
   similar_case/1: "Case %s is similar to the current case."
   similar_to/2: "%s is similar to %s."
   situation_help/3: "%s is in a situation where some action %s by %s would help."
-  situation_necessiy/4: "As %s sets the situation, %s is a necessary or sufficient condition for caryying out %s, and tells %s this."
-  smaller_part_property/3: " %s is less %s then %s because it's a smaller part of it."
-  speakers_correct: "Speakers of a language are generally correct about word definitions in that language."
+  situation_necessiy/4: "As %s sets the situation, %s is a necessary or sufficient condition for carrying out %s, and tells %s this."
+  smaller_part_property/3: "%s is less %s than %s, because it is a smaller part of it."
+  speakers_correct/0: "Speakers of a language are generally correct about word definitions in that language."
   special_circumstances/1: "But I can cite special circumstances that constitute an excuse %s."
   special_in/2: "%s is in %s."
   special_not_in/2: "%s is not in %s."
-  special_proposition/2: "A is a special type of proposition such that if it were true, it would normally or usually be expected to be in %s."
+  special_proposition/2: "%s is a special type of proposition such that, if it were true, it would normally or usually be expected to be in %s."
   species_of/2: "%s is a species of %s."
   species_property/2: "%s is %s."
   stop_realize_wasted/2: "If %s stops trying to realize %s now, all previous efforts will be wasted."
-  strong_advocate: "%s advocate %s in a stron way indicating her personal commitment to %s."
+  strong_advocate/3: "%s advocates %s in a strong way, indicating her personal commitment to %s."
   strong_correlation/2: "Correlation of %s and %s is strong."
-  stronger_than_character/1: "There are some strong evidences that supported %s more than than the character issue."
-  strongly_occur: "If you don't do %s consequences %s may strongly appear."
+  stronger_than_character/1: "There is strong evidence that supports %s more than the character issue does."
+  strongly_occur/2: "If you do not do %s, the consequences %s are strongly likely to occur."
   subclass/2:  "%s is a subclass of %s."
-  succesful_account/2: "%s , is the account that explains %s most successfully."
+  succesful_account/2: "%s is the account that explains %s most successfully."
   succesful_diagram/1: "The most plausible -strongest- argument is represented by %s."
-  sufficient_account/2: "%s itself as an explanation of %s apart from other alternative explanations availablle so far, is sufficient."
+  sufficient_account/2: "%s itself, as an explanation of %s apart from other alternative explanations available so far, is sufficient."
   sufficient_action/2: "I have selected one member %s as an acceptable, or as the most acceptable, sufficient condition for %s."
   sufficient_correlation/2: "Correlation between %s and %s is sufficient."
-  sufficient_evidence: "search for the evidence progress is sufficient."
+  sufficient_evidence/0: "The search for evidence has progressed sufficiently."
   sunk_costs/2:  "The costs incurred performing %s thus far are %s."
-  synonymous: "Whenever expressions are referentially coextensive, they are synonymous."
+  synonymous/0: "Whenever expressions are referentially coextensive, they are synonymous."
   tells_intend/3: "%s intends to realize %s, and tells %s this."
   therefore_true/1: "Therefore %s is true."
   to_think_acceptable/1: "That gives a reason to think that %s is acceptable."
   too_high_to_waste/1: "The sunk costs of %s are too high to waste."
-  treatment_required/2: "The treatment %s is required for the subject %s."
+  treatment_required/2: "The treatment %[2]s is required for the subject %[1]s."
   true/1: "%s is true." 
   true_acceptable/1: "Proposition %s is true, acceptable to the respondent."
   true_false/2: "For all %s in %s, it is either true or false." 
   true_in_situation/1: "%s is true in this situation."
   true_propositions_contained/2: "It has not been established that all the true propositions in %s are contained in %s."
   trustworthy/1: "%s is trustworthy."
-  typical_example/1: "Example %s is an typical example of the kinds of cases the generalzation covers."
+  typical_example/1: "Example %s is a typical example of the kinds of cases the generalization covers."
   undesirable/1: "%s is bad or undesirable, from your point of view."
   uninvestigated/1: "The truth of %s has not been sufficiently investigated."
   untrustworthy/1: "%s is untrustworthy."
   usually_properties/3: "Usually, if %s has property %s it also has property %s."
-  vague_defined_property/2: "If an argument %s, occurs in a context of dialogue that requires a certain level of precision but some property %s that occurs in argument is defined in a way that is too vague to meet the requirement of that level of precision,then argument ought to be rejected as deficient." 
-  vague_property/3: "Property %s is vague, and so generally, if %s, has it then you can't deny that the next closely neighboring individual %s, has it."
-  vaguness_recejted/1: " Therefore, %s ought to be rejected as deficient."
+  vague_defined_property/2: "If an argument %s occurs in a context of dialogue that requires a certain level of precision, but some property %s that occurs in the argument is defined in a way that is too vague to meet the requirement of that level of precision, then the argument ought to be rejected as deficient."
+  vague_property/3: "Property %s is vague, and so generally, if %s has it, then you can't deny that the next closely neighboring individual %s has it."
+  vaguness_recejted/1: "Therefore, %s ought to be rejected as deficient."
   valid/1: "Rule %s is valid."
   valid_rule/1: "The rule is valid for %s."
   valued_to_be_member/1: "Being a member of this group %s is highly valued for you."
-  want_to_be_different/2: "%s want to be different from %s."
-  waste_bad_thing: "If all %s 's previous attempts to realize %s are wasted, that would be a bad thing."
+  want_to_be_different/2: "%s wants to be different from %s."
+  waste_bad_thing/2: "If all of %s's previous attempts to realize %s are wasted, that would be a bad thing."
+  whole_is/2: "%s is %s."
+  whole_of/4: "%s is the whole of %s, %s and %s."
   will_occur/1: "An event %s will occur."
   without_correcting/1: "Speakers are able to use the word %s in the correct physical and grammatical context without being correct about the nature of its referent or property."
-  worth_imitated/2: "Then %s worth being imitated by %s."
+  worth_imitated/2: "Then %s is worth being imitated by %s."
   worthy_goal/1: "%s is a worthy goal."
   would_achieve/2: "Performing action %s would achieve goal %s."
   would_be_known/1: "%s would be known if it were true."
@@ -407,7 +419,7 @@ argument_schemes:
       title: Argument From Popular Opinion
       source: >
               Douglas Walton, Fundamentals of Critical Argumentation. New York: Cambridge University Press, 2006, p. 91.
-              Douglas Walton, lnformal Logic. New York: Cambridge University Press, 1989, p. 89.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989, p. 89.
               Douglas Walton, Appeal to Popular Opinion. University Park: Pennsylvania State University Press, 1999, pp. 223-226.
     variables: [A]
     conclusions:
@@ -415,7 +427,7 @@ argument_schemes:
     premises:
       - generally_true(A)
       - favor(A)
-    assumption:
+    assumptions:
       - generally_accepted(A)
     exceptions:
       - doubting_general(A)
@@ -493,8 +505,8 @@ argument_schemes:
               Argumentation Schemes. Cambridge University Press, p. 312.
     variables: [G,X,A]
     conclusions:
+      - morally_acceptable_action(X,A)
     premises:
-      -  morally_acceptable_action(X,A)
       - group_does(G,X,A)
       - acceptable_norm(X,A,G)
       - group_member(G)
@@ -549,9 +561,9 @@ argument_schemes:
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
     variables: []
     conclusions:
-      - background
-    premises:
       - being_credible
+    premises:
+      - background
 
   - id: common_folks_group_ad_populum
     meta:
@@ -568,7 +580,7 @@ argument_schemes:
       
   - id: popular_practise
     meta:
-      title: Argument From Popular Practise
+      title: Argument From Popular Practice
       source: >
               Douglas Walton , Fundamentals of Critical Argumentation. New York: Cambridge
               University Press, 2006, p. 93.
@@ -589,9 +601,9 @@ argument_schemes:
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 357-368.
     variables: [A,P1,P2]
     conclusions:
-      - has_properties(A,P1,P2)
-    premises:
       - both_properties(A,P1,P2)
+    premises:
+      - has_properties(A,P1,P2)
     exceptions:
       - impair_general(A)
     assumptions: 
@@ -642,7 +654,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning From Analogy - Positive Schema
       source: >
-              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989. p.257.
     variables: [A1,A2,X]
     conclusions:
       - carry_out_right(A2,X)
@@ -654,7 +666,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning From Analogy - Negative Schema
       source: >
-              Douglas Walton, lnformal Logic New York: Cambridge University Press, 1989. p.257.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989. p.257.
     variables: [A1,A2,X]
     conclusions:
       - carry_out_wrong(A2,X)
@@ -666,14 +678,14 @@ argument_schemes:
     meta:
       title: Argument From Composition - Generic
       source: >
-              Douglas Walton, Informal Iogic, New York: Cambridge University Press, 1989, p.130.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989, p.130.
     variables: [A,P]
     conclusions:
       - has_property(A,P)
     premises:
       - all_parts_propert(A,P)
     assumptions: 
-     - all_parts_has(A,P)
+     - compositionally_hereditary(A,P)
 
   - id: part_in_whole
     meta:
@@ -681,14 +693,14 @@ argument_schemes:
       source: >
              Ch. Perelman and L.Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp.231-233,234-241.
-    variables: [Y,X,P]
+    variables: [Y,X,A]
     conclusions:
       - part_propert(Y,A)
     premises:
       - species_of(Y,X)
       - species_property(X,A)
     exceptions:
-      -smaller_part_property(Y,A,X)
+      - smaller_part_property(Y,A,X)
   
   - id: division_generic
     meta:
@@ -697,11 +709,25 @@ argument_schemes:
              Douglas Walton, Argument: The Logic of Fallacies, Toronto: McGraw-Hill Ryerson, 1982, pp.206-208.
     variables: [A,P]
     conclusions:
-      - has_property(A,P)
-    premises:
       - all_parts_propert(A,P)
+    premises:
+      - has_property(A,P)
     assumptions: 
-     - all_parts_has(A,P)
+     - divisionally_hereditary(A,P)
+
+  - id: whole_into_parts
+    meta:
+      title: Argument From Division - Division of the Whole into its Parts
+      source: >
+              Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation.
+              Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 231-233,234-241.
+    variables: [X,X1,X2,X3,A]
+    conclusions:
+      - whole_is(X,A)
+    premises:
+      - whole_of(X,X1,X2,X3)
+      - part_whole(X,A,X1,X2,X3)
+      - part_is(X1,A)
      
   - id: opposition-descriptive_1
     meta:
@@ -709,11 +735,11 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 317. 
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - cannot_present_sametime(A,P')
+      - cannot_present_sametime(A,P2)
     premises:
-      - presents_predicate(A,P,P')
+      - presents_predicate(A,P,P2)
       - presents(A,P)
  
   - id: opposition-descriptive_2
@@ -722,24 +748,24 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 317.
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - must_present_sametime(A,P')
+      - must_present_sametime(A,P2)
     premises:
-      - not_presents_predicate(A,P,P')
+      - not_presents_predicate(A,P,P2)
       - ¬presents(A,P)
 
-  - id:opposition-descriptive_3
+  - id: opposition-descriptive_3
     meta:
-      title: Argument From Opposition - Descriptive Scheme 2
+      title: Argument From Opposition - Descriptive Scheme 3
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - must_present_sametime(A,P')
+      - must_present_sametime(A,P2)
     premises:
-      - must_present_complementary_contrary(A,P,P')
+      - must_present_complementary_contrary(A,P,P2)
       - ¬presents(A,P)
 
   - id: opposition-normative
@@ -748,12 +774,12 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [A,X,X']
+    variables: [A,X,X2]
     conclusions:
-      - cannot_recieve_evaluation(A,X')
+      - cannot_recieve_evaluation(A,X2)
     premises:
-      - cannot_present_sametime(A,X,X')
-      - recieves_evaluation(A,X')
+      - cannot_opposite_evaluation(A,X,X2)
+      - recieves_evaluation(A,X)
 
   - id: rhetorical_oppositions_normative
     meta:
@@ -761,11 +787,11 @@ argument_schemes:
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [X,X',A,A']
+    variables: [X,X2,A,A2]
     conclusions:
-      - contrary_treatment_required(X',A')
+      - contrary_treatment_required(X2,A2)
     premises:
-      - if_treatment_required(X,A,A',X)
+      - if_treatment_required(X,A,X2,A2)
       - treatment_required(X,A)
 
   - id: rhetorical_oppositions_descriptive
@@ -774,18 +800,18 @@ argument_schemes:
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [A,B,R,R']
+    variables: [A,B,R,R2]
     conclusions:
-      - converse_relation(B,R',A)
+      - converse_relation(B,R2,A)
     premises:
-      - relation_converse_relation(A,R,B,R')
+      - relation_converse_relation(A,R,B,R2)
       - relation_with(A,R,B)
 
   - id: alternative_cognitive
     meta:
       title: Argument From Alternatives - Cognitive Schemes
       source: >
-              Manfred Kienpointner, Alltagslogik, Struktur rmd Funktion von Argumentationmustern. 
+              Manfred Kienpointner, Alltagslogik, Struktur und Funktion von Argumentationsmustern. 
               Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.
              
     variables: [A,B]
@@ -799,7 +825,7 @@ argument_schemes:
     meta:
       title: Argument From Alternatives - Normative Schemes
       source: >
-              Manfred Kienpointner, Alltagslogik, Struktur rmd Funktion von Argumentationmustern. 
+              Manfred Kienpointner, Alltagslogik, Struktur und Funktion von Argumentationsmustern. 
               Stuttgart-Bad Cannstatt: Frommann-Holzboog, 1992, p.306.
     variables: [A,B]
     conclusions:
@@ -810,11 +836,11 @@ argument_schemes:
 
   - id:  verbal_classification_vagueness
     meta: 
-      title: Argument From Definition to Verbal Classification 
+      title: Argument From Vagueness of a Verbal Classification
       source: >
-                Douglas Walton, Argumentation Schmes for Presumptive Reasoning. 
+                Douglas Walton, Argumentation Schemes for Presumptive Reasoning. 
                 Mahwah, NJ.: Erlbaum, 1996, pp.102-103.       
-    variables: [A,P]
+    variables: [A,F]
     conclusions: 
       -  vaguness_recejted(A)
     premises: 
@@ -828,14 +854,14 @@ argument_schemes:
     meta:
       title:  Argument From Arbitrariness of a Verbal Classification
       source: >
-               Douglas Walton, Argumentation Schmes for Presumptive Reasoning. 
+               Douglas Walton, Argumentation Schemes for Presumptive Reasoning. 
                Mahwah, NJ.: Erlbaum, 1996, pp.104-105.	          
     variables: [A,F]
     conclusions:
       - arbitrary_rejected(A)
     premises: 
       - arbitrary_defined_property(A,F)
-      - needed_nonarbitrary((A,F)
+      - needed_nonarbitrary(A,F)
       - arbitrary_property(F,A)
 
   - id: interaction_act_person_1
@@ -866,12 +892,12 @@ argument_schemes:
 
   - id: positive_value
     meta: 
-      title: Argument From Values - Variant 1: Positive Value 
+      title: "Argument From Values - Variant 1: Positive Value"
       source: >
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
                Trevor Bench-Capon, "Agreeing to Differ: Modelling Persuasive Dialogue
-               between Parties without a Consensus about Values." lnformal Logic 22 (2003a), pp. 231 -245. 
+               between Parties without a Consensus about Values." Informal Logic 22 (2003a), pp. 231 -245. 
     variables: [V,A,G]
     conclusions: 
       - reason_retaining_goal(V,G)
@@ -881,12 +907,12 @@ argument_schemes:
 
   - id: negative_value
     meta:
-      title: Argument From Values - Variant 2: Negative Value
+      title: "Argument From Values - Variant 2: Negative Value"
       source: >
                Trevor Bench-Capon, "Persuasion in Practical Argument Using Value-based Argumentation Frameworks." 
                Journal of Logic and Computation 13 (2003), pp.429­448. 
                Trevor Bench-Capon, "Agreeing to Differ: Modelling Persuasive Dialogue
-               between Parties without a Consensus about Values." lnformal Logic 22 (2003a), pp. 231 -245. 
+               between Parties without a Consensus about Values." Informal Logic 22 (2003a), pp. 231 -245. 
     variables: [V,A,G]
     conclusions: 
       - reason_retaining_goal(V,G)
@@ -898,14 +924,14 @@ argument_schemes:
     meta:
       title: Argumentation From Sacrifice 
       source: >
-               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Trtalise on Argumentation. 
+               Ch. Perelman and L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
                Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 248-254. 
     variables: [A,S,V]
     conclusions: 
       - sacrifice_value(A,V)
     premises: 
       - sacrifice_made(A,S)
-      - great_sacrifice(S,A,X)
+      - great_sacrifice(S,A,V)
       - great_sacrifice_made(S,A)
 
   - id: group_1
@@ -1021,7 +1047,7 @@ argument_schemes:
       title: Practical Reasoning - Argument From Goal
       source: >
               Bart Verheij, "Dialectical Argumentation with Argumentation Schemes: An Approach to Legal Logic." 
-              Artificial lntelligence and Law 11 (2003), p. 169.
+              Artificial Intelligence and Law 11 (2003), p. 169.
              
     variables: [P,X,G]
     conclusions:
@@ -1034,7 +1060,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 1
       source: > 
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X,Y]
     conclusions:
@@ -1047,7 +1073,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 2
       source: >
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X]
     conclusions:
@@ -1060,7 +1086,7 @@ argument_schemes:
     meta:
       title: Practical Reasoning - Argument From Ends and Means 3
       source: >
-              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Trtatise on Argumentation 
+              Chaim Perelman and Lucie Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation 
               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 273-278.
     variables: [X,Y]
     conclusions:
@@ -1108,7 +1134,7 @@ argument_schemes:
     meta:
       title: Negative Reasoning from Normal Expectations
       source: >
-             Douglas Walton, Arguments from lgnorance. University Park: 
+             Douglas Walton, Arguments from Ignorance. University Park: 
              Pennsylvania State University Press, 1996, pp. 84,86.
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
              University of Alabama Press, 1995. p. 150.
@@ -1124,7 +1150,7 @@ argument_schemes:
     meta:
       title: Negative Practical Reasoning
       source: >
-             Douglas Walton, Arguments from lgnorance. University Park: 
+             Douglas Walton, Arguments from Ignorance. University Park: 
              Pennsylvania State University Press, 1996, pp. 84,86.
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London: 
              University of Alabama Press, 1995. p. 150.
@@ -1142,10 +1168,10 @@ argument_schemes:
      
   - id: epistemic_ignorence
     meta:
-      title: Epistemic Argument From Ignorence
+      title: Epistemic Argument From Ignorance
       source: >
               Douglas Walton , "Nonfallacious Arguments from Ignorance." 
-              American Philosophical Quaerterly 29 (1992), p. 386.
+              American Philosophical Quarterly 29 (1992), p. 386.
     variables: [A,D,K]
     conclusions:
       - plausible_false(D,A)
@@ -1183,8 +1209,9 @@ argument_schemes:
     conclusions:
       - plausible_hypothesis(A1)
     premises:
-      - data_set(D,A)
-      - data_account (A1,D)
+      - data_set(D)
+      - data_account(A,D)
+      - succesful_account(A1,D)
     assumptions: 
      - sufficient_account(A1,D)
       
@@ -1204,7 +1231,7 @@ argument_schemes:
 
   - id: abductive_action_to_character
     meta:
-      title: Abductive Argumentation Scheme - From Action to Character.
+      title: Abductive Argumentation Scheme - From Action to Character
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 330.
@@ -1237,7 +1264,8 @@ argument_schemes:
     meta:
       title: Retroductive Scheme for Identifying an Agent from Past Action
       source: >
-             
+             Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008).
+             Argumentation Schemes. Cambridge University Press, p. 331.
     variables: [A,Q]
     conclusions:
       - event_question(A)
@@ -1270,7 +1298,7 @@ argument_schemes:
              Douglas Walton, Argumentation Schemes for Presumptive Reasoning. Mahwah, N.J.: Erlbaum, 1996, pp. 67-70.             
     variables: [H,A]
     conclusions:
-      - ¬A
+      - ¬H
     premises:
       - hypothesis_event(H,A)
       - event_false(A)
@@ -1293,7 +1321,21 @@ argument_schemes:
     exceptions:
       - other_consequences(X)
     assumptions: 
-     -  strongly_occur(X)
+     -  strongly_occur(X,C)
+
+  - id: negative_consequences_reasoning
+    meta:
+      title: Argument From Consequences - Reasoning From Negative Consequences
+      source: >
+             Douglas Walton, A Pragmatic Theory of Fallacy.
+             Tuscaloosa and London: University of Alabama Press, 1995. pp. 155-156.
+             Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 123.
+    variables: [A,B]
+    conclusions:
+      - should_not_bring_about(A)
+    premises:
+      - agent_bring_about(A,B)
+      - bad_for_goals(B)
 
   - id: pragmatic_alternative
     meta:
@@ -1309,7 +1351,7 @@ argument_schemes:
 
   - id: treat
     meta:
-      title: Argument From Treat 
+      title: Argument From Threat
       source: >
              Douglas Walton, A Pragmatic Theory of Fallacy. Tuscaloosa and London:
              University of Alabama Press, 1995, p. 157.
@@ -1317,13 +1359,13 @@ argument_schemes:
     conclusions:
       - not_bring_about(X)
     premises:
-      - cited_bad_consequences(X)
-      - position_to_know(X)
+      - cited_bad_consequences(X,C)
+      - position_to_bring_about(C)
       - assert_bad(X,C)
       
   - id: ad_baculum
     meta:
-      title: Argument From Disjunctive Ad Baculum Treat
+      title: Argument From Disjunctive Ad Baculum Threat
       source: >
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 140.
     variables: [X,Y]
@@ -1354,7 +1396,7 @@ argument_schemes:
              Douglas Walton, Scare Tactics. Dordrecht: Kluwer, 2000, p. 173.             
     variables: [X,Y]
     conclusions:
-      - should_not(Y)
+      - should_not(X)
     premises:
       - occur(X,Y)
       - danger(Y)
@@ -1405,7 +1447,7 @@ argument_schemes:
              Argumentation 16 (2002), p. 490.
     variables: [A,X,Y]
     conclusions:
-      - commined_to(A,Y)
+      - committed_to(A,Y)
     premises:
       - committed(A,X)
       - also_committed(X,Y)
@@ -1547,7 +1589,7 @@ argument_schemes:
     meta:
       title: Sorites Slippery Slope Argument
       source: >
-             Douglas Walton, "The Argument of the Beard." lnformal Logic 18 (1996), p. 151.
+             Douglas Walton, "The Argument of the Beard." Informal Logic 18 (1996), p. 151.
     variables: [A,P,A1,A2]
     conclusions:
       - may_have(A,P)
@@ -1562,7 +1604,7 @@ argument_schemes:
       source: >
              Douglas Walton, A Pragmatic Theory of Fallacy. 
              Tuscaloosa and London: University of Alabama Press, 1995, p. 160.
-    variables: [A1,A2,A,P]
+    variables: [A1,A2,A,P,F]
     conclusions:
       - not_has_propery(A1,P)
     premises:
@@ -1571,9 +1613,24 @@ argument_schemes:
       - vague_property(P,A1,A)
       - individual_property_false(A,P)
 
+  - id: full_slippery_slope
+    meta:
+      title: Full Slippery Slope Argument
+      source: >
+             Douglas Walton, Slippery Slope Arguments. Newport News, Va.: Vale Press, 1992, pp. 200, 203.
+    variables: [C0,C1,C2]
+    conclusions:
+      - not_acceptable_step(C0)
+    premises:
+      - initial_presumption(C0)
+      - leads_to_next(C0,C1,C2)
+      - accept_all_steps
+    assumptions:
+     - led_to_step
+
   - id: rule_physical_world_1
     meta:
-      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 1 
+      title: Argument For Constitutive Rule Claims - Physical World Premise Version 1 
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 342.             
@@ -1584,11 +1641,11 @@ argument_schemes:
       - is(W,D)
       - synonymous
     exceptions:
-      -not_necessarily_true
+      - not_necessarily_true
       
   - id: rule_physical_world_2
     meta:
-      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 2
+      title: Argument For Constitutive Rule Claims - Physical World Premise Version 2
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 342.             
@@ -1599,13 +1656,13 @@ argument_schemes:
       - oficcial_rulebook(I,D,W)
       - correctly_report
     exceptions:
-      -rule_changed
+      - rule_changed
 
   - id: rule_mental_world 
     meta:
-      title: 
+      title: Argument For Constitutive Rule Claims - Mental World Premise
       source: >
-             Wayrw Grennan, Informal Logic, Montreal: McGill-Queen's University Press, 1997, p. 196.
+             Wayne Grennan, Informal Logic, Montreal: McGill-Queen's University Press, 1997, p. 196.
     variables: [W,D,L]
     conclusions:
       - means_same(W,D)

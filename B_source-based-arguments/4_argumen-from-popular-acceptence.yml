@@ -1,51 +1,57 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Source-based Arguments - Arguments from Popular Acceptance"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
-  accept_property_object/4: "If you accept %s acquire property %s or buy object %s, then you will a member of the group %s."
-  accept_saying: "Therefore, you should accept what I say."
+  accept_property_object/4: "If you accept %s, acquire property %s or buy object %s, then you will be a member of the group %s."
+  accept_saying/0: "Therefore, you should accept what I say."
   acceptable_in_case/1: "Therefore, %s is acceptable in this case."
   acceptable_norm/3: "Doing %s or accepting %s shows that they are an acceptable norm of conduct for %s."
   admired_people/2: "Everybody in this group of admired, popular people %s accepts %s."
   asserts/2: "%s asserts that %s is true."
-  background: "The speaker is an ordinary person, that is, share a common background with the audience."
-  bad_moral_character/1: "%s has bad moral character."  
-  being_credible: "Therefore, you ought to take what I say as being more credible or acceptable."
+  background/0: "The speaker is an ordinary person, that is, shares a common background with the audience."
+  bad_moral_character/1: "%s has bad moral character."
+  being_credible/0: "Therefore, you ought to take what I say as being more credible or acceptable."
   carry_out_action/1: "Therefore, you should carry out action %s."
-  character_is_relevant/1: "Character is relevant for evaluating the plausibility of the assertion: %s"  
+  character_is_relevant/1: "Character is relevant for evaluating the plausibility of the assertion: %s"
   deliberate/2: "Group %s has deliberated intelligently and extensively on whether to accept proposition %s or not."
   doubting_general/1: "There are some strong reasons for doubting %s is generally true."
   elite_group/1: "This group %s is elite, that is, everyone who belongs to it has prestige."
-  favor/1: "If %s is generally accepted as true that gives a reason in favor of %s."
-  generally_accepted/1: "%s generally accepted as true."
+  favor/1: "If %s is generally accepted as true, that gives a reason in favor of it."
+  generally_accepted/1: "%s is generally accepted as true."
   generally_true/1: "%s is generally accepted as true."
   goal_good_group/1: "Your goal is to be a good person, or a member of a group %s with good qualities."
-  goal_prestige: "Prestige is an important goal for you."
-  good_group/2: "Everybody who is good, or who represen ts a group %s with good qualities, accepts policy %s."
-  good_moral_character/1: "%s is of good moral character."  
-  group_accepted/2: "Everybody in this group %s accepts %s"
+  goal_prestige/0: "Prestige is an important goal for you."
+  good_group/2: "Everybody who is good, or who represents a group %s with good qualities, accepts policy %s."
+  good_moral_character/1: "%s is of good moral character."
+  group_accepted/2: "Everybody in this group %s accepts %s."
   group_action/2: "If you carry out action %s then you will belong to this group %s."
   group_background/1: "I, the speaker, am an ordinary person, that is, I share a common background with the members of this audience, group %s."
   group_does/3: "Everybody in a group %s does %s or accepts proposition %s as a policy."
-  group_member/1: "The speaker is a member of %s"
-  have_grounds_think/1: "Large majority have justified grounds to think %s is acceptable."
+  group_member/1: "The speaker is a member of %s."
+  have_grounds_think/1: "A large majority have justified grounds to think %s is acceptable."
   morally_acceptable_action/2: "Therefore, my doing %s or accepting %s is morally justified as an acceptable action or policy."
   out_group_not_accept/2: "If you do not accept %s, you will be out of this group %s."
   plausibly_true/1: "Therefore, %s is plausibly true."
-  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to %s."
-  property_or_object/2: "Everybody in this group %s accepts %s or has some property, or possesses some object." 
+  popular_practise/1: "%s is a popular practice among those who are familiar with what is acceptable or not in regard to it."
+  property_or_object/2: "Everybody in this group %s accepts %s or has some property, or possesses some object."
   reason_in_favor/1: "There is a reason in favor of %s."
-  reference_group_accepted/2: "Everybody in particular group %s accepts %s"
+  reference_group_accepted/2: "Everybody in particular group %s accepts %s."
   respondent_member/1: "You, the respondent are a member of this audience, group %s."
-  should_accept/1: "You should accept %s"
+  should_accept/1: "You should accept %s."
   to_think_acceptable/1: "That gives a reason to think that %s is acceptable."
-  true/1: "%s is true." 
+  true/1: "%s is true."
   valued_to_be_member/1: "Being a member of this group %s is highly valued for you."
- 
-argument_schemes: 
+
+argument_schemes:
   - id: popular_opinion
     meta:
       title: Argument From Popular Opinion
       source: >
               Douglas Walton, Fundamentals of Critical Argumentation. New York: Cambridge University Press, 2006, p. 91.
-              Douglas Walton, lnformal Logic. New York: Cambridge University Press, 1989, p. 89.
+              Douglas Walton, Informal Logic. New York: Cambridge University Press, 1989, p. 89.
               Douglas Walton, Appeal to Popular Opinion. University Park: Pennsylvania State University Press, 1999, pp. 223-226.
     variables: [A]
     conclusions:
@@ -53,11 +59,11 @@ argument_schemes:
     premises:
       - generally_true(A)
       - favor(A)
-    assumption:
+    assumptions:
       - generally_accepted(A)
     exceptions:
       - doubting_general(A)
-      
+
   - id: pop_scheme
     meta:
       title: Pop Scheme
@@ -83,7 +89,7 @@ argument_schemes:
     premises:
       - group_accepted(G,A)
       - deliberate(G,A)
-      
+
   - id: moral_justification_ad_populum
     meta:
       title: Moral Justification Ad Populum Argument
@@ -96,7 +102,7 @@ argument_schemes:
     premises:
       - good_group(G,P)
       - goal_good_group(G)
-      
+
   - id: moral_justification_ad_populum_excuse
     meta:
       title: Moral Justification Ad Populum Argument Excuse Subtype
@@ -110,7 +116,7 @@ argument_schemes:
       - group_does(G,X,A)
       - acceptable_norm(X,A,G)
       - group_member(G)
-      
+
   - id: snob_appeal_ad_populum
     meta:
       title: Snob Appeal Ad Populum Argument
@@ -138,7 +144,7 @@ argument_schemes:
     premises:
       - admired_people(G,A)
       - group_action(X,G)
-      
+
   - id: rhetoric_ad_populum
     meta:
       title: Rhetoric of Belonging Ad Populum Argument
@@ -152,7 +158,7 @@ argument_schemes:
       - group_accepted(G,A)
       - valued_to_be_member(G)
       - out_group_not_accept(A,G)
-      
+
   - id: common_folk_ad_populum 
     meta:
       title: Common Folks Ad Populum Argument
@@ -161,9 +167,9 @@ argument_schemes:
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
     variables: []
     conclusions:
-      - background
-    premises:
       - being_credible
+    premises:
+      - background
 
   - id: common_folks_group_ad_populum
     meta:
@@ -177,10 +183,10 @@ argument_schemes:
     premises:
       - group_background(G)
       - respondent_member(G)
-      
+
   - id: popular_practise
     meta:
-      title: Argument From Popular Practise
+      title: Argument From Popular Practice
       source: >
               Douglas Walton , Fundamentals of Critical Argumentation. New York: Cambridge
               University Press, 2006, p. 93.
@@ -191,8 +197,8 @@ argument_schemes:
       - popular_practise(A)
       - to_think_acceptable(A)
     assumptions: 
-      - have_grounds_think(A)
-      
+     - have_grounds_think(A)
+
   - id: ethotic1
     meta:
       title: Positive Argument from Ethos

@@ -1,40 +1,47 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Reasoning - Causal Reasoning"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
-  accept_all_steps: "There is a climate of social opinion such that once people come to accept each step as plausible, then they will also be led to accept the next step."
+  accept_all_steps/0: "There is a climate of social opinion such that once people come to accept each step as plausible, then they will also be led to accept the next step."
   act_value/2: "Done act %s is attributed the value %s."
+  cannot_opposite_evaluation/3: "If %s receives the evaluation %s, it cannot receive the opposite evaluation %s at the same time and in the same respect."
   cannot_present_sametime/2: "%s cannot present %s at the same time and in the same respect."
   cannot_recieve_evaluation/2: "%s cannot receive the evaluation %s at the same time and in the same respect."
   causes/2: "Event %s causes event %s."
   causes_both/2: "Some other event causes both %s and %s."
-  contrary_treatment_required/2: " The contrary treatment %s is required for the subject %s."  
+  contrary_treatment_required/2: "The contrary treatment %[2]s is required for the subject %[1]s."
   converse_relation/3: "%s can be in converse relation %s with %s."
   correlated/2: "Events %s and %s are correlated."
   explanatory_theory/2: "There exists a theory explaining how event %s causes event %s."
   has_occurred/1: "An event %s has occurred."
   horrible_costs/1: "Event %s would entail horrible costs."
-  if_treatment_required/4: "If the treatment %s is required for the subject %s, for the contrary subject %s the contrary treatment %s is required."
-  initial_presumption/1: "Case %s, is tentatively acceptable as an initial presumption."
+  if_treatment_required/4: "If the treatment %[2]s is required for the subject %[1]s, for the contrary subject %[3]s the contrary treatment %[4]s is required."
+  initial_presumption/1: "Case %s is tentatively acceptable as an initial presumption."
   interference/1: "An event has occurred which interferes with event %s."
-  leads_to_next/3: "There exists a series of cases %s, %s,..., %s where each leads to the next by a combination of causal, precedent, and/or analogical steps."
-  led_to_step: "People will be led to accept the next step once they come to accept each step as plausible."
+  leads_to_next/3: "There exists a series of cases %s, %s, ..., %s where each leads to the next by a combination of causal, precedent and/or analogical steps."
+  led_to_step/0: "People will be led to accept the next step once they come to accept each step as plausible."
   must_present_complementary_contrary/3: "If %s does not present the predicate %s, it must present the complementary contrary predicate %s at the same time and in the same respect."
-  must_present_sametime/2: "%s must present %s at the same time and in the same respect." 
+  must_present_sametime/2: "%s must present %s at the same time and in the same respect."
   negative_consequences/1: "Performing action %s would have negative consequences."
   not_acceptable_step/1: "%s is not acceptable, contrary to the presumption of the initial premise."
-  not_presents_predicate/3: " If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
-  person_act/2: "Person %s done act %s." 
-  person_acts_value/3: "%s acts %s will be %s."
+  not_presents_predicate/3: "If %s does not present the predicate %s, it must present the contradictory predicate %s at the same time and in the same respect."
+  person_act/2: "Person %s has done act %s."
+  person_acts_value/3: "%s's acts %s will be %s."
   person_judgment_value/2: "Person %s has a judgment value %s."
   person_value/2: "Person %s is %s."
   person_value_depending/3: "If a person is %s, his acts %s depending on judgment value, will be %s."
   presents/2: "%s presents %s."
   presents_predicate/3: "If %s presents the predicate %s, it cannot present the contradictory, contrary, converse, incompatible, predicate %s at the same time and in the same respect."
-  recieves_evaluation/2: "%s recieves the evaluation %s." 
+  recieves_evaluation/2: "%s receives the evaluation %s."
   relation_converse_relation/4: "If %s is in relation %s with %s they can be in the converse relation %s."
   relation_with/3: "%s is in relation %s with %s."
-  treatment_required/2: "The treatment %s is required for the subject %s."
+  treatment_required/2: "The treatment %[2]s is required for the subject %[1]s."
   will_occur/1: "An event %s will occur."
   would_realize/2: "Performing %s would realize event %s."
-  
+
 argument_schemes:
   - id: slippery_slope_base_case
     meta:
@@ -59,45 +66,45 @@ argument_schemes:
     premises:
       - causes(E1,E2)
       - horrible_costs(E2)
-  
+
   - id: opposition-descriptive_1
     meta:
       title: Argument From Opposition - Descriptive Scheme 1
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 317. 
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - cannot_present_sametime(A,P')
+      - cannot_present_sametime(A,P2)
     premises:
-      - presents_predicate(A,P,P')
+      - presents_predicate(A,P,P2)
       - presents(A,P)
- 
-  - id: opposition_descriptive_2
+
+  - id: opposition-descriptive_2
     meta:
       title: Argument From Opposition - Descriptive Scheme 2
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 317.
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - must_present_sametime(A,P')
+      - must_present_sametime(A,P2)
     premises:
-      - not_presents_predicate(A,P,P')
+      - not_presents_predicate(A,P,P2)
       - ¬presents(A,P)
 
-  - id:opposition_descriptive_3
+  - id: opposition-descriptive_3
     meta:
-      title: Argument From Opposition - Descriptive Scheme 2
+      title: Argument From Opposition - Descriptive Scheme 3
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [P,P',A]
+    variables: [P,P2,A]
     conclusions:
-      - must_present_sametime(A,P')
+      - must_present_sametime(A,P2)
     premises:
-      - must_present_complementary_contrary(A,P,P')
-      - Â¬presents(A,P)
+      - must_present_complementary_contrary(A,P,P2)
+      - ¬presents(A,P)
 
   - id: opposition-normative
     meta:
@@ -105,12 +112,12 @@ argument_schemes:
       source: >
               Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
               Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [A,X,X']
+    variables: [A,X,X2]
     conclusions:
-      - cannot_recieve_evaluation(A,X')
+      - cannot_recieve_evaluation(A,X2)
     premises:
-      - cannot_present_sametime(A,X,X')
-      - recieves_evaluation(A,X') 
+      - cannot_opposite_evaluation(A,X,X2)
+      - recieves_evaluation(A,X)
 
   - id: rhetorical_oppositions_normative
     meta:
@@ -118,11 +125,11 @@ argument_schemes:
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [X,X',A,A']
+    variables: [X,X2,A,A2]
     conclusions:
-      - contrary_treatment_required(X',A')
+      - contrary_treatment_required(X2,A2)
     premises:
-      - if_treatment_required(X,A,A',X)
+      - if_treatment_required(X,A,X2,A2)
       - treatment_required(X,A)
 
   - id: rhetorical_oppositions_descriptive
@@ -131,19 +138,19 @@ argument_schemes:
       source: >
              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
              Argumentation Schemes. Cambridge University Press, p. 318.
-    variables: [A,B,R,R']
+    variables: [A,B,R,R2]
     conclusions:
-      - converse_relation(B,R',A)
+      - converse_relation(B,R2,A)
     premises:
-      - relation_converse_relation(A,R,B,R')
+      - relation_converse_relation(A,R,B,R2)
       - relation_with(A,R,B)
-     
+
   - id: interaction_act_person_1
     meta: 
       title: Argument From Interaction of Act and Person - Variant 1
       source: >
                Ch. Perelman, L. Olbrechts-Tyteca, The New Rhetoric: A Treatise on Argumentation. 
-               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 296-305.       
+               Notre Dame, Ind.: University of Notre Dame Press, 1969, pp. 296-305. 
     variables: [X,A,V]
     conclusions: 
       - person_value(A,V)
@@ -168,7 +175,7 @@ argument_schemes:
     meta:
       title: Full Slippery Slope Argument
       source: >
-             
+             Douglas Walton, Slippery Slope Arguments. Newport News, Va.: Vale Press, 1992, pp. 200, 203.
     variables: [C0,C1,C2]
     conclusions:
       - not_acceptable_step(C0)
@@ -176,7 +183,7 @@ argument_schemes:
       - initial_presumption(C0)
       - leads_to_next(C0,C1,C2)
       - accept_all_steps
-    assumptions: 
+    assumptions:
      - led_to_step
 
   - id: cause_to_effect

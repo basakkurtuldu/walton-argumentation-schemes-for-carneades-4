@@ -1,37 +1,24 @@
+# Generated from walton.yml by tools/build_category_files.py. Do not edit:
+# change walton.yml (or the grouping in categories.yml) and run the tool again.
+
+meta:
+  title: "Applying Rules to Cases - Verbal Classification Arguments"
+  source: "Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). Argumentation Schemes. Cambridge University Press."
 language:
-  case/1: "%s is the case."
-  case_exception/1: "The case of %s is an exception."
+  arbitrary_defined_property/2: "If an argument %s occurs in a context of dialogue that requires a certain level of nonarbitrary definition for a key property %s that occurs in the argument, and if the property is defined in an arbitrary way in the argument, then the argument ought to be rejected as deficient."
+  arbitrary_property/2: "Some property %s that occurs in %s is defined in a way that is arbitrary."
+  arbitrary_rejected/1: "Therefore, %s ought to be rejected as deficient."
+  certainity_no_need/2: "In argument %s, property %s does not need to be certain for the sake of the argument."
   classified_as/2: "Objects which satisfy definition %s are classified as instances of class %s."
-  correctly_report: "Oflicial rulelebooks correctly report the rules in force."
-  counts_as/2: "%s counts as %s." 
-  do_obligator: "One must not do what is prohibite -obligator-."
-  evaluation/3: "If %s is the case, then an evaluation %s is justified/conduct %s is required."
-  evaluation_justified/2: "Therefore, evaluation %s is justified/conduct %s is required."
-  excuse/1: "%s fall under one of recognized categories of excuses for this type of case and this inclusion be justified in this case."
-  excuse: "%s has an adequate excuse or an overriding duty."
-  exempted/1: "Therefore, in this instance, I ought to be exempted from %s."
-  inadequate_definition/2: "%s is an inadequate definition of %s."  
+  inadequate_definition/2: "%s is an inadequate definition of %s."
   instance/2: "%s is an instance of class %s."
-  is/2: "% is %s."
-  means_same/2: "%s means the same as %s"
-  must_do/2: "%s must do %s."
-  not_excuse/1: "%s does not fall under a recognized category and this pose a problem in future cases."
-  not_has_propery/2: "Therefore, you can't truly say that %s, has %s"
-  not_necessarily_true: "First premise not necessary true." 
-  obligatory/1: "%s is prohibited -obligatory-."
-  oficcial_rulebook: "In the official rulebook for %s -a rule governed institution, such as a game- it is stated that %s counts as %s."
-  pleader_committed/1: "I -the pleader- have committed %s."
-  rule_can_waived/1: "If the case of %s is an exception, then the established rule can be waived in the case."
-  rule_changed: "The rule has changed since the publication of the rulebook." 
-  rule_require/3: "Normally, rule %s requires or forbids a type o f action or inaction %s, which carries with it a sanction - penalty- %s."
-  rule_waived/1: "Therefore, the established rule can be waived in the case of %s."
-  same_meaning/2: "Speakers of %s believe that %s means the same as %s."
+  needed_nonarbitrary/2: "%s occurs in a context of dialogue that requires a nonarbitrary definition for a key property %s that occurs in the argument."
+  property_precion_needed/1: "%s occurs in a context of dialogue that requires a certain level of precision that is appropriate for that context."
+  property_vagueness/2: "Some property %s that occurs in %s is defined in a way that is too vague to meet the requirement of the level of precision appropriate for the context."
   satisfies_definition/2: "%s satisfies definition %s."
-  speakers_correct: "Speakers of a language are generally correct about word definitions in that language."
-  special_circumstances/1: "But I can cite special circumstances that constitute an excuse %s."
   subclass/2:  "%s is a subclass of %s."
-  synonymous: "Whenever expressions are referentially coextensive, they are synonymous."
-  without_correcting/1: "Speakers are able to use the word %s in the correct physical and grammatical context without being correct about the nature of its referent or property."
+  vague_defined_property/2: "If an argument %s occurs in a context of dialogue that requires a certain level of precision, but some property %s that occurs in the argument is defined in a way that is too vague to meet the requirement of that level of precision, then the argument ought to be rejected as deficient."
+  vaguness_recejted/1: "Therefore, %s ought to be rejected as deficient."
 
 argument_schemes:
   - id: verbal_classification
@@ -43,110 +30,6 @@ argument_schemes:
     premises:
       - instance(O,F)
       - subclass(F,G)
-
-  - id: rule_physical_world_1
-    meta:
-      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 1 
-      source: >
-              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
-              Argumentation Schemes. Cambridge University Press, p. 342.             
-    variables: [W,D]
-    conclusions:
-      - means_same(W,D)
-    premises:
-      - is(W,D)
-      - synonymous
-    exceptions:
-      -not_necessarily_true
-      
-  - id: rule_physical_world_2
-    meta:
-      title: Argument For Constitutive Rule Claims - Physical Worl Premise Version 2
-      source: >
-              Walton, Douglas and Reed, Chris and Macagno, Fabrizio (2008). 
-              Argumentation Schemes. Cambridge University Press, p. 342.             
-    variables: [I,D,W]
-    conclusions:
-      - counts_as(D,W)
-    premises:
-      - oficcial_rulebook(I,D,W)
-      - correctly_report
-    exceptions:
-      -rule_changed
-
-  - id: rule_mental_world 
-    meta:
-      title: 
-      source: >
-             Wayrw Grennan, Informal Logic, Montreal: McGill-Queen's University Press, 1997, p. 196.
-    variables: [W,D,L]
-    conclusions:
-      - means_same(W,D)
-    premises:
-      - same_meaning(L,W,D)
-      - speakers_correct
-    exceptions:
-      - without_correcting(W)
-      
-  - id: rule
-    meta:
-      title: Argument From Rules - From Rules
-      source: >
-             Peter Jan Schellens and Menno De Jong, "Argumentation Schemes in Persuasive  Brochures.
-             "Argumentation 18, 2004, p. 311.
-    variables: [E,A,C] 
-    conclusions:
-      - evaluation_justified(E,C)
-    premises:
-      - evaluation(A,E,C)
-      - case(A)
-
-  - id: regulative_rule
-    meta:
-      title: Argumentation From Rules - Regulative Rule Premise Obligation Claim
-      source: >
-            Wayne Grennan, Informal Logic. Montreal: McGill-Queen's University Press, 1997, p. 169.
-    variables: [A,X]
-    conclusions:
-      - must_do(A,X)
-    premises:
-      - obligatory(X)
-      - do_obligator
-    exceptions:
-      - excuse
-
-  - id: exeptional
-    meta:
-      title: Argument For An Exceptional Case
-      source: >
-             Douglas Walton, A Pragmatic Theory of Fallacy. 
-             Tuscaloosa and London: University of Alabama Press, 1995, p. 148.
-    variables: [A,X]
-    conclusions:
-      - rule_waived(A)
-    premises:
-      - rule_can_waived(X)
-      - case_exception(A)
-    assumptions:
-      - case_exception(A)
-
-  - id: plea_for_excuse
-    meta:
-      title: Argument From Plea For Excuse
-      source: >
-             Douglas Walton, Appeal to Pity. 
-             Albany: State University of New York Press, 1997, pp. 154-156.
-    variables: [S,R,T,E]
-    conclusions:
-      - exempted(S)
-    premises:
-      - rule_require(R,T,S)
-      - pleader_committed(T)
-      - special_circumstances(E)
-    exceptions:
-      - not_excuse(E)
-    assumptions: 
-     - excuse(E)
 
   - id: definition_to_verbal_classification
     meta:
@@ -161,4 +44,34 @@ argument_schemes:
       - satisfies_definition(O,D)
       - classified_as(D,G)
     exceptions:
-      - inadequate_definition(D,G)    
+      - inadequate_definition(D,G)
+
+  - id:  verbal_classification_vagueness
+    meta: 
+      title: Argument From Vagueness of a Verbal Classification
+      source: >
+                Douglas Walton, Argumentation Schemes for Presumptive Reasoning. 
+                Mahwah, NJ.: Erlbaum, 1996, pp.102-103.       
+    variables: [A,F]
+    conclusions: 
+      -  vaguness_recejted(A)
+    premises: 
+      - vague_defined_property(A,F)
+      - property_precion_needed(F)
+      - property_vagueness(F,A)
+    exceptions: 
+      - certainity_no_need(A,F)
+
+  - id: verbal_classification_arbitrariness
+    meta:
+      title:  Argument From Arbitrariness of a Verbal Classification
+      source: >
+               Douglas Walton, Argumentation Schemes for Presumptive Reasoning. 
+               Mahwah, NJ.: Erlbaum, 1996, pp.104-105.	          
+    variables: [A,F]
+    conclusions:
+      - arbitrary_rejected(A)
+    premises: 
+      - arbitrary_defined_property(A,F)
+      - needed_nonarbitrary(A,F)
+      - arbitrary_property(F,A)
